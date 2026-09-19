@@ -1,0 +1,1829 @@
+{
+  "source": "lspfi",
+  "created": "2026-09-19T09:37:09Z",
+  "tables": [
+    {
+      "name": "activitylog",
+      "target": "rw_activitylog",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `activitylog` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `user_id` int DEFAULT NULL,\n  `action` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,\n  `ip_address` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  PRIMARY KEY (`id`),\n  KEY `ActivityLog_user_id_idx` (`user_id`),\n  KEY `ActivityLog_action_idx` (`action`),\n  CONSTRAINT `ActivityLog_user_id_fkey` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE SET NULL ON UPDATE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "user_id",
+          "type": "int",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "action",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "description",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "ip_address",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        }
+      ],
+      "relations": [
+        {
+          "name": "ActivityLog_user_id_fkey",
+          "column": "user_id",
+          "table": "user",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "SET NULL"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ActivityLog_action_idx",
+          "column": "action",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "ActivityLog_user_id_idx",
+          "column": "user_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 71,
+      "sha256": "044d69afa68e6ece77749d3ed6f74fa681d21be516ef6dceceade2825e452fcb"
+    },
+    {
+      "name": "asesiprofile",
+      "target": "rw_asesiprofile",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `asesiprofile` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `user_id` int NOT NULL,\n  `nama_lengkap` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `nik` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `tempat_lahir` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `tanggal_lahir` date NOT NULL,\n  `jenis_kelamin` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `kebangsaan` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `alamat_rumah` text COLLATE utf8mb4_unicode_ci NOT NULL,\n  `kode_pos_rumah` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `telp_rumah` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `telp_hp` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `email_pribadi` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `kota_kabupaten` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `provinsi` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `kualifikasi_pendidikan` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `status_pekerjaan` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `nama_institusi` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `jabatan` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `tahun_met` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `alamat_kantor` text COLLATE utf8mb4_unicode_ci,\n  `kode_pos_kantor` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `telp_kantor` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `fax_kantor` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `email_kantor` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL,\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `AsesiProfile_user_id_key` (`user_id`),\n  UNIQUE KEY `AsesiProfile_nik_key` (`nik`),\n  CONSTRAINT `AsesiProfile_user_id_fkey` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "user_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "nama_lengkap",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "nik",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "tempat_lahir",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "tanggal_lahir",
+          "type": "date",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "jenis_kelamin",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kebangsaan",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "alamat_rumah",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kode_pos_rumah",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "telp_rumah",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "telp_hp",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "email_pribadi",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kota_kabupaten",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "provinsi",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kualifikasi_pendidikan",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "status_pekerjaan",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "nama_institusi",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "jabatan",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "tahun_met",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "alamat_kantor",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kode_pos_kantor",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "telp_kantor",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "fax_kantor",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "email_kantor",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        }
+      ],
+      "relations": [
+        {
+          "name": "AsesiProfile_user_id_fkey",
+          "column": "user_id",
+          "table": "user",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "AsesiProfile_nik_key",
+          "column": "nik",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "AsesiProfile_user_id_key",
+          "column": "user_id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 43,
+      "sha256": "07ea894ed658e27fb9f94f8f5a55db58166a13a6b6d91c7a03764b4c969b9759"
+    },
+    {
+      "name": "asesmenmandiri",
+      "target": "rw_asesmenmandiri",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `asesmenmandiri` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `pendaftaran_id` int NOT NULL,\n  `kuk_id` int NOT NULL,\n  `status_k_bk` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `bukti_file_id` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL,\n  `keterangan` text COLLATE utf8mb4_unicode_ci,\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `AsesmenMandiri_pendaftaran_id_kuk_id_key` (`pendaftaran_id`,`kuk_id`),\n  KEY `AsesmenMandiri_kuk_id_fkey` (`kuk_id`),\n  CONSTRAINT `AsesmenMandiri_kuk_id_fkey` FOREIGN KEY (`kuk_id`) REFERENCES `kriteriaunjukkerja` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,\n  CONSTRAINT `AsesmenMandiri_pendaftaran_id_fkey` FOREIGN KEY (`pendaftaran_id`) REFERENCES `pendaftaran` (`id`) ON DELETE CASCADE ON UPDATE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "pendaftaran_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "kuk_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "status_k_bk",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "bukti_file_id",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "keterangan",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        }
+      ],
+      "relations": [
+        {
+          "name": "AsesmenMandiri_kuk_id_fkey",
+          "column": "kuk_id",
+          "table": "kriteriaunjukkerja",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "CASCADE"
+        },
+        {
+          "name": "AsesmenMandiri_pendaftaran_id_fkey",
+          "column": "pendaftaran_id",
+          "table": "pendaftaran",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "AsesmenMandiri_kuk_id_fkey",
+          "column": "kuk_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "AsesmenMandiri_pendaftaran_id_kuk_id_key",
+          "column": "pendaftaran_id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "AsesmenMandiri_pendaftaran_id_kuk_id_key",
+          "column": "kuk_id",
+          "unique": true,
+          "position": 2,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 24,
+      "sha256": "24517ebf78799de1ee6b85c183fe7e53b44778dbf80e11ce2936adf3d76254b8"
+    },
+    {
+      "name": "banksoal",
+      "target": "rw_banksoal",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `banksoal` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `kode_soal` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `skema_id` int NOT NULL,\n  `unit_kompetensi_id` int NOT NULL,\n  `elemen_kompetensi_id` int DEFAULT NULL,\n  `kuk_id` int DEFAULT NULL,\n  `metode_pengumpulan_bukti` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `jenjang_kkni` int NOT NULL,\n  `pertanyaan` text COLLATE utf8mb4_unicode_ci NOT NULL,\n  `opsi_jawaban` json DEFAULT NULL,\n  `kunci_jawaban_panduan` text COLLATE utf8mb4_unicode_ci,\n  `instruksi_praktik` text COLLATE utf8mb4_unicode_ci,\n  `peralatan_bahan` text COLLATE utf8mb4_unicode_ci,\n  `alokasi_waktu_menit` int DEFAULT NULL,\n  `standar_kinerja` text COLLATE utf8mb4_unicode_ci,\n  `rubrik_penilaian` text COLLATE utf8mb4_unicode_ci,\n  `bobot_soal` double NOT NULL DEFAULT '1',\n  `status_soal` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'AKTIF',\n  `created_by_user_id` int DEFAULT NULL,\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `kode_soal` (`kode_soal`),\n  KEY `BankSoal_skema_id_idx` (`skema_id`),\n  KEY `BankSoal_unit_kompetensi_id_idx` (`unit_kompetensi_id`),\n  KEY `BankSoal_metode_pengumpulan_bukti_idx` (`metode_pengumpulan_bukti`),\n  KEY `BankSoal_jenjang_kkni_idx` (`jenjang_kkni`)\n) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "kode_soal",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "skema_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "unit_kompetensi_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "elemen_kompetensi_id",
+          "type": "int",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "kuk_id",
+          "type": "int",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "metode_pengumpulan_bukti",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "jenjang_kkni",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "pertanyaan",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "opsi_jawaban",
+          "type": "json",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "kunci_jawaban_panduan",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "instruksi_praktik",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "peralatan_bahan",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "alokasi_waktu_menit",
+          "type": "int",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "standar_kinerja",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "rubrik_penilaian",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "bobot_soal",
+          "type": "double",
+          "nullable": false,
+          "default": "1",
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "status_soal",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": "AKTIF",
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "created_by_user_id",
+          "type": "int",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(3)",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "BankSoal_jenjang_kkni_idx",
+          "column": "jenjang_kkni",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "BankSoal_metode_pengumpulan_bukti_idx",
+          "column": "metode_pengumpulan_bukti",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "BankSoal_skema_id_idx",
+          "column": "skema_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "BankSoal_unit_kompetensi_id_idx",
+          "column": "unit_kompetensi_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "kode_soal",
+          "column": "kode_soal",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 66,
+      "sha256": "00e4ae0c74de20da504b73520307af9eecdce62592bb10cc7027a6cd35599d47"
+    },
+    {
+      "name": "certificatesequence",
+      "target": "rw_certificatesequence",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `certificatesequence` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `year` int NOT NULL,\n  `skema_id` int NOT NULL,\n  `last_seq` int NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `CertificateSequence_year_skema_id_key` (`year`,`skema_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "year",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "skema_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "last_seq",
+          "type": "int",
+          "nullable": false,
+          "default": "0",
+          "extra": "",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "CertificateSequence_year_skema_id_key",
+          "column": "year",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "CertificateSequence_year_skema_id_key",
+          "column": "skema_id",
+          "unique": true,
+          "position": 2,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 5,
+      "sha256": "d1adec92c56f9869413920c8341fcdde9200399e0ff37692be435740a38bfc4e"
+    },
+    {
+      "name": "elemenkompetensi",
+      "target": "rw_elemenkompetensi",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `elemenkompetensi` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `unit_kompetensi_id` int NOT NULL,\n  `urutan_elemen` int NOT NULL,\n  `nama_elemen` text COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`),\n  KEY `ElemenKompetensi_unit_kompetensi_id_idx` (`unit_kompetensi_id`),\n  CONSTRAINT `ElemenKompetensi_unit_kompetensi_id_fkey` FOREIGN KEY (`unit_kompetensi_id`) REFERENCES `unitkompetensi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=212 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "unit_kompetensi_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "urutan_elemen",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "nama_elemen",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        }
+      ],
+      "relations": [
+        {
+          "name": "ElemenKompetensi_unit_kompetensi_id_fkey",
+          "column": "unit_kompetensi_id",
+          "table": "unitkompetensi",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "ElemenKompetensi_unit_kompetensi_id_idx",
+          "column": "unit_kompetensi_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 209,
+      "sha256": "9be8fcc069183e99ad8574682cbaa01cb9a3bc040375cd68f4ca85a38dbb04bd"
+    },
+    {
+      "name": "kriteriaunjukkerja",
+      "target": "rw_kriteriaunjukkerja",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `kriteriaunjukkerja` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `elemen_kompetensi_id` int NOT NULL,\n  `urutan_kuk` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `pernyataan_kuk` text COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`),\n  KEY `KriteriaUnjukKerja_elemen_kompetensi_id_idx` (`elemen_kompetensi_id`),\n  CONSTRAINT `KriteriaUnjukKerja_elemen_kompetensi_id_fkey` FOREIGN KEY (`elemen_kompetensi_id`) REFERENCES `elemenkompetensi` (`id`) ON DELETE CASCADE ON UPDATE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=622 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "elemen_kompetensi_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "urutan_kuk",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "pernyataan_kuk",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        }
+      ],
+      "relations": [
+        {
+          "name": "KriteriaUnjukKerja_elemen_kompetensi_id_fkey",
+          "column": "elemen_kompetensi_id",
+          "table": "elemenkompetensi",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "KriteriaUnjukKerja_elemen_kompetensi_id_idx",
+          "column": "elemen_kompetensi_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 618,
+      "sha256": "97060ba6a890ad18ac383acf525a312b1e3c7740be7c0627f61581e60d522089"
+    },
+    {
+      "name": "legacyarchiveimport",
+      "target": "rw_legacyarchiveimport",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `legacyarchiveimport` (\n  `id` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `asesi_id` int NOT NULL,\n  `skema_id` int NOT NULL,\n  `reviewed_by` int NOT NULL,\n  `review_hash` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  PRIMARY KEY (`id`),\n  KEY `LegacyArchiveImport_asesi_id_idx` (`asesi_id`),\n  KEY `LegacyArchiveImport_skema_id_idx` (`skema_id`),\n  CONSTRAINT `LegacyArchiveImport_asesi_id_fkey` FOREIGN KEY (`asesi_id`) REFERENCES `asesiprofile` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE,\n  CONSTRAINT `LegacyArchiveImport_skema_id_fkey` FOREIGN KEY (`skema_id`) REFERENCES `skema` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "varchar(64)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "asesi_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "skema_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "reviewed_by",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "review_hash",
+          "type": "varchar(64)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        }
+      ],
+      "relations": [
+        {
+          "name": "LegacyArchiveImport_asesi_id_fkey",
+          "column": "asesi_id",
+          "table": "asesiprofile",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "RESTRICT"
+        },
+        {
+          "name": "LegacyArchiveImport_skema_id_fkey",
+          "column": "skema_id",
+          "table": "skema",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "RESTRICT"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "LegacyArchiveImport_asesi_id_idx",
+          "column": "asesi_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "LegacyArchiveImport_skema_id_idx",
+          "column": "skema_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "paketsoal",
+      "target": "rw_paketsoal",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `paketsoal` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `kode_paket` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `nama_paket` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `skema_id` int NOT NULL,\n  `durasi_menit` int NOT NULL DEFAULT '60',\n  `passing_grade` double NOT NULL DEFAULT '70',\n  `keterangan` text COLLATE utf8mb4_unicode_ci,\n  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'AKTIF',\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3) ON UPDATE CURRENT_TIMESTAMP(3),\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `kode_paket` (`kode_paket`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "kode_paket",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "nama_paket",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "skema_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "durasi_menit",
+          "type": "int",
+          "nullable": false,
+          "default": "60",
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "passing_grade",
+          "type": "double",
+          "nullable": false,
+          "default": "70",
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "keterangan",
+          "type": "text",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "status",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": "AKTIF",
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED on update CURRENT_TIMESTAMP(3)",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "kode_paket",
+          "column": "kode_paket",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "paketsoalitem",
+      "target": "rw_paketsoalitem",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `paketsoalitem` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `paket_soal_id` int NOT NULL,\n  `bank_soal_id` int NOT NULL,\n  `urutan` int NOT NULL DEFAULT '1',\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `PaketSoalItem_paket_soal_id_bank_soal_id_key` (`paket_soal_id`,`bank_soal_id`)\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "paket_soal_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "bank_soal_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "urutan",
+          "type": "int",
+          "nullable": false,
+          "default": "1",
+          "extra": "",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "PaketSoalItem_paket_soal_id_bank_soal_id_key",
+          "column": "paket_soal_id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PaketSoalItem_paket_soal_id_bank_soal_id_key",
+          "column": "bank_soal_id",
+          "unique": true,
+          "position": 2,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 0,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "parameterbnsp",
+      "target": "rw_parameterbnsp",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `parameterbnsp` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `kategori` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `kode` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `label` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `parent_kode` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL,\n  PRIMARY KEY (`id`),\n  KEY `ParameterBnsp_kategori_idx` (`kategori`)\n) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "kategori",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kode",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "label",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "parent_kode",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "ParameterBnsp_kategori_idx",
+          "column": "kategori",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 40,
+      "sha256": "ceb903fbe989f82bb6596f1c65cbcd04a629445abbc9432ddb92a298b9f8115e"
+    },
+    {
+      "name": "pendaftaran",
+      "target": "rw_pendaftaran",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `pendaftaran` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `nomor_registrasi` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `user_id` int NOT NULL,\n  `skema_id` int NOT NULL,\n  `tujuan_asesmen` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `sumber_anggaran` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `instansi_pemberi_anggaran` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `kementerian` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `nama_tuk` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `jenis_tuk` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `tanggal_uji` date DEFAULT NULL,\n  `no_blanko_sertifikat` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `no_sertifikat` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `tahun_sertifikat` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `tanggal_pleno` date DEFAULT NULL,\n  `kode_jadwal` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `no_reg_asesor` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `nama_asesor` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `keputusan_asesmen` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `status_pendaftaran` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'MENGISI_APL01',\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL,\n  `metode_asesmen` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  PRIMARY KEY (`id`),\n  KEY `Pendaftaran_skema_id_idx` (`skema_id`),\n  KEY `Pendaftaran_user_id_idx` (`user_id`),\n  CONSTRAINT `Pendaftaran_skema_id_fkey` FOREIGN KEY (`skema_id`) REFERENCES `skema` (`id`) ON DELETE RESTRICT ON UPDATE CASCADE,\n  CONSTRAINT `Pendaftaran_user_id_fkey` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "nomor_registrasi",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "user_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "skema_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "tujuan_asesmen",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "sumber_anggaran",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "instansi_pemberi_anggaran",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kementerian",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "nama_tuk",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "jenis_tuk",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "tanggal_uji",
+          "type": "date",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "no_blanko_sertifikat",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "no_sertifikat",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "tahun_sertifikat",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "tanggal_pleno",
+          "type": "date",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "kode_jadwal",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "no_reg_asesor",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "nama_asesor",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "keputusan_asesmen",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "status_pendaftaran",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": "MENGISI_APL01",
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "metode_asesmen",
+          "type": "varchar(255)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        }
+      ],
+      "relations": [
+        {
+          "name": "Pendaftaran_skema_id_fkey",
+          "column": "skema_id",
+          "table": "skema",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "RESTRICT"
+        },
+        {
+          "name": "Pendaftaran_user_id_fkey",
+          "column": "user_id",
+          "table": "user",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "Pendaftaran_skema_id_idx",
+          "column": "skema_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "Pendaftaran_user_id_idx",
+          "column": "user_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 44,
+      "sha256": "d92e564ae53030c56f4f993a470ff257d2ac78bbebfb7737672167506ea39f60"
+    },
+    {
+      "name": "registrationsequence",
+      "target": "rw_registrationsequence",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `registrationsequence` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `year` int NOT NULL,\n  `skema_id` int NOT NULL,\n  `last_seq` int NOT NULL DEFAULT '0',\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `RegistrationSequence_year_skema_id_key` (`year`,`skema_id`)\n) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "year",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "skema_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "last_seq",
+          "type": "int",
+          "nullable": false,
+          "default": "0",
+          "extra": "",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "RegistrationSequence_year_skema_id_key",
+          "column": "year",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "RegistrationSequence_year_skema_id_key",
+          "column": "skema_id",
+          "unique": true,
+          "position": 2,
+          "prefix": null
+        }
+      ],
+      "count": 5,
+      "sha256": "10c1113de8e50acd3debc9e8ed7985542bb6970996b11271246d6e69320cc731"
+    },
+    {
+      "name": "skema",
+      "target": "rw_skema",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `skema` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `kode_skema` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `nama_skema` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `jenjang` int NOT NULL,\n  `kode_sektor` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `kode_profesi` varchar(191) COLLATE utf8mb4_unicode_ci DEFAULT NULL,\n  `status` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Aktif',\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `Skema_kode_skema_key` (`kode_skema`)\n) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "kode_skema",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "nama_skema",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "jenjang",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "kode_sektor",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "kode_profesi",
+          "type": "varchar(191)",
+          "nullable": true,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "status",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": "Aktif",
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "Skema_kode_skema_key",
+          "column": "kode_skema",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 11,
+      "sha256": "02fe5cdc31a33e3993dcb4028ade5e25a7f61341a3c18c7daac6a7fff7d3d7f1"
+    },
+    {
+      "name": "unitkompetensi",
+      "target": "rw_unitkompetensi",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `unitkompetensi` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `skema_id` int NOT NULL,\n  `kode_unit` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `judul_unit` text COLLATE utf8mb4_unicode_ci NOT NULL,\n  PRIMARY KEY (`id`),\n  KEY `UnitKompetensi_skema_id_idx` (`skema_id`),\n  CONSTRAINT `UnitKompetensi_skema_id_fkey` FOREIGN KEY (`skema_id`) REFERENCES `skema` (`id`) ON DELETE CASCADE ON UPDATE CASCADE\n) ENGINE=InnoDB AUTO_INCREMENT=84 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "skema_id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        },
+        {
+          "name": "kode_unit",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "judul_unit",
+          "type": "text",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        }
+      ],
+      "relations": [
+        {
+          "name": "UnitKompetensi_skema_id_fkey",
+          "column": "skema_id",
+          "table": "skema",
+          "target_column": "id",
+          "on_update": "CASCADE",
+          "on_delete": "CASCADE"
+        }
+      ],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "UnitKompetensi_skema_id_idx",
+          "column": "skema_id",
+          "unique": false,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 79,
+      "sha256": "3296a1e61b3ce583c1d8098ea29fb17f76e833fbce99ed2c41296433336f787f"
+    },
+    {
+      "name": "user",
+      "target": "rw_user",
+      "engine": "InnoDB",
+      "ddl": "CREATE TABLE `user` (\n  `id` int NOT NULL AUTO_INCREMENT,\n  `name` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `email` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `password` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,\n  `role` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'asesi',\n  `createdAt` datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),\n  `updatedAt` datetime(3) NOT NULL,\n  PRIMARY KEY (`id`),\n  UNIQUE KEY `User_email_key` (`email`)\n) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci",
+      "columns": [
+        {
+          "name": "id",
+          "type": "int",
+          "nullable": false,
+          "default": null,
+          "extra": "auto_increment",
+          "collation": null
+        },
+        {
+          "name": "name",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "email",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "password",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "role",
+          "type": "varchar(191)",
+          "nullable": false,
+          "default": "asesi",
+          "extra": "",
+          "collation": "utf8mb4_unicode_ci"
+        },
+        {
+          "name": "createdAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": "CURRENT_TIMESTAMP(3)",
+          "extra": "DEFAULT_GENERATED",
+          "collation": null
+        },
+        {
+          "name": "updatedAt",
+          "type": "datetime(3)",
+          "nullable": false,
+          "default": null,
+          "extra": "",
+          "collation": null
+        }
+      ],
+      "relations": [],
+      "indexes": [
+        {
+          "name": "PRIMARY",
+          "column": "id",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        },
+        {
+          "name": "User_email_key",
+          "column": "email",
+          "unique": true,
+          "position": 1,
+          "prefix": null
+        }
+      ],
+      "count": 46,
+      "sha256": "7dc718155ab1e4f32654a1305c130bcbb0086243748010d52316a54b43430d15"
+    }
+  ],
+  "orphans": [
+    {
+      "table": "elemenkompetensi",
+      "constraint": "ElemenKompetensi_unit_kompetensi_id_fkey",
+      "columns": [
+        "unit_kompetensi_id"
+      ],
+      "target": "unitkompetensi",
+      "count": 6
+    },
+    {
+      "table": "kriteriaunjukkerja",
+      "constraint": "KriteriaUnjukKerja_elemen_kompetensi_id_fkey",
+      "columns": [
+        "elemen_kompetensi_id"
+      ],
+      "target": "elemenkompetensi",
+      "count": 3
+    }
+  ]
+}

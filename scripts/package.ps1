@@ -7,12 +7,17 @@ foreach ($fileName in @('LSPFI-Arsip.exe','Mulai-LSPFI.cmd','config.example.json
     Copy-Item -LiteralPath (Join-Path $projectDirectory $fileName) -Destination (Join-Path $distribution $fileName) -Force
 }
 Copy-Item -LiteralPath 'scripts/start.ps1' -Destination (Join-Path $distribution 'scripts/start.ps1') -Force
+if (Test-Path -LiteralPath 'docs/registerweb-database.md') {
+    New-Item -ItemType Directory -Path (Join-Path $distribution 'docs') -Force | Out-Null
+    Copy-Item -LiteralPath 'docs/registerweb-database.md','docs/registerweb-schema.json' -Destination (Join-Path $distribution 'docs') -Force
+}
 $goBinary = Join-Path $projectDirectory '.tools/go/bin/go.exe'
 if (-not (Test-Path -LiteralPath $goBinary)) { $goBinary = (Get-Command go -ErrorAction Stop).Source }
 $env:GOPATH = Join-Path $projectDirectory '.tools/gopath'
 $env:GOCACHE = Join-Path $projectDirectory '.tools/gocache'
-$moduleLines = & $goBinary list -m -f '{{.Path}}|{{.Version}}|{{.Dir}}' all
+$moduleLines = & $goBinary list -deps -f '{{if .Module}}{{.Module.Path}}|{{.Module.Version}}|{{.Module.Dir}}{{end}}' .
 if ($LASTEXITCODE -ne 0) { throw 'Daftar dependensi tidak tersedia.' }
+$moduleLines = $moduleLines | Where-Object { $_ } | Sort-Object -Unique
 $notices = @('# Third-party components', '', 'This application uses the Go runtime and the following unmodified open-source components. Licenses are included in this folder. Source code for each component is available at its module URL and exact version listed below.', '')
 foreach ($line in $moduleLines) {
     $parts = $line.Split('|')

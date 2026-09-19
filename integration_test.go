@@ -191,8 +191,34 @@ func TestMySQLArchiveLifecycle(t *testing.T) {
 		t.Fatal(e)
 	}
 	rr, e := restored.records("", "", "", "")
-	if e != nil || len(rr) != 1 || rr[0].Documents != 1 || rr[0].Fields["company"] != "PERUSAHAAN UJI" {
+	if e != nil || len(rr) != 0 {
 		t.Fatalf("restore mismatch: %+v %v", rr, e)
+	}
+	var users, masters, audit, documents int
+	for name, dest := range map[string]*int{"users": &users, "master": &masters, "audit": &audit, "documents": &documents} {
+		if e = restored.db.QueryRow("SELECT COUNT(*) FROM `" + name + "`").Scan(dest); e != nil {
+			t.Fatal(e)
+		}
+	}
+	if users == 0 || masters == 0 || audit != 0 || documents != 0 {
+		t.Fatal("reference backup content incorrect")
+	}
+	z, e := zip.OpenReader(path)
+	if e != nil {
+		t.Fatal(e)
+	}
+	if len(z.File) != 1 || z.File[0].Name != "manifest.json" {
+		t.Fatal("candidate files leaked into backup")
+	}
+	reader, e := z.File[0].Open()
+	if e != nil {
+		t.Fatal(e)
+	}
+	manifestBytes, e := io.ReadAll(reader)
+	reader.Close()
+	z.Close()
+	if e != nil || bytes.Contains(manifestBytes, []byte("PERUSAHAAN UJI")) {
+		t.Fatal("candidate identity leaked into backup")
 	}
 	if e = restored.restore(path); e == nil {
 		t.Fatal("restore overwrote existing database")

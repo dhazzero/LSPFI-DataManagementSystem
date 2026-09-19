@@ -23,12 +23,14 @@ type Master struct {
 	Parent   string `json:"parent"`
 }
 type Record struct {
-	ID        int64             `json:"id"`
-	Fields    map[string]string `json:"fields"`
-	Source    string            `json:"source"`
-	Version   int               `json:"version"`
-	Documents int               `json:"documents"`
-	Updated   string            `json:"updated"`
+	GenerateRegistration bool              `json:"generate_registration,omitempty"`
+	LegacyID             int64             `json:"legacy_id,omitempty"`
+	ID                   int64             `json:"id"`
+	Fields               map[string]string `json:"fields"`
+	Source               string            `json:"source"`
+	Version              int               `json:"version"`
+	Documents            int               `json:"documents"`
+	Updated              string            `json:"updated"`
 }
 type Field struct {
 	Key      string `json:"key"`
@@ -194,9 +196,16 @@ func schemeAliases(label string) []string {
 
 var nikPattern = regexp.MustCompile(`^\d{16}$`)
 
-func validate(input map[string]string, masters []Master) (map[string]string, []string) {
+func validate(input map[string]string, masters []Master, generate ...bool) (map[string]string, []string) {
 	out := map[string]string{}
 	issues := []string{}
+	if year := strings.TrimSpace(input["registration_year"]); year != "" {
+		out["registration_year"] = year
+		n, e := strconv.Atoi(year)
+		if e != nil || n < 1900 || n > 2100 {
+			issues = append(issues, "Tahun registrasi harus 1900–2100")
+		}
+	}
 	for _, f := range fields {
 		v := strings.TrimSpace(input[f.Key])
 		if v == "-" {
@@ -289,7 +298,7 @@ func validate(input map[string]string, masters []Master) (map[string]string, []s
 			}
 		}
 	}
-	if out["registration"] == "" && out["test_date"] == "" {
+	if out["registration"] == "" && out["test_date"] == "" && !(len(generate) > 0 && generate[0]) {
 		issues = append(issues, "Nomor registrasi atau tanggal uji wajib untuk membedakan riwayat asesmen")
 	}
 	return out, issues
@@ -311,6 +320,9 @@ func nullable(s string) any {
 }
 func saveRecord(tx *sql.Tx, r Record) (int64, error) {
 	f := r.Fields
+	if e := prepareRegistration(tx, &r); e != nil {
+		return 0, e
+	}
 	b, e := json.Marshal(f)
 	if e != nil {
 		return 0, e

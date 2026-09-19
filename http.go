@@ -144,6 +144,7 @@ func (a *App) routes() http.Handler {
 		jsonOut(w, 200, rows)
 	}))
 	mux.HandleFunc("POST /api/records", a.protected(true, a.save))
+	mux.HandleFunc("GET /api/registrations", a.protected(true, a.registrationSummary))
 	mux.HandleFunc("GET /api/records/{id}/documents", a.protected(false, a.listDocuments))
 	mux.HandleFunc("POST /api/records/{id}/documents", a.protected(true, a.uploadDocument))
 	mux.HandleFunc("GET /api/documents/{id}", a.protected(false, a.readDocument))
@@ -155,6 +156,10 @@ func (a *App) routes() http.Handler {
 	mux.HandleFunc("POST /api/password", a.protected(false, a.changePassword))
 	mux.HandleFunc("POST /api/users", a.protected(true, a.createUser))
 	mux.HandleFunc("GET /api/backup", a.protected(true, a.backup))
+	mux.HandleFunc("GET /api/registerweb", a.protected(true, a.legacyTables))
+	mux.HandleFunc("GET /api/registerweb/{table}", a.protected(true, a.legacyData))
+	mux.HandleFunc("GET /api/registerweb/{table}/export", a.protected(true, a.legacyExport))
+	mux.HandleFunc("GET /api/registerweb/pendaftaran/{id}/candidate", a.protected(true, a.legacyCandidateHandler))
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		host, _, e := net.SplitHostPort(r.Host)
 		if e != nil {
@@ -231,7 +236,7 @@ func (a *App) save(w http.ResponseWriter, r *http.Request, s Session) {
 		internal(w, e)
 		return
 	}
-	mapped, issues := validate(input.Fields, masters)
+	mapped, issues := validate(input.Fields, masters, input.GenerateRegistration)
 	if len(issues) > 0 {
 		jsonOut(w, 422, map[string]any{"error": "Periksa data yang diisi.", "issues": issues})
 		return
@@ -247,6 +252,26 @@ func (a *App) save(w http.ResponseWriter, r *http.Request, s Session) {
 		}
 	} else {
 		input.Source = "Input manual"
+		if input.LegacyID > 0 {
+			candidate, e := a.legacyCandidate(input.LegacyID)
+			if e == sql.ErrNoRows {
+				fail(w, 404, "Pendaftaran RegisterWeb tidak ditemukan.")
+				return
+			}
+			if e != nil {
+				internal(w, e)
+				return
+			}
+			if candidate.ID > 0 {
+				fail(w, 409, "Pendaftaran ini sudah menjadi arsip. Buka arsip yang sudah ada untuk mengubahnya.")
+				return
+			}
+			input.Source = candidate.Source
+			if input.GenerateRegistration && candidate.Fields["registration"] != "" {
+				fail(w, 422, "Pendaftaran RegisterWeb sudah memiliki nomor. Gunakan nomor sumber.")
+				return
+			}
+		}
 	}
 	tx, e := a.db.Begin()
 	if e != nil {
@@ -256,14 +281,16 @@ func (a *App) save(w http.ResponseWriter, r *http.Request, s Session) {
 	defer tx.Rollback()
 	id, e := saveRecord(tx, input)
 	if e != nil {
-		if strings.Contains(e.Error(), "muat ulang") {
+		if errors.Is(e, errRegistration) {
+			fail(w, 422, e.Error())
+		} else if strings.Contains(e.Error(), "muat ulang") {
 			fail(w, 409, e.Error())
 		} else {
 			internal(w, e)
 		}
 		return
 	}
-	if e = audit(tx, s.Username, "SAVE_ASSESSMENT", fmt.Sprintf("Asesmen #%d", id)); e != nil {
+	if e = audit(tx, s.Username, "SAVE_ASSESSMENT", fmt.Sprintf("Asesmen #%d · skema %s · registrasi %s · tahun %s · otomatis %t", id, input.Fields["scheme"], input.Fields["registration"], input.Fields["registration_year"], input.GenerateRegistration)); e != nil {
 		internal(w, e)
 		return
 	}

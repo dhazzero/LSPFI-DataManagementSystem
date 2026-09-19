@@ -2,7 +2,9 @@ package main
 
 import (
 	"archive/zip"
+	"context"
 	"crypto/sha256"
+	"database/sql"
 	"encoding/hex"
 	"encoding/json"
 	"errors"
@@ -22,28 +24,35 @@ var backupTables = []struct {
 }{
 	{"users", []string{"id", "username", "password_hash", "role", "created_at"}},
 	{"master", []string{"id", "category", "code", "label", "parent_code"}},
+	{"registration_sequences", []string{"id", "scheme", "year", "last_seq"}},
 	{"assessments", []string{"id", "identity_key", "nik", "name", "scheme", "registration", "certificate", "test_date", "result", "fields", "source", "version", "created_at", "updated_at"}},
 	{"documents", []string{"id", "assessment_id", "name", "category", "mime", "size", "sha256", "created_at"}},
 	{"audit", []string{"id", "username", "action", "detail", "created_at"}},
 }
 
 type Backup struct {
-	Format  string                 `json:"format"`
-	Created string                 `json:"created"`
-	Tables  map[string][][]*string `json:"tables"`
-	Files   map[string]string      `json:"files"`
+	Format      string                 `json:"format"`
+	Scope       string                 `json:"scope,omitempty"`
+	Created     string                 `json:"created"`
+	Tables      map[string][][]*string `json:"tables"`
+	Files       map[string]string      `json:"files"`
+	RegisterWeb *LegacySnapshot        `json:"registerweb,omitempty"`
 }
 
 var backupPath = regexp.MustCompile(`^(documents/[a-f0-9]{32}|imports/[a-f0-9]{32}\.(xlsx|csv))$`)
 
 func (a *App) writeBackup(path string) error {
-	snapshot := Backup{Format: "lspfi-dms-v1", Created: time.Now().UTC().Format(time.RFC3339), Tables: map[string][][]*string{}, Files: map[string]string{}}
+	snapshot := Backup{Format: "lspfi-dms-v2", Scope: referenceBackupScope, Created: time.Now().UTC().Format(time.RFC3339), Tables: map[string][][]*string{}, Files: map[string]string{}}
 	tx, e := a.db.Begin()
 	if e != nil {
 		return e
 	}
 	defer tx.Rollback()
 	for _, table := range backupTables {
+		if table.Name != "users" && table.Name != "master" && table.Name != "registration_sequences" {
+			snapshot.Tables[table.Name] = [][]*string{}
+			continue
+		}
 		columns := []string{}
 		for _, c := range table.Columns {
 			columns = append(columns, "CAST(`"+c+"` AS CHAR)")
@@ -72,6 +81,34 @@ func (a *App) writeBackup(path string) error {
 		}
 		snapshot.Tables[table.Name] = data
 	}
+	if e = preserveRegistrationFloors(tx, &snapshot); e != nil {
+		return e
+	}
+	var catalogBytes []byte
+	if e = tx.QueryRow("SELECT catalog FROM registerweb_snapshot WHERE id=1").Scan(&catalogBytes); e == nil {
+		var catalog LegacyCatalog
+		if e = json.Unmarshal(catalogBytes, &catalog); e != nil {
+			return e
+		}
+		legacy := LegacySnapshot{Catalog: catalog, Rows: map[string][][]*string{}}
+		for i := range legacy.Catalog.Tables {
+			t := &legacy.Catalog.Tables[i]
+			rows, e := readLegacyRows(context.Background(), tx, *t, t.Target)
+			if e != nil {
+				return e
+			}
+			t.Count = int64(len(rows))
+			t.Digest = legacyDigest(rows)
+			legacy.Rows[t.Name] = rows
+		}
+		legacy = referenceLegacySnapshot(legacy)
+		if e = validateLegacySnapshot(legacy); e != nil {
+			return e
+		}
+		snapshot.RegisterWeb = &legacy
+	} else if e != sql.ErrNoRows {
+		return e
+	}
 	if e = tx.Commit(); e != nil {
 		return e
 	}
@@ -82,56 +119,7 @@ func (a *App) writeBackup(path string) error {
 	defer file.Close()
 	zw := zip.NewWriter(file)
 	defer zw.Close()
-	// A missing referenced scan makes the backup fail rather than silently incomplete.
-	for _, row := range snapshot.Tables["documents"] {
-		if row[0] == nil || row[6] == nil {
-			return errors.New("metadata dokumen tidak valid")
-		}
-		pathName := "documents/" + *row[0]
-		if !backupPath.MatchString(pathName) {
-			return errors.New("ID dokumen tidak valid")
-		}
-		b, e := os.ReadFile(filepath.Join(a.cfg.Storage, filepath.FromSlash(pathName)))
-		if e != nil {
-			return e
-		}
-		sum := sha256.Sum256(b)
-		if hex.EncodeToString(sum[:]) != *row[6] {
-			return errors.New("checksum dokumen berbeda; backup dibatalkan")
-		}
-		snapshot.Files[pathName] = *row[6]
-	}
-	for _, folder := range []string{"documents", "imports"} {
-		entries, e := os.ReadDir(filepath.Join(a.cfg.Storage, folder))
-		if e != nil {
-			return e
-		}
-		for _, entry := range entries {
-			if entry.IsDir() {
-				continue
-			}
-			name := folder + "/" + entry.Name()
-			if !backupPath.MatchString(name) {
-				continue
-			}
-			in, e := os.Open(filepath.Join(a.cfg.Storage, folder, entry.Name()))
-			if e != nil {
-				return e
-			}
-			out, e := zw.Create(name)
-			if e != nil {
-				in.Close()
-				return e
-			}
-			hash := sha256.New()
-			_, e = io.Copy(io.MultiWriter(out, hash), in)
-			in.Close()
-			if e != nil {
-				return e
-			}
-			snapshot.Files[name] = hex.EncodeToString(hash.Sum(nil))
-		}
-	}
+	// Candidate scans and source spreadsheets are deliberately never added.
 	out, e := zw.Create("manifest.json")
 	if e != nil {
 		return e
@@ -159,15 +147,22 @@ func (a *App) backup(w http.ResponseWriter, r *http.Request, s Session) {
 		internal(w, e)
 		return
 	}
-	if _, e = a.db.Exec("INSERT INTO audit(username,action,detail) VALUES(?,'BACKUP','Cadangan ZIP diunduh')", s.Username); e != nil {
+	if _, e = a.db.Exec("INSERT INTO audit(username,action,detail) VALUES(?,'BACKUP','Cadangan tanpa data asesi diunduh')", s.Username); e != nil {
 		internal(w, e)
 		return
 	}
 	w.Header().Set("Content-Type", "application/zip")
-	w.Header().Set("Content-Disposition", fmt.Sprintf(`attachment; filename="LSPFI-Arsip-%s.zip"`, time.Now().Format("20060102-150405")))
+	w.Header().Set("Content-Disposition", fmt.Sprintf(`attachment; filename="LSPFI-Referensi-%s.zip"`, time.Now().Format("20060102-150405")))
 	http.ServeFile(w, r, path)
 }
 func (a *App) restore(path string) error {
+	var snapshots int
+	if e := a.db.QueryRow("SELECT COUNT(*) FROM registerweb_snapshot").Scan(&snapshots); e != nil {
+		return e
+	}
+	if snapshots > 0 {
+		return errors.New("salinan RegisterWeb sudah ada; pemulihan tidak menimpanya")
+	}
 	// Restore only to an empty schema: never replace an existing archive or users.
 	for _, table := range backupTables {
 		var count int
@@ -222,8 +217,13 @@ func (a *App) restore(path string) error {
 	if e != nil {
 		return e
 	}
-	if manifest.Format != "lspfi-dms-v1" {
+	if manifest.Format != "lspfi-dms-v1" && manifest.Format != "lspfi-dms-v2" {
 		return errors.New("versi backup tidak sesuai")
+	}
+	if manifest.Format == "lspfi-dms-v2" {
+		if e = validateReferenceBackup(manifest); e != nil {
+			return e
+		}
 	}
 	if len(entries) != len(manifest.Files)+1 {
 		return errors.New("isi backup tidak sesuai manifest")
@@ -270,11 +270,26 @@ func (a *App) restore(path string) error {
 			return errors.New("referensi dokumen tidak lengkap")
 		}
 	}
-	tx, e := a.db.Begin()
+	if manifest.RegisterWeb != nil {
+		if e = validateLegacySnapshot(*manifest.RegisterWeb); e != nil {
+			return e
+		}
+		if e = createLegacyTables(context.Background(), a.db, manifest.RegisterWeb.Catalog); e != nil {
+			return e
+		}
+	}
+	tx, cleanup, e := beginArchiveTx(context.Background(), a.db)
 	if e != nil {
 		return e
 	}
-	defer tx.Rollback()
+	defer cleanup()
+	// Backups made before automatic numbering have no local counter table.
+	if manifest.Tables == nil {
+		return errors.New("tabel backup tidak lengkap")
+	}
+	if _, ok := manifest.Tables["registration_sequences"]; !ok {
+		manifest.Tables["registration_sequences"] = [][]*string{}
+	}
 	if len(manifest.Tables) != len(backupTables) {
 		return errors.New("tabel backup tidak lengkap")
 	}
@@ -298,6 +313,11 @@ func (a *App) restore(path string) error {
 			if _, e = tx.Exec(query, args...); e != nil {
 				return e
 			}
+		}
+	}
+	if manifest.RegisterWeb != nil {
+		if e = insertLegacySnapshot(context.Background(), tx, *manifest.RegisterWeb); e != nil {
+			return e
 		}
 	}
 	moved := []string{}

@@ -283,7 +283,32 @@ func main() {
 	initDB := flag.Bool("init", false, "Buat database aplikasi")
 	source := flag.String("source-env", "", "Salin master dari DATABASE_URL proyek lama (read-only)")
 	restore := flag.String("restore", "", "Pulihkan backup ZIP ke database arsip kosong")
+	inspect := flag.Bool("inspect-registerweb", false, "Inventaris seluruh tabel MySQL sumber tanpa mengubahnya")
+	importLegacy := flag.Bool("import-registerweb", false, "Salin seluruh struktur dan data tabel RegisterWeb ke tabel rw_ lokal")
 	flag.Parse()
+	if *inspect {
+		c, _, e := sourceConfig(*source)
+		if e != nil {
+			log.Fatal(e)
+		}
+		_, sourceDB, _ := sourceConfig(*source)
+		db, e := connect(c, sourceDB)
+		if e != nil {
+			log.Fatal(e)
+		}
+		defer db.Close()
+		catalog, e := inspectLegacy(context.Background(), db)
+		if e != nil {
+			log.Fatal(e)
+		}
+		if e = writeLegacyDocs(catalog); e != nil {
+			log.Fatal(e)
+		}
+		for _, table := range catalog.Tables {
+			fmt.Printf("%s: %d baris, %d kolom, %d relasi\n", table.Name, table.Count, len(table.Columns), len(table.Relations))
+		}
+		return
+	}
 	if *initDB {
 		if e := initialize(*config, *source); e != nil {
 			log.Fatal(e)
@@ -308,6 +333,32 @@ func main() {
 		}
 	}
 	a := &App{db: db, cfg: c, sessions: map[string]Session{}, previews: map[string]Preview{}, attempts: map[string][]time.Time{}}
+	if *importLegacy {
+		sourceCfg, sourceDB, e := sourceConfig(*source)
+		if e != nil {
+			log.Fatal(e)
+		}
+		old, e := connect(sourceCfg, sourceDB)
+		if e != nil {
+			log.Fatal(e)
+		}
+		defer old.Close()
+		backupPath := filepath.Join(c.Storage, "before-registerweb-"+time.Now().Format("20060102-150405")+".zip")
+		if e = a.writeBackup(backupPath); e != nil {
+			log.Fatal(e)
+		}
+		catalog, e := a.importRegisterWeb(context.Background(), old)
+		if e != nil {
+			log.Fatal(e)
+		}
+		if e = writeLegacyDocs(catalog); e != nil {
+			log.Fatal(e)
+		}
+		for _, table := range catalog.Tables {
+			fmt.Printf("%s → %s: %d baris terverifikasi\n", table.Name, table.Target, table.Count)
+		}
+		return
+	}
 	if *restore != "" {
 		if e = a.restore(*restore); e != nil {
 			log.Fatal(e)

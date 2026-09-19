@@ -1,0 +1,5891 @@
+{
+  "parameter_bnsp": [
+    {
+      "id": 33,
+      "kategori": "KABUPATEN",
+      "kode": "3101",
+      "label": "Kepulauan Seribu",
+      "parent_kode": "31"
+    },
+    {
+      "id": 28,
+      "kategori": "KABUPATEN",
+      "kode": "3171",
+      "label": "Jakarta Selatan",
+      "parent_kode": "31"
+    },
+    {
+      "id": 29,
+      "kategori": "KABUPATEN",
+      "kode": "3172",
+      "label": "Jakarta Timur",
+      "parent_kode": "31"
+    },
+    {
+      "id": 30,
+      "kategori": "KABUPATEN",
+      "kode": "3173",
+      "label": "Jakarta Pusat",
+      "parent_kode": "31"
+    },
+    {
+      "id": 31,
+      "kategori": "KABUPATEN",
+      "kode": "3174",
+      "label": "Jakarta Barat",
+      "parent_kode": "31"
+    },
+    {
+      "id": 32,
+      "kategori": "KABUPATEN",
+      "kode": "3175",
+      "label": "Jakarta Utara",
+      "parent_kode": "31"
+    },
+    {
+      "id": 35,
+      "kategori": "KABUPATEN",
+      "kode": "3201",
+      "label": "Kabupaten Bogor",
+      "parent_kode": "32"
+    },
+    {
+      "id": 36,
+      "kategori": "KABUPATEN",
+      "kode": "3271",
+      "label": "Kota Bogor",
+      "parent_kode": "32"
+    },
+    {
+      "id": 34,
+      "kategori": "KABUPATEN",
+      "kode": "3273",
+      "label": "Kota Bandung",
+      "parent_kode": "32"
+    },
+    {
+      "id": 37,
+      "kategori": "KABUPATEN",
+      "kode": "3275",
+      "label": "Kota Bekasi",
+      "parent_kode": "32"
+    },
+    {
+      "id": 38,
+      "kategori": "KABUPATEN",
+      "kode": "3276",
+      "label": "Kota Depok",
+      "parent_kode": "32"
+    },
+    {
+      "id": 39,
+      "kategori": "KABUPATEN",
+      "kode": "3671",
+      "label": "Kota Tangerang",
+      "parent_kode": "36"
+    },
+    {
+      "id": 40,
+      "kategori": "KABUPATEN",
+      "kode": "3674",
+      "label": "Kota Tangerang Selatan",
+      "parent_kode": "36"
+    },
+    {
+      "id": 18,
+      "kategori": "KEMENTERIAN",
+      "kode": "01",
+      "label": "Kementerian Ketenagakerjaan",
+      "parent_kode": ""
+    },
+    {
+      "id": 19,
+      "kategori": "KEMENTERIAN",
+      "kode": "02",
+      "label": "Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi",
+      "parent_kode": ""
+    },
+    {
+      "id": 20,
+      "kategori": "KEMENTERIAN",
+      "kode": "03",
+      "label": "Kementerian Komunikasi dan Informatika",
+      "parent_kode": ""
+    },
+    {
+      "id": 21,
+      "kategori": "KEMENTERIAN",
+      "kode": "99",
+      "label": "Lainnya",
+      "parent_kode": ""
+    },
+    {
+      "id": 8,
+      "kategori": "PEKERJAAN",
+      "kode": "1",
+      "label": "Aparatur Sipil Negara",
+      "parent_kode": ""
+    },
+    {
+      "id": 9,
+      "kategori": "PEKERJAAN",
+      "kode": "2",
+      "label": "Tenaga Pendidik/Dosen",
+      "parent_kode": ""
+    },
+    {
+      "id": 10,
+      "kategori": "PEKERJAAN",
+      "kode": "3",
+      "label": "Pegawai Swasta",
+      "parent_kode": ""
+    },
+    {
+      "id": 11,
+      "kategori": "PEKERJAAN",
+      "kode": "4",
+      "label": "Wiraswasta",
+      "parent_kode": ""
+    },
+    {
+      "id": 12,
+      "kategori": "PEKERJAAN",
+      "kode": "5",
+      "label": "Mahasiswa/Pelajar",
+      "parent_kode": ""
+    },
+    {
+      "id": 13,
+      "kategori": "PEKERJAAN",
+      "kode": "6",
+      "label": "Lainnya",
+      "parent_kode": ""
+    },
+    {
+      "id": 1,
+      "kategori": "PENDIDIKAN",
+      "kode": "01",
+      "label": "SD",
+      "parent_kode": ""
+    },
+    {
+      "id": 2,
+      "kategori": "PENDIDIKAN",
+      "kode": "02",
+      "label": "SMP",
+      "parent_kode": ""
+    },
+    {
+      "id": 3,
+      "kategori": "PENDIDIKAN",
+      "kode": "04",
+      "label": "SMA/SMK",
+      "parent_kode": ""
+    },
+    {
+      "id": 4,
+      "kategori": "PENDIDIKAN",
+      "kode": "05",
+      "label": "D1/D2/D3",
+      "parent_kode": ""
+    },
+    {
+      "id": 5,
+      "kategori": "PENDIDIKAN",
+      "kode": "06",
+      "label": "S1/D4",
+      "parent_kode": ""
+    },
+    {
+      "id": 6,
+      "kategori": "PENDIDIKAN",
+      "kode": "08",
+      "label": "S2",
+      "parent_kode": ""
+    },
+    {
+      "id": 7,
+      "kategori": "PENDIDIKAN",
+      "kode": "09",
+      "label": "S3",
+      "parent_kode": ""
+    },
+    {
+      "id": 22,
+      "kategori": "PROVINSI",
+      "kode": "31",
+      "label": "DKI Jakarta",
+      "parent_kode": ""
+    },
+    {
+      "id": 23,
+      "kategori": "PROVINSI",
+      "kode": "32",
+      "label": "Jawa Barat",
+      "parent_kode": ""
+    },
+    {
+      "id": 24,
+      "kategori": "PROVINSI",
+      "kode": "33",
+      "label": "Jawa Tengah",
+      "parent_kode": ""
+    },
+    {
+      "id": 25,
+      "kategori": "PROVINSI",
+      "kode": "34",
+      "label": "DI Yogyakarta",
+      "parent_kode": ""
+    },
+    {
+      "id": 26,
+      "kategori": "PROVINSI",
+      "kode": "35",
+      "label": "Jawa Timur",
+      "parent_kode": ""
+    },
+    {
+      "id": 27,
+      "kategori": "PROVINSI",
+      "kode": "36",
+      "label": "Banten",
+      "parent_kode": ""
+    },
+    {
+      "id": 14,
+      "kategori": "SUMBER_ANGGARAN",
+      "kode": "1",
+      "label": "APBN",
+      "parent_kode": ""
+    },
+    {
+      "id": 15,
+      "kategori": "SUMBER_ANGGARAN",
+      "kode": "2",
+      "label": "APBD",
+      "parent_kode": ""
+    },
+    {
+      "id": 16,
+      "kategori": "SUMBER_ANGGARAN",
+      "kode": "3",
+      "label": "Mandiri / Pribadi",
+      "parent_kode": ""
+    },
+    {
+      "id": 17,
+      "kategori": "SUMBER_ANGGARAN",
+      "kode": "4",
+      "label": "Instansi / Perusahaan",
+      "parent_kode": ""
+    }
+  ],
+  "skema": [
+    {
+      "id": 24,
+      "kode_skema": "SS-LSPFI-01-24",
+      "nama_skema": "Jenjang Kualifikasi 3 Bidang Fintech P2P Lending Sub Bidang Penagihan",
+      "jenjang": 3,
+      "kode_sektor": "64911",
+      "kode_profesi": "4210",
+      "status": "Aktif"
+    },
+    {
+      "id": 25,
+      "kode_skema": "SS-LSPFI-02-24",
+      "nama_skema": "Jenjang Kualifikasi 3 Bidang Fintech P2P Lending Sub Bidang Layanan Pengguna",
+      "jenjang": 3,
+      "kode_sektor": "64911",
+      "kode_profesi": "4210",
+      "status": "Aktif"
+    },
+    {
+      "id": 26,
+      "kode_skema": "SS-LSPFI-03-24",
+      "nama_skema": "Jenjang Kualifikasi 3 Bidang Fintech P2P Lending Sub Bidang Analisis Kredit",
+      "jenjang": 3,
+      "kode_sektor": "64911",
+      "kode_profesi": "4210",
+      "status": "Aktif"
+    },
+    {
+      "id": 27,
+      "kode_skema": "SS-LSPFI-04-24",
+      "nama_skema": "Jenjang Kualifikasi 4 Bidang Fintech P2P Lending Sub Bidang Penagihan",
+      "jenjang": 4,
+      "kode_sektor": "64911",
+      "kode_profesi": "4210",
+      "status": "Aktif"
+    },
+    {
+      "id": 28,
+      "kode_skema": "SS-LSPFI-05-24",
+      "nama_skema": "Jenjang Kualifikasi 4 Bidang Fintech P2P Lending Sub Bidang Layanan Pengguna",
+      "jenjang": 4,
+      "kode_sektor": "64911",
+      "kode_profesi": "4210",
+      "status": "Aktif"
+    },
+    {
+      "id": 29,
+      "kode_skema": "SS-LSPFI-06-24",
+      "nama_skema": "Jenjang Kualifikasi 4 Bidang Fintech P2P Lending Sub Bidang Analis Kredit",
+      "jenjang": 4,
+      "kode_sektor": "64911",
+      "kode_profesi": "4210",
+      "status": "Aktif"
+    },
+    {
+      "id": 30,
+      "kode_skema": "SS-LSPFI-07-24",
+      "nama_skema": "Jenjang Kualifikasi 5 Bidang Fintech P2P Lending Sub Bidang Eksekutif NON - Teknologi Informasi",
+      "jenjang": 5,
+      "kode_sektor": "64911",
+      "kode_profesi": "2510",
+      "status": "Aktif"
+    },
+    {
+      "id": 31,
+      "kode_skema": "SS-LSPFI-08-24",
+      "nama_skema": "Jenjang Kualifikasi 5 Bidang Fintech P2P Lending Sub Bidang Eksekutif Teknologi Informasi",
+      "jenjang": 5,
+      "kode_sektor": "64911",
+      "kode_profesi": "2510",
+      "status": "Aktif"
+    },
+    {
+      "id": 32,
+      "kode_skema": "SS-LSPFI-09-24",
+      "nama_skema": "Jenjang Kualifikasi 6 Bidang Fintech P2P Lending Sub Bidang Pengelolaan NON - Teknologi Informasi",
+      "jenjang": 6,
+      "kode_sektor": "64911",
+      "kode_profesi": "2510",
+      "status": "Aktif"
+    },
+    {
+      "id": 33,
+      "kode_skema": "SS-LSPFI-10-24",
+      "nama_skema": "Jenjang Kualifikasi 6 Bidang Fintech P2P Lending Sub Bidang PengelolaanTeknologi Informasi",
+      "jenjang": 6,
+      "kode_sektor": "64911",
+      "kode_profesi": "2510",
+      "status": "Aktif"
+    },
+    {
+      "id": 34,
+      "kode_skema": "SS-LSPFI-11-24",
+      "nama_skema": "Jenjang Kualifikasi 6 Bidang Fintech P2P Lending Sub Bidang Pengawasan",
+      "jenjang": 6,
+      "kode_sektor": "64911",
+      "kode_profesi": "2420",
+      "status": "Aktif"
+    }
+  ],
+  "unit_kompetensi": [
+    {
+      "id": 4,
+      "skema_id": 24,
+      "kode_unit": "K.64PPL00.009.1",
+      "judul_unit": "Mengelola Tagihan Bermasalah"
+    },
+    {
+      "id": 5,
+      "skema_id": 24,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 6,
+      "skema_id": 24,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 7,
+      "skema_id": 25,
+      "kode_unit": "K.64PPL00.022.1",
+      "judul_unit": "Memberikan Tanggapan kepada Pengguna"
+    },
+    {
+      "id": 8,
+      "skema_id": 25,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 9,
+      "skema_id": 26,
+      "kode_unit": "K.64PPL00.005.1",
+      "judul_unit": "Melakukan Penilaian Permohonan Pendanaan Produktif"
+    },
+    {
+      "id": 10,
+      "skema_id": 26,
+      "kode_unit": "K.64PPL00.006.1",
+      "judul_unit": "Melakukan Penilaian Permohonan Pendanaan Multiguna"
+    },
+    {
+      "id": 11,
+      "skema_id": 26,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 12,
+      "skema_id": 26,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 13,
+      "skema_id": 27,
+      "kode_unit": "K.64PPL00.008.1",
+      "judul_unit": "Menyusun Strategi Penagihan"
+    },
+    {
+      "id": 14,
+      "skema_id": 27,
+      "kode_unit": "K.64PPL00.009.1",
+      "judul_unit": "Mengelola Tagihan Bermasalah"
+    },
+    {
+      "id": 15,
+      "skema_id": 27,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 16,
+      "skema_id": 27,
+      "kode_unit": "K.64PPL00.015.1",
+      "judul_unit": "Mengelola Pemulihan Bencana"
+    },
+    {
+      "id": 17,
+      "skema_id": 27,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 18,
+      "skema_id": 27,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 19,
+      "skema_id": 27,
+      "kode_unit": "K.64PPL00.022.1",
+      "judul_unit": "Memberikan Tanggapan kepada Pengguna"
+    },
+    {
+      "id": 20,
+      "skema_id": 28,
+      "kode_unit": "K.64PPL00.022.1",
+      "judul_unit": "Memberikan Tanggapan kepada Pengguna"
+    },
+    {
+      "id": 21,
+      "skema_id": 28,
+      "kode_unit": "K.64PPL00.023.1",
+      "judul_unit": "Mengelola Kualitas Pelayanan Pengguna"
+    },
+    {
+      "id": 22,
+      "skema_id": 28,
+      "kode_unit": "K.64PPL00.009.1",
+      "judul_unit": "Mengelola Tagihan Bermasalah"
+    },
+    {
+      "id": 23,
+      "skema_id": 28,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 24,
+      "skema_id": 28,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 25,
+      "skema_id": 28,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 26,
+      "skema_id": 29,
+      "kode_unit": "K.64PPL00.005.1",
+      "judul_unit": "Melakukan Penilaian Permohonan Pendanaan Produktif"
+    },
+    {
+      "id": 27,
+      "skema_id": 29,
+      "kode_unit": "K.64PPL00.006.1",
+      "judul_unit": "Melakukan Penilaian Permohonan Pendanaan Multiguna"
+    },
+    {
+      "id": 28,
+      "skema_id": 29,
+      "kode_unit": "K.64PPL00.007.1",
+      "judul_unit": "Memantau Kinerja Portofolio Pendanaan"
+    },
+    {
+      "id": 29,
+      "skema_id": 29,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 30,
+      "skema_id": 29,
+      "kode_unit": "K.64PPL00.015.1",
+      "judul_unit": "Mengelola Pemulihan Bencana"
+    },
+    {
+      "id": 31,
+      "skema_id": 29,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 32,
+      "skema_id": 29,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 33,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.001.1",
+      "judul_unit": "Menyusun Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 34,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.002.1",
+      "judul_unit": "Melaksanakan Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 35,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 36,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.019.1",
+      "judul_unit": "Merumuskan Kebijakan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 37,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 38,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.004.1",
+      "judul_unit": "Menyusun Kebijakan Umum Penyaluran Pendanaan"
+    },
+    {
+      "id": 39,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.005.1",
+      "judul_unit": "Melakukan Penilaian Permohonan Pendanaan Produktif"
+    },
+    {
+      "id": 40,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 41,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.015.1",
+      "judul_unit": "Mengelola Pemulihan Bencana"
+    },
+    {
+      "id": 42,
+      "skema_id": 30,
+      "kode_unit": "K.64PPL00.016.1",
+      "judul_unit": "Menyusun Kerangka dan Kebijakan Manajemen Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 44,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.001.1",
+      "judul_unit": "Menyusun Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 45,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.002.1",
+      "judul_unit": "Melaksanakan Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 46,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 47,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.010.1",
+      "judul_unit": "Menyusun Rancang Bangun Teknologi Informasi"
+    },
+    {
+      "id": 48,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 49,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.011.1",
+      "judul_unit": "Mengembangkan Teknologi Informasi"
+    },
+    {
+      "id": 50,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.012.1",
+      "judul_unit": "Menjaga Keandalan Sistem Informasi Sesuai Standar yang Telah Ditetapkan"
+    },
+    {
+      "id": 51,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 52,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.015.1",
+      "judul_unit": "Mengelola Pemulihan Bencana"
+    },
+    {
+      "id": 53,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.016.1",
+      "judul_unit": "Menyusun Kerangka dan Kebijakan Manajemen Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 54,
+      "skema_id": 31,
+      "kode_unit": "K.64PPL00.013.1",
+      "judul_unit": "Menerapkan Prinsip Keamanan Informasi"
+    },
+    {
+      "id": 55,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.001.1",
+      "judul_unit": "Menyusun Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 56,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.002.1",
+      "judul_unit": "Melaksanakan Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 57,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 58,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.019.1",
+      "judul_unit": "Merumuskan Kebijakan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 59,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 60,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.004.1",
+      "judul_unit": "Menyusun Kebijakan Umum Penyaluran Pendanaan"
+    },
+    {
+      "id": 61,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.016.1",
+      "judul_unit": "Menyusun Kerangka dan Kebijakan Manajemen Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 62,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.003.1",
+      "judul_unit": "Mengelola Kinerja Keuangan"
+    },
+    {
+      "id": 63,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.018.1",
+      "judul_unit": "Mengevaluasi Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 64,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.025.1",
+      "judul_unit": "Mengevaluasi Penerapan Manajemen Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 65,
+      "skema_id": 32,
+      "kode_unit": "K.64PPL00.021.1",
+      "judul_unit": "Mengevaluasi Penerapan Kebijakan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 66,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.001.1",
+      "judul_unit": "Menyusun Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 67,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.002.1",
+      "judul_unit": "Melaksanakan Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 68,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 69,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.019.1",
+      "judul_unit": "Merumuskan Kebijakan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi"
+    },
+    {
+      "id": 70,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 71,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.014.1",
+      "judul_unit": "Mengelola Penanganan Insiden"
+    },
+    {
+      "id": 72,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.016.1",
+      "judul_unit": "Menyusun Kerangka dan Kebijakan Manajemen Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 73,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.011.1",
+      "judul_unit": "Mengembangkan Teknologi Informasi"
+    },
+    {
+      "id": 74,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.010.1",
+      "judul_unit": "Menyusun Rancang Bangun Teknologi Informasi"
+    },
+    {
+      "id": 75,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.013.1",
+      "judul_unit": "Menerapkan Prinsip Keamanan Informasi"
+    },
+    {
+      "id": 76,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.003.1",
+      "judul_unit": "Mengevaluasi Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 77,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.018.1",
+      "judul_unit": "Mengevaluasi Penerapan Manajemen Risiko Layanan Pendanaan Bersama Berbasis TeknologiInformasi (LPBBTI)"
+    },
+    {
+      "id": 78,
+      "skema_id": 33,
+      "kode_unit": "K.64PPL00.021.1",
+      "judul_unit": "Mengevaluasi Penerapan Kebijakan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 79,
+      "skema_id": 34,
+      "kode_unit": "K.64PPL00.017.1",
+      "judul_unit": "Mengelola Risiko Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 80,
+      "skema_id": 34,
+      "kode_unit": "K.64PPL00.020.1",
+      "judul_unit": "Mengelola Penerapan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 81,
+      "skema_id": 34,
+      "kode_unit": "K.64PPL00.003.1",
+      "judul_unit": "Mengevaluasi Rencana Bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 82,
+      "skema_id": 34,
+      "kode_unit": "K.64PPL00.018.1",
+      "judul_unit": "Mengevaluasi Penerapan Manajemen Risiko Layanan Pendanaan Bersama Berbasis TeknologiInformasi (LPBBTI)"
+    },
+    {
+      "id": 83,
+      "skema_id": 34,
+      "kode_unit": "K.64PPL00.021.1",
+      "judul_unit": "Mengevaluasi Penerapan Kebijakan Tata Kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    }
+  ],
+  "elemen_kompetensi": [
+    {
+      "id": 3,
+      "unit_kompetensi_id": 2,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 4,
+      "unit_kompetensi_id": 2,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan\r\npenanganan insiden"
+    },
+    {
+      "id": 5,
+      "unit_kompetensi_id": 3,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 6,
+      "unit_kompetensi_id": 3,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 7,
+      "unit_kompetensi_id": 3,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 8,
+      "unit_kompetensi_id": 3,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 9,
+      "unit_kompetensi_id": 4,
+      "urutan_elemen": 1,
+      "nama_elemen": "Melakukan komunikasi dengan penerima dana"
+    },
+    {
+      "id": 10,
+      "unit_kompetensi_id": 4,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan kegiatan penagihan"
+    },
+    {
+      "id": 11,
+      "unit_kompetensi_id": 5,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 12,
+      "unit_kompetensi_id": 5,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan\r\npenanganan insiden"
+    },
+    {
+      "id": 13,
+      "unit_kompetensi_id": 6,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 14,
+      "unit_kompetensi_id": 6,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 15,
+      "unit_kompetensi_id": 6,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 16,
+      "unit_kompetensi_id": 6,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 17,
+      "unit_kompetensi_id": 7,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi\r\npermintaan informasi\r\nterkait pertanyaan,\r\nkeluhan atau\r\npengaduan"
+    },
+    {
+      "id": 18,
+      "unit_kompetensi_id": 7,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyampaikan tanggapan kepada pengguna"
+    },
+    {
+      "id": 19,
+      "unit_kompetensi_id": 8,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 20,
+      "unit_kompetensi_id": 8,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan\r\npenanganan insiden"
+    },
+    {
+      "id": 21,
+      "unit_kompetensi_id": 9,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyiapkan kegiatan penilaian permohonan pendanaan produktif"
+    },
+    {
+      "id": 22,
+      "unit_kompetensi_id": 9,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengolah data dan informasi sebagai bahan analisis kelayakan pendanaan produktif"
+    },
+    {
+      "id": 23,
+      "unit_kompetensi_id": 9,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan analisis kelayakan pendanaan produktif"
+    },
+    {
+      "id": 24,
+      "unit_kompetensi_id": 10,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyiapkan kegiatan penilaian permohonan pendanaan multiguna"
+    },
+    {
+      "id": 25,
+      "unit_kompetensi_id": 10,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengolah data dan informasi sebagai bahan analisis kelayakan pendanaan multiguna"
+    },
+    {
+      "id": 26,
+      "unit_kompetensi_id": 10,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan analisis kelayakan pendanaan"
+    },
+    {
+      "id": 27,
+      "unit_kompetensi_id": 11,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 28,
+      "unit_kompetensi_id": 11,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan penanganan insiden"
+    },
+    {
+      "id": 29,
+      "unit_kompetensi_id": 12,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 30,
+      "unit_kompetensi_id": 12,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 31,
+      "unit_kompetensi_id": 12,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 32,
+      "unit_kompetensi_id": 12,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 33,
+      "unit_kompetensi_id": 13,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi faktor-faktor penagihan"
+    },
+    {
+      "id": 34,
+      "unit_kompetensi_id": 13,
+      "urutan_elemen": 2,
+      "nama_elemen": "Merumuskan strategi penagihan"
+    },
+    {
+      "id": 35,
+      "unit_kompetensi_id": 14,
+      "urutan_elemen": 1,
+      "nama_elemen": "Melakukan komunikasi dengan penerima dana"
+    },
+    {
+      "id": 36,
+      "unit_kompetensi_id": 14,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan kegiatan penagihan"
+    },
+    {
+      "id": 37,
+      "unit_kompetensi_id": 15,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 38,
+      "unit_kompetensi_id": 15,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan\r\npenanganan insiden"
+    },
+    {
+      "id": 39,
+      "unit_kompetensi_id": 16,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis bencana yang terjadi"
+    },
+    {
+      "id": 40,
+      "unit_kompetensi_id": 16,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan pemulihan bencana"
+    },
+    {
+      "id": 41,
+      "unit_kompetensi_id": 16,
+      "urutan_elemen": 3,
+      "nama_elemen": "Mengevaluasi pelaksanaan pemulihan bencana"
+    },
+    {
+      "id": 42,
+      "unit_kompetensi_id": 17,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 43,
+      "unit_kompetensi_id": 17,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 44,
+      "unit_kompetensi_id": 17,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 45,
+      "unit_kompetensi_id": 17,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 46,
+      "unit_kompetensi_id": 18,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 47,
+      "unit_kompetensi_id": 18,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 48,
+      "unit_kompetensi_id": 19,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi\r\npermintaan informasi\r\nterkait pertanyaan,\r\nkeluhan atau\r\npengaduan"
+    },
+    {
+      "id": 49,
+      "unit_kompetensi_id": 19,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyampaikan tanggapan kepada pengguna"
+    },
+    {
+      "id": 50,
+      "unit_kompetensi_id": 20,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi permintaan informasi terkait pertanyaan keluhan atau pengaduan"
+    },
+    {
+      "id": 51,
+      "unit_kompetensi_id": 20,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyampaikan tanggapan kepada pengguna"
+    },
+    {
+      "id": 52,
+      "unit_kompetensi_id": 21,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun rencana kerja pelayanan pengguna"
+    },
+    {
+      "id": 53,
+      "unit_kompetensi_id": 21,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan pelayanan pengguna"
+    },
+    {
+      "id": 54,
+      "unit_kompetensi_id": 21,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan evaluasi pelayanan pengguna"
+    },
+    {
+      "id": 55,
+      "unit_kompetensi_id": 22,
+      "urutan_elemen": 1,
+      "nama_elemen": "Melakukan komunikasi dengan penerima dana"
+    },
+    {
+      "id": 56,
+      "unit_kompetensi_id": 22,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan kegiatan penagihan"
+    },
+    {
+      "id": 57,
+      "unit_kompetensi_id": 23,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 58,
+      "unit_kompetensi_id": 23,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan penanganan insiden"
+    },
+    {
+      "id": 59,
+      "unit_kompetensi_id": 24,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 60,
+      "unit_kompetensi_id": 24,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 61,
+      "unit_kompetensi_id": 24,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 62,
+      "unit_kompetensi_id": 24,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 63,
+      "unit_kompetensi_id": 25,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 64,
+      "unit_kompetensi_id": 25,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 65,
+      "unit_kompetensi_id": 26,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyiapkan kegiatan penilaian permohonan pendanaan produktif"
+    },
+    {
+      "id": 66,
+      "unit_kompetensi_id": 26,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengolah data dan informasi sebagai bahan analisis kelayakan pendanaan produktif"
+    },
+    {
+      "id": 67,
+      "unit_kompetensi_id": 26,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan analisis kelayakan pendanaan produktif"
+    },
+    {
+      "id": 68,
+      "unit_kompetensi_id": 27,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyiapkan kegiatan penilaian permohonan pendanaan multiguna"
+    },
+    {
+      "id": 69,
+      "unit_kompetensi_id": 27,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengolah data dan informasi sebagai bahan analisis pendanaan multiguna"
+    },
+    {
+      "id": 70,
+      "unit_kompetensi_id": 27,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan analisis kelayakan pendanaan multiguna"
+    },
+    {
+      "id": 71,
+      "unit_kompetensi_id": 28,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengelompokkan portofolio pendanaan"
+    },
+    {
+      "id": 72,
+      "unit_kompetensi_id": 28,
+      "urutan_elemen": 2,
+      "nama_elemen": "Memonitor kinerja portofolio pendanaan"
+    },
+    {
+      "id": 73,
+      "unit_kompetensi_id": 29,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 74,
+      "unit_kompetensi_id": 29,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan penanganan insiden"
+    },
+    {
+      "id": 75,
+      "unit_kompetensi_id": 30,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis bencana yang terjadi"
+    },
+    {
+      "id": 76,
+      "unit_kompetensi_id": 30,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan pemulihan bencana"
+    },
+    {
+      "id": 77,
+      "unit_kompetensi_id": 30,
+      "urutan_elemen": 3,
+      "nama_elemen": "Mengevaluasi pelaksanaan pemulihan bencana"
+    },
+    {
+      "id": 78,
+      "unit_kompetensi_id": 31,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 79,
+      "unit_kompetensi_id": 31,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 80,
+      "unit_kompetensi_id": 31,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 81,
+      "unit_kompetensi_id": 31,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 82,
+      "unit_kompetensi_id": 32,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 83,
+      "unit_kompetensi_id": 32,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 84,
+      "unit_kompetensi_id": 33,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menjabarkan program kerja ke dalam rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 85,
+      "unit_kompetensi_id": 33,
+      "urutan_elemen": 2,
+      "nama_elemen": "Membuat rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 86,
+      "unit_kompetensi_id": 33,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menerapkan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 87,
+      "unit_kompetensi_id": 34,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mensosialisasikan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 88,
+      "unit_kompetensi_id": 34,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengimplementasikan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 89,
+      "unit_kompetensi_id": 35,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 90,
+      "unit_kompetensi_id": 35,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 91,
+      "unit_kompetensi_id": 35,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 92,
+      "unit_kompetensi_id": 35,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 93,
+      "unit_kompetensi_id": 36,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis kebutuhan kebijakan tata kelola"
+    },
+    {
+      "id": 94,
+      "unit_kompetensi_id": 36,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun pedoman tata kelola"
+    },
+    {
+      "id": 95,
+      "unit_kompetensi_id": 37,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 96,
+      "unit_kompetensi_id": 37,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 97,
+      "unit_kompetensi_id": 38,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi faktor-faktor kebijakan umum penyaluran pendanaan"
+    },
+    {
+      "id": 98,
+      "unit_kompetensi_id": 38,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun kebijakan umum penyaluran pendanaan"
+    },
+    {
+      "id": 99,
+      "unit_kompetensi_id": 39,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyiapkan kegiatan penilaian permohonan pendanaan produktif"
+    },
+    {
+      "id": 100,
+      "unit_kompetensi_id": 39,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengolah data dan informasi sebagai bahan analisis kelayakan pendanaan produktif"
+    },
+    {
+      "id": 101,
+      "unit_kompetensi_id": 39,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan analisis kelayakan pendanaan produktif"
+    },
+    {
+      "id": 102,
+      "unit_kompetensi_id": 40,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 103,
+      "unit_kompetensi_id": 40,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan penanganan insiden"
+    },
+    {
+      "id": 104,
+      "unit_kompetensi_id": 41,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis bencana yang terjadi"
+    },
+    {
+      "id": 105,
+      "unit_kompetensi_id": 41,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan pemulihan bencana"
+    },
+    {
+      "id": 106,
+      "unit_kompetensi_id": 41,
+      "urutan_elemen": 3,
+      "nama_elemen": "Mengevaluasi pelaksanaan pemulihan bencana"
+    },
+    {
+      "id": 107,
+      "unit_kompetensi_id": 42,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun kebijakan dan strategi manajemen risiko"
+    },
+    {
+      "id": 108,
+      "unit_kompetensi_id": 42,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyiapkan infrastruktur manajemen risiko"
+    },
+    {
+      "id": 109,
+      "unit_kompetensi_id": 44,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menjabarkan program kerja ke dalam rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 110,
+      "unit_kompetensi_id": 44,
+      "urutan_elemen": 2,
+      "nama_elemen": "Membuat rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 111,
+      "unit_kompetensi_id": 44,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menetapkan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 112,
+      "unit_kompetensi_id": 45,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mensosialisasikan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 113,
+      "unit_kompetensi_id": 45,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengimplementasikan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 114,
+      "unit_kompetensi_id": 46,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 115,
+      "unit_kompetensi_id": 46,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 116,
+      "unit_kompetensi_id": 46,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 117,
+      "unit_kompetensi_id": 46,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 118,
+      "unit_kompetensi_id": 47,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi rancang bangun teknologi informasi"
+    },
+    {
+      "id": 119,
+      "unit_kompetensi_id": 47,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menentukan rancang bangun teknologi informasi"
+    },
+    {
+      "id": 120,
+      "unit_kompetensi_id": 48,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 121,
+      "unit_kompetensi_id": 48,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 122,
+      "unit_kompetensi_id": 49,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun rencana kerja pengembangan sistem"
+    },
+    {
+      "id": 123,
+      "unit_kompetensi_id": 49,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengimplementasikan rencana kerja pengembangan sistem"
+    },
+    {
+      "id": 124,
+      "unit_kompetensi_id": 50,
+      "urutan_elemen": 1,
+      "nama_elemen": "Memantau keandalan informasi kinerja sistem"
+    },
+    {
+      "id": 125,
+      "unit_kompetensi_id": 50,
+      "urutan_elemen": 2,
+      "nama_elemen": "Memantau keandalan informasi pengujian sistem"
+    },
+    {
+      "id": 126,
+      "unit_kompetensi_id": 51,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 127,
+      "unit_kompetensi_id": 51,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan penanganan insiden"
+    },
+    {
+      "id": 128,
+      "unit_kompetensi_id": 52,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis bencana yang terjadi"
+    },
+    {
+      "id": 129,
+      "unit_kompetensi_id": 52,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan pemulihan bencana"
+    },
+    {
+      "id": 130,
+      "unit_kompetensi_id": 52,
+      "urutan_elemen": 3,
+      "nama_elemen": "Mengevaluasi pelaksanaan pemulihan bencana"
+    },
+    {
+      "id": 131,
+      "unit_kompetensi_id": 53,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun kebijakan dan strategi manajemen risiko"
+    },
+    {
+      "id": 132,
+      "unit_kompetensi_id": 53,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyiapkan infrastruktur manajemen risiko"
+    },
+    {
+      "id": 133,
+      "unit_kompetensi_id": 54,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun pedoman penerapan keamanan informasi"
+    },
+    {
+      "id": 134,
+      "unit_kompetensi_id": 54,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan pedoman keamanan informasi"
+    },
+    {
+      "id": 135,
+      "unit_kompetensi_id": 54,
+      "urutan_elemen": 3,
+      "nama_elemen": "Mengevaluasi pedoman keamanan informasi"
+    },
+    {
+      "id": 136,
+      "unit_kompetensi_id": 55,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menjabarkan program kerja ke dalam rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 137,
+      "unit_kompetensi_id": 55,
+      "urutan_elemen": 2,
+      "nama_elemen": "Membuat rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 138,
+      "unit_kompetensi_id": 55,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menetapkan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 139,
+      "unit_kompetensi_id": 56,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mensosialisasikan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 140,
+      "unit_kompetensi_id": 56,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengimplementasikan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 141,
+      "unit_kompetensi_id": 57,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 142,
+      "unit_kompetensi_id": 57,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 143,
+      "unit_kompetensi_id": 57,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 144,
+      "unit_kompetensi_id": 57,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 145,
+      "unit_kompetensi_id": 58,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis kebutuhan kebijakan tata kelola"
+    },
+    {
+      "id": 146,
+      "unit_kompetensi_id": 58,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun pedoman tata kelola"
+    },
+    {
+      "id": 147,
+      "unit_kompetensi_id": 59,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 148,
+      "unit_kompetensi_id": 59,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 149,
+      "unit_kompetensi_id": 60,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi faktor-faktor kebijakan umum penyaluran pendanaan"
+    },
+    {
+      "id": 150,
+      "unit_kompetensi_id": 60,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun kebijakan umum penyaluran pendanaan"
+    },
+    {
+      "id": 151,
+      "unit_kompetensi_id": 61,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun kebijakan dan strategi manajemen risiko"
+    },
+    {
+      "id": 152,
+      "unit_kompetensi_id": 61,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyiapkan infrastruktur manajemen risiko"
+    },
+    {
+      "id": 153,
+      "unit_kompetensi_id": 62,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mereviu hasil analisis laporan keuangan"
+    },
+    {
+      "id": 154,
+      "unit_kompetensi_id": 62,
+      "urutan_elemen": 2,
+      "nama_elemen": "Memberikan rekomendasi kebijakan keuangan"
+    },
+    {
+      "id": 155,
+      "unit_kompetensi_id": 63,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi faktor-faktor keberhasilan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 156,
+      "unit_kompetensi_id": 63,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur keberhasilan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 157,
+      "unit_kompetensi_id": 63,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menyusun rencana tindak lanjut"
+    },
+    {
+      "id": 158,
+      "unit_kompetensi_id": 63,
+      "urutan_elemen": 4,
+      "nama_elemen": "Menyampaikan hasil evaluasi"
+    },
+    {
+      "id": 159,
+      "unit_kompetensi_id": 64,
+      "urutan_elemen": 1,
+      "nama_elemen": "Melaksanakan evaluasi penerapan manajemen risiko"
+    },
+    {
+      "id": 160,
+      "unit_kompetensi_id": 64,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun rekomendasi atas hasil evaluasi penerapan manajemen risiko"
+    },
+    {
+      "id": 161,
+      "unit_kompetensi_id": 65,
+      "urutan_elemen": 1,
+      "nama_elemen": "Memantau penerapan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 162,
+      "unit_kompetensi_id": 65,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengevaluasi penerapan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 163,
+      "unit_kompetensi_id": 65,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menindaklanjuti evaluasi penerapan kebijakan tata kelola"
+    },
+    {
+      "id": 164,
+      "unit_kompetensi_id": 66,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menjabarkan program kerja ke dalam rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 165,
+      "unit_kompetensi_id": 66,
+      "urutan_elemen": 2,
+      "nama_elemen": "Membuat rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 166,
+      "unit_kompetensi_id": 66,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menetapkan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 167,
+      "unit_kompetensi_id": 67,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mensosialisasikan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 168,
+      "unit_kompetensi_id": 67,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengimplementasi rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 169,
+      "unit_kompetensi_id": 68,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 170,
+      "unit_kompetensi_id": 68,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 171,
+      "unit_kompetensi_id": 68,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 172,
+      "unit_kompetensi_id": 68,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 173,
+      "unit_kompetensi_id": 69,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis kebutuhan kebijakan tata kelola"
+    },
+    {
+      "id": 174,
+      "unit_kompetensi_id": 69,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun pedoman tata kelola"
+    },
+    {
+      "id": 175,
+      "unit_kompetensi_id": 70,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 176,
+      "unit_kompetensi_id": 70,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 177,
+      "unit_kompetensi_id": 71,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menganalisis insiden yang terjadi"
+    },
+    {
+      "id": 178,
+      "unit_kompetensi_id": 71,
+      "urutan_elemen": 2,
+      "nama_elemen": "Melakukan penanganan insiden"
+    },
+    {
+      "id": 179,
+      "unit_kompetensi_id": 72,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun kebijakan dan strategi manajemen risiko"
+    },
+    {
+      "id": 180,
+      "unit_kompetensi_id": 72,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyiapkan infrastruktur manajemen risiko"
+    },
+    {
+      "id": 181,
+      "unit_kompetensi_id": 73,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun rencana kerja pengembangan sistem"
+    },
+    {
+      "id": 182,
+      "unit_kompetensi_id": 73,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengimplementasikan rencana kerja pengembangan sistem"
+    },
+    {
+      "id": 183,
+      "unit_kompetensi_id": 74,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi rancang bangun teknologi informasi"
+    },
+    {
+      "id": 184,
+      "unit_kompetensi_id": 74,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menentukan rancang bangun teknologi informasi"
+    },
+    {
+      "id": 185,
+      "unit_kompetensi_id": 75,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyusun pedoman penerapan keamanan informasi"
+    },
+    {
+      "id": 186,
+      "unit_kompetensi_id": 75,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan pedoman keamanan informasi"
+    },
+    {
+      "id": 187,
+      "unit_kompetensi_id": 75,
+      "urutan_elemen": 3,
+      "nama_elemen": "Mengevaluasi pedoman keamanan informasi"
+    },
+    {
+      "id": 188,
+      "unit_kompetensi_id": 76,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi faktor-faktor keberhasilan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 189,
+      "unit_kompetensi_id": 76,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur keberhasilan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 190,
+      "unit_kompetensi_id": 76,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menyusun rencana tindak lanjut"
+    },
+    {
+      "id": 191,
+      "unit_kompetensi_id": 76,
+      "urutan_elemen": 4,
+      "nama_elemen": "Menyampaikan hasil evaluasi"
+    },
+    {
+      "id": 192,
+      "unit_kompetensi_id": 77,
+      "urutan_elemen": 1,
+      "nama_elemen": "Melaksanakan evaluasi penerapan manajemen risiko"
+    },
+    {
+      "id": 193,
+      "unit_kompetensi_id": 77,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun rekomendasi atas hasil evaluasi penerapan manajemen risiko"
+    },
+    {
+      "id": 194,
+      "unit_kompetensi_id": 78,
+      "urutan_elemen": 1,
+      "nama_elemen": "Memantau penerapan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 195,
+      "unit_kompetensi_id": 78,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengevaluasi penerapan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 196,
+      "unit_kompetensi_id": 78,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menindaklanjuti evaluasi penerapan kebijakan tata kelola"
+    },
+    {
+      "id": 197,
+      "unit_kompetensi_id": 79,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi risiko"
+    },
+    {
+      "id": 198,
+      "unit_kompetensi_id": 79,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur risiko"
+    },
+    {
+      "id": 199,
+      "unit_kompetensi_id": 79,
+      "urutan_elemen": 3,
+      "nama_elemen": "Melakukan pemantauan risiko"
+    },
+    {
+      "id": 200,
+      "unit_kompetensi_id": 79,
+      "urutan_elemen": 4,
+      "nama_elemen": "Mengendalikan risiko"
+    },
+    {
+      "id": 201,
+      "unit_kompetensi_id": 80,
+      "urutan_elemen": 1,
+      "nama_elemen": "Menyosialisasikan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 202,
+      "unit_kompetensi_id": 80,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menerapkan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 203,
+      "unit_kompetensi_id": 81,
+      "urutan_elemen": 1,
+      "nama_elemen": "Mengidentifikasi faktor-faktor keberhasilan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 204,
+      "unit_kompetensi_id": 81,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengukur keberhasilan rencana bisnis Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 205,
+      "unit_kompetensi_id": 81,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menyusun rencana tindak lanjut"
+    },
+    {
+      "id": 206,
+      "unit_kompetensi_id": 81,
+      "urutan_elemen": 4,
+      "nama_elemen": "Menyampaikan hasil evaluasi"
+    },
+    {
+      "id": 207,
+      "unit_kompetensi_id": 82,
+      "urutan_elemen": 1,
+      "nama_elemen": "Melaksanakan evaluasi penerapan manajemen risiko"
+    },
+    {
+      "id": 208,
+      "unit_kompetensi_id": 82,
+      "urutan_elemen": 2,
+      "nama_elemen": "Menyusun rekomendasi atas hasil evaluasi penerapan manajemen risiko"
+    },
+    {
+      "id": 209,
+      "unit_kompetensi_id": 83,
+      "urutan_elemen": 1,
+      "nama_elemen": "Memantau penerapan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 210,
+      "unit_kompetensi_id": 83,
+      "urutan_elemen": 2,
+      "nama_elemen": "Mengevaluasi penerapan kebijakan tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)"
+    },
+    {
+      "id": 211,
+      "unit_kompetensi_id": 83,
+      "urutan_elemen": 3,
+      "nama_elemen": "Menindaklanjuti evaluasi penerapan kebijakan tata kelola"
+    }
+  ],
+  "kriteria_unjuk_kerja": [
+    {
+      "id": 4,
+      "elemen_kompetensi_id": 2,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kemungkinan dampak tindakan hukum dan implikasi lainnya jika pembayaran terutang tidak diselesaikan dikomunikasikan kepada penerima dana."
+    },
+    {
+      "id": 5,
+      "elemen_kompetensi_id": 2,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tunggakan penerima dana ditagih sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 6,
+      "elemen_kompetensi_id": 2,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Hasil penagihan dan hasil negosiasi didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 7,
+      "elemen_kompetensi_id": 3,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 8,
+      "elemen_kompetensi_id": 3,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 9,
+      "elemen_kompetensi_id": 3,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 10,
+      "elemen_kompetensi_id": 4,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 11,
+      "elemen_kompetensi_id": 4,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 12,
+      "elemen_kompetensi_id": 4,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat prosedur yang berlaku."
+    },
+    {
+      "id": 13,
+      "elemen_kompetensi_id": 5,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 14,
+      "elemen_kompetensi_id": 5,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 15,
+      "elemen_kompetensi_id": 6,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 16,
+      "elemen_kompetensi_id": 6,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 17,
+      "elemen_kompetensi_id": 6,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 18,
+      "elemen_kompetensi_id": 7,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 19,
+      "elemen_kompetensi_id": 7,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 20,
+      "elemen_kompetensi_id": 7,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 21,
+      "elemen_kompetensi_id": 8,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 22,
+      "elemen_kompetensi_id": 8,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 23,
+      "elemen_kompetensi_id": 8,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 24,
+      "elemen_kompetensi_id": 8,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 25,
+      "elemen_kompetensi_id": 9,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan dan prosedur penagihan yang berlaku diidentifikasi."
+    },
+    {
+      "id": 26,
+      "elemen_kompetensi_id": 9,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data piutang diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 27,
+      "elemen_kompetensi_id": 9,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Informasi tagihan disampaikan kepada penerima dana sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 28,
+      "elemen_kompetensi_id": 10,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kemungkinan dampak tindakan hukum dan implikasi lainnya jika pembayaran terutang tidak diselesaikan dikomunikasikan kepada penerima dana."
+    },
+    {
+      "id": 29,
+      "elemen_kompetensi_id": 10,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tunggakan penerima dana ditagih sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 30,
+      "elemen_kompetensi_id": 10,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Hasil penagihan dan hasil negosiasi didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 31,
+      "elemen_kompetensi_id": 11,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 32,
+      "elemen_kompetensi_id": 11,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 33,
+      "elemen_kompetensi_id": 11,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 34,
+      "elemen_kompetensi_id": 12,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 35,
+      "elemen_kompetensi_id": 12,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 36,
+      "elemen_kompetensi_id": 12,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat prosedur yang berlaku."
+    },
+    {
+      "id": 37,
+      "elemen_kompetensi_id": 13,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 38,
+      "elemen_kompetensi_id": 13,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 39,
+      "elemen_kompetensi_id": 14,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 40,
+      "elemen_kompetensi_id": 14,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 41,
+      "elemen_kompetensi_id": 14,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 42,
+      "elemen_kompetensi_id": 15,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 43,
+      "elemen_kompetensi_id": 15,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 44,
+      "elemen_kompetensi_id": 15,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 45,
+      "elemen_kompetensi_id": 16,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 46,
+      "elemen_kompetensi_id": 16,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 47,
+      "elemen_kompetensi_id": 16,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 48,
+      "elemen_kompetensi_id": 16,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 49,
+      "elemen_kompetensi_id": 17,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Permintaan informasi terkait pertanyaan, keluhan atau pengaduan dari pengguna dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 50,
+      "elemen_kompetensi_id": 17,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Informasi terkait pertanyaan, pengaduan, dan keluhan dari pengguna diklasifikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 51,
+      "elemen_kompetensi_id": 18,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kewenangan atas tindak lanjut hasil klasifikasi informasi ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 52,
+      "elemen_kompetensi_id": 18,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Pertanyaan dan keluhan atau pengaduan, dari pengguna yang memerlukan tindak lanjut dikomunikasikan kepada unit kerja terkait yang berwenang"
+    },
+    {
+      "id": 53,
+      "elemen_kompetensi_id": 18,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Konsep tanggapan dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 54,
+      "elemen_kompetensi_id": 18,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Tanggapan dikomunikasikan kepada pengguna sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 55,
+      "elemen_kompetensi_id": 18,
+      "urutan_kuk": "2.5",
+      "pernyataan_kuk": "Penyelesaian permintaan informasi dari pengguna dilaporkan kepada otoritas yang berwenang."
+    },
+    {
+      "id": 56,
+      "elemen_kompetensi_id": 19,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 57,
+      "elemen_kompetensi_id": 19,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 58,
+      "elemen_kompetensi_id": 19,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 59,
+      "elemen_kompetensi_id": 20,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 60,
+      "elemen_kompetensi_id": 20,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 61,
+      "elemen_kompetensi_id": 20,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat prosedur yang berlaku."
+    },
+    {
+      "id": 62,
+      "elemen_kompetensi_id": 21,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode dan perangkat (tools) untuk menilai permohonan pendanaan produktif disiapkan sesuai prosedur."
+    },
+    {
+      "id": 63,
+      "elemen_kompetensi_id": 21,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kriteria dan persyaratan pendanaan produktif diidentifikasi sesuai ketentuan."
+    },
+    {
+      "id": 64,
+      "elemen_kompetensi_id": 21,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Data dan dokumen dalam analisis kelayakan pendanaan produktif dikumpulkan."
+    },
+    {
+      "id": 65,
+      "elemen_kompetensi_id": 22,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Data dan informasi bahan analisis pendanaan produktif diklasifikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 66,
+      "elemen_kompetensi_id": 22,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi divalidasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 67,
+      "elemen_kompetensi_id": 23,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Data dan informasi kelayakan dianalisis secara kuantitatif dan kualitatif sesuai metode analisis kelayakan pendanaan produktif."
+    },
+    {
+      "id": 68,
+      "elemen_kompetensi_id": 23,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Hasil analisis kelayakan pendanaan produktif didokumentasikan."
+    },
+    {
+      "id": 69,
+      "elemen_kompetensi_id": 24,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode dan perangkat (tools) untuk menilai permohonan pendanaan multiguna disiapkan."
+    },
+    {
+      "id": 70,
+      "elemen_kompetensi_id": 24,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kriteria dan persyaratan pendanaan multiguna diidentifikasi."
+    },
+    {
+      "id": 71,
+      "elemen_kompetensi_id": 24,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Data dan dokumen dalam analisis kelayakan pendanaan multiguna dikumpulkan."
+    },
+    {
+      "id": 72,
+      "elemen_kompetensi_id": 25,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Data dan informasi bahan analisis pendanaan multiguna diklasifikasikan sesuai prosedur."
+    },
+    {
+      "id": 73,
+      "elemen_kompetensi_id": 25,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi divalidasi sesuai prosedur."
+    },
+    {
+      "id": 74,
+      "elemen_kompetensi_id": 26,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Data dan informasi penerima dana dianalisis."
+    },
+    {
+      "id": 75,
+      "elemen_kompetensi_id": 26,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Hasil analisis kelayakan pendanaan multiguna didokumentasikan."
+    },
+    {
+      "id": 76,
+      "elemen_kompetensi_id": 27,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi."
+    },
+    {
+      "id": 77,
+      "elemen_kompetensi_id": 27,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan insiden diidentifikasi."
+    },
+    {
+      "id": 78,
+      "elemen_kompetensi_id": 27,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan."
+    },
+    {
+      "id": 79,
+      "elemen_kompetensi_id": 28,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan."
+    },
+    {
+      "id": 80,
+      "elemen_kompetensi_id": 28,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan."
+    },
+    {
+      "id": 81,
+      "elemen_kompetensi_id": 28,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat."
+    },
+    {
+      "id": 82,
+      "elemen_kompetensi_id": 29,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dikumpulkan."
+    },
+    {
+      "id": 83,
+      "elemen_kompetensi_id": 29,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan."
+    },
+    {
+      "id": 84,
+      "elemen_kompetensi_id": 30,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan."
+    },
+    {
+      "id": 85,
+      "elemen_kompetensi_id": 30,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 86,
+      "elemen_kompetensi_id": 30,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai kriteria."
+    },
+    {
+      "id": 87,
+      "elemen_kompetensi_id": 31,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan."
+    },
+    {
+      "id": 88,
+      "elemen_kompetensi_id": 31,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan."
+    },
+    {
+      "id": 89,
+      "elemen_kompetensi_id": 31,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan."
+    },
+    {
+      "id": 90,
+      "elemen_kompetensi_id": 32,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko disusun."
+    },
+    {
+      "id": 91,
+      "elemen_kompetensi_id": 32,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilaksanakan."
+    },
+    {
+      "id": 92,
+      "elemen_kompetensi_id": 32,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi."
+    },
+    {
+      "id": 93,
+      "elemen_kompetensi_id": 32,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko ditindaklanjuti/dilaporkan."
+    },
+    {
+      "id": 94,
+      "elemen_kompetensi_id": 33,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Proyeksi tagihan dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 95,
+      "elemen_kompetensi_id": 33,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Potensi tagihan bermasalah diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 96,
+      "elemen_kompetensi_id": 34,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Hasil penagihan dievaluasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 97,
+      "elemen_kompetensi_id": 34,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tindak lanjut hasil evaluasi ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 98,
+      "elemen_kompetensi_id": 34,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Strategi penagihan ditetapkan sesuai hasil evaluasi."
+    },
+    {
+      "id": 99,
+      "elemen_kompetensi_id": 35,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan dan prosedur penagihan yang berlaku diidentifikasi."
+    },
+    {
+      "id": 100,
+      "elemen_kompetensi_id": 35,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data piutang diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 101,
+      "elemen_kompetensi_id": 35,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Informasi tagihan disampaikan kepada penerima dana sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 102,
+      "elemen_kompetensi_id": 36,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kemungkinan dampak tindakan hukum dan implikasi lainnya jika pembayaran terutang tidak diselesaikan dikomunikasikan kepada penerima dana."
+    },
+    {
+      "id": 103,
+      "elemen_kompetensi_id": 36,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tunggakan penerima dana ditagih sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 104,
+      "elemen_kompetensi_id": 36,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Hasil penagihan dan hasil negosiasi didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 105,
+      "elemen_kompetensi_id": 37,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 106,
+      "elemen_kompetensi_id": 37,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 107,
+      "elemen_kompetensi_id": 37,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 108,
+      "elemen_kompetensi_id": 38,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 109,
+      "elemen_kompetensi_id": 38,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 110,
+      "elemen_kompetensi_id": 38,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat prosedur yang berlaku."
+    },
+    {
+      "id": 111,
+      "elemen_kompetensi_id": 39,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Bencana yang terjadi diidentifikasi prosedur yang berlaku."
+    },
+    {
+      "id": 112,
+      "elemen_kompetensi_id": 39,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 113,
+      "elemen_kompetensi_id": 39,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat dampak bencana ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 114,
+      "elemen_kompetensi_id": 40,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana pemulihan bencana disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 115,
+      "elemen_kompetensi_id": 40,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 116,
+      "elemen_kompetensi_id": 40,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Proses pemulihan bencana dimonitor sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 117,
+      "elemen_kompetensi_id": 40,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Laporan pemulihan bencana dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 118,
+      "elemen_kompetensi_id": 41,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Laporan pemulihan bencana dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 119,
+      "elemen_kompetensi_id": 41,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Evaluasi pelaksanaan pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 120,
+      "elemen_kompetensi_id": 41,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rekomendasi perbaikan dirumuskan berdasarkan hasil evaluasi."
+    },
+    {
+      "id": 121,
+      "elemen_kompetensi_id": 41,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rekomendasi perbaikan dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 122,
+      "elemen_kompetensi_id": 42,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 123,
+      "elemen_kompetensi_id": 42,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 124,
+      "elemen_kompetensi_id": 43,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 125,
+      "elemen_kompetensi_id": 43,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 126,
+      "elemen_kompetensi_id": 43,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 127,
+      "elemen_kompetensi_id": 44,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 128,
+      "elemen_kompetensi_id": 44,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 129,
+      "elemen_kompetensi_id": 44,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 130,
+      "elemen_kompetensi_id": 45,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 131,
+      "elemen_kompetensi_id": 45,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 132,
+      "elemen_kompetensi_id": 45,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 133,
+      "elemen_kompetensi_id": 45,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 134,
+      "elemen_kompetensi_id": 46,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 135,
+      "elemen_kompetensi_id": 46,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 136,
+      "elemen_kompetensi_id": 46,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 137,
+      "elemen_kompetensi_id": 47,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 138,
+      "elemen_kompetensi_id": 47,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 139,
+      "elemen_kompetensi_id": 48,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Permintaan informasi terkait pertanyaan, keluhan atau pengaduan dari pengguna dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 140,
+      "elemen_kompetensi_id": 48,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Informasi terkait pertanyaan, pengaduan, dan keluhan dari pengguna diklasifikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 141,
+      "elemen_kompetensi_id": 49,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kewenangan atas tindak lanjut hasil klasifikasi informasi ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 142,
+      "elemen_kompetensi_id": 49,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Pertanyaan dan keluhan atau pengaduan, dari pengguna yang memerlukan tindak lanjut dikomunikasikan kepada unit kerja terkait yang berwenang"
+    },
+    {
+      "id": 143,
+      "elemen_kompetensi_id": 49,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Konsep tanggapan dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 144,
+      "elemen_kompetensi_id": 49,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Tanggapan dikomunikasikan kepada pengguna sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 145,
+      "elemen_kompetensi_id": 49,
+      "urutan_kuk": "2.5",
+      "pernyataan_kuk": "Penyelesaian permintaan informasi dari pengguna dilaporkan kepada otoritas yang berwenang."
+    },
+    {
+      "id": 146,
+      "elemen_kompetensi_id": 50,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Permintaan informasi terkait pertanyaan keluhan atau pengaduan dari pengguna dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 147,
+      "elemen_kompetensi_id": 50,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Informasi terkait pertanyaan pengaduan dan keluhan dari pengguna diklasifikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 148,
+      "elemen_kompetensi_id": 51,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kewenangan atas tindak lanjut hasil klasifikasi informasi ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 149,
+      "elemen_kompetensi_id": 51,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Pertanyaan dan keluhan atau pengaduan, dari pengguna yang memerlukan tindak lanjut dikomunikasikan kepada unit kerja terkait yang berwenang"
+    },
+    {
+      "id": 150,
+      "elemen_kompetensi_id": 51,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Konsep tanggapan dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 151,
+      "elemen_kompetensi_id": 51,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Tanggapan dikomunikasikan kepada pengguna sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 152,
+      "elemen_kompetensi_id": 51,
+      "urutan_kuk": "2.5",
+      "pernyataan_kuk": "Penyelesaian permintaan informasi dari pengguna dilaporkan kepada otoritas yang berwenang."
+    },
+    {
+      "id": 153,
+      "elemen_kompetensi_id": 52,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Strategi pelayanan pengguna diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 154,
+      "elemen_kompetensi_id": 52,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kebutuhan layanan pengguna diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 155,
+      "elemen_kompetensi_id": 52,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Rencana kerja pelayanan pengguna dirumuskan sesuai kebutuhan dan strategi."
+    },
+    {
+      "id": 156,
+      "elemen_kompetensi_id": 53,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Strategi dan rencana kerja pelayanan pengguna disosialisasikan kepada tim."
+    },
+    {
+      "id": 157,
+      "elemen_kompetensi_id": 53,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Rencana kerja pelayanan pengguna dilaksanakan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 158,
+      "elemen_kompetensi_id": 53,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Pelaksanaan pelayanan pengguna dimonitor sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 159,
+      "elemen_kompetensi_id": 54,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Data dan informasi penerapan pelayanan pengguna dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 160,
+      "elemen_kompetensi_id": 54,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Data dan informasi pelayanan pengguna dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 161,
+      "elemen_kompetensi_id": 54,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rekomendasi perbaikan pelayanan pengguna dirumuskan sesuai hasil analisis."
+    },
+    {
+      "id": 162,
+      "elemen_kompetensi_id": 55,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan dan prosedur penagihan yang berlaku diidentifikasi."
+    },
+    {
+      "id": 163,
+      "elemen_kompetensi_id": 55,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data piutang diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 164,
+      "elemen_kompetensi_id": 55,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Informasi tagihan disampaikan kepada penerima dana sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 165,
+      "elemen_kompetensi_id": 56,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kemungkinan dampak tindakan hukum dan implikasi lainnya jika pembayaran terutang tidak diselesaikan dikomunikasikan kepada penerima dana."
+    },
+    {
+      "id": 166,
+      "elemen_kompetensi_id": 56,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tunggakan penerima dana ditagih sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 167,
+      "elemen_kompetensi_id": 56,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Hasil penagihan dan hasil negosiasi didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 168,
+      "elemen_kompetensi_id": 57,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 169,
+      "elemen_kompetensi_id": 57,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 170,
+      "elemen_kompetensi_id": 57,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 171,
+      "elemen_kompetensi_id": 58,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 172,
+      "elemen_kompetensi_id": 58,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 173,
+      "elemen_kompetensi_id": 58,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 174,
+      "elemen_kompetensi_id": 59,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 175,
+      "elemen_kompetensi_id": 59,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 176,
+      "elemen_kompetensi_id": 60,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 177,
+      "elemen_kompetensi_id": 60,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 178,
+      "elemen_kompetensi_id": 60,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 179,
+      "elemen_kompetensi_id": 61,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 180,
+      "elemen_kompetensi_id": 61,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 181,
+      "elemen_kompetensi_id": 61,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 182,
+      "elemen_kompetensi_id": 62,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 183,
+      "elemen_kompetensi_id": 62,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 184,
+      "elemen_kompetensi_id": 62,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 185,
+      "elemen_kompetensi_id": 62,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 186,
+      "elemen_kompetensi_id": 63,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 187,
+      "elemen_kompetensi_id": 63,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 188,
+      "elemen_kompetensi_id": 63,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 189,
+      "elemen_kompetensi_id": 64,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 190,
+      "elemen_kompetensi_id": 64,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 191,
+      "elemen_kompetensi_id": 65,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode dan perangkat (tools) untuk menilai kelayakan pendanaan produktif diidentifikasi sesuai dengan kebijakan Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)."
+    },
+    {
+      "id": 192,
+      "elemen_kompetensi_id": 65,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kriteria dan persyaratan pendanaan produktif diidentifikasi sesuai dengan kebijakan LPBBTI."
+    },
+    {
+      "id": 193,
+      "elemen_kompetensi_id": 65,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Data dan dokumen dalam analisis kelayakan pendanaan produktif dikumpulkan berdasarkan sumber-sumber yang dapat dipertanggungjawabkan."
+    },
+    {
+      "id": 194,
+      "elemen_kompetensi_id": 66,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Data dan informasi bahan analisis pendanaan produktif diklasifikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 195,
+      "elemen_kompetensi_id": 66,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi divalidasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 196,
+      "elemen_kompetensi_id": 67,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Data dan informasi kelayakan dianalisis secara kuantitatif dan kualitatif sesuai metode analisis kelayakan pendanaan produktif"
+    },
+    {
+      "id": 197,
+      "elemen_kompetensi_id": 67,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Hasil analisis kelayakan pendanaan produktif disimpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 198,
+      "elemen_kompetensi_id": 68,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode dan perangkat (tools) untuk menilai kelayakan pendanaan multiguna diidentifikasi sesuai dengan kebijakan Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)."
+    },
+    {
+      "id": 199,
+      "elemen_kompetensi_id": 68,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kriteria dan persyaratan pendanaan multiguna diidentifikasi sesuai dengan kebijakan LPBBTI."
+    },
+    {
+      "id": 200,
+      "elemen_kompetensi_id": 68,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Data dan dokumen dalam analisis kelayakan pendanaan multiguna dikumpulkan berdasarkan sumber-sumber yang dapat dipertanggungjawabkan."
+    },
+    {
+      "id": 201,
+      "elemen_kompetensi_id": 69,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Data dan informasi bahan analisis pendanaan multiguna diklasifikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 202,
+      "elemen_kompetensi_id": 69,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi divalidasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 203,
+      "elemen_kompetensi_id": 70,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Data dan informasi penerima dana dianalisis secara kuantitatif dan kualitatif sesuai metode analisis kelayakan pendanaan multiguna."
+    },
+    {
+      "id": 204,
+      "elemen_kompetensi_id": 70,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Hasil analisis kelayakan pendanaan multiguna disimpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 205,
+      "elemen_kompetensi_id": 71,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Karakteristik atau jenis pengelompokan portofolio pendanaan diidentifikasi."
+    },
+    {
+      "id": 206,
+      "elemen_kompetensi_id": 71,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Portofolio pendanaan disusun untuk memudahkan pemantauan kinerja."
+    },
+    {
+      "id": 207,
+      "elemen_kompetensi_id": 72,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Data kinerja portofolio pendanaan berdasarkan kelompok dianalisis untuk memastikan pergerakannya."
+    },
+    {
+      "id": 208,
+      "elemen_kompetensi_id": 72,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Pergerakan data kinerja portofolio yang memiliki signifikan baik secara negatif maupun positif dicatat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 209,
+      "elemen_kompetensi_id": 72,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan hasil pemantauan disusun menggunakan format dan prosedur yang berlaku."
+    },
+    {
+      "id": 210,
+      "elemen_kompetensi_id": 72,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Laporan hasil pemantauan dikomunikasikan kepada pihak terkait."
+    },
+    {
+      "id": 211,
+      "elemen_kompetensi_id": 73,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 212,
+      "elemen_kompetensi_id": 73,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 213,
+      "elemen_kompetensi_id": 73,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 214,
+      "elemen_kompetensi_id": 74,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 215,
+      "elemen_kompetensi_id": 74,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 216,
+      "elemen_kompetensi_id": 74,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 217,
+      "elemen_kompetensi_id": 75,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Bencana yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 218,
+      "elemen_kompetensi_id": 75,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 219,
+      "elemen_kompetensi_id": 75,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat dampak bencana ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 220,
+      "elemen_kompetensi_id": 76,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana pemulihan bencana disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 221,
+      "elemen_kompetensi_id": 76,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 222,
+      "elemen_kompetensi_id": 76,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Proses pemulihan bencana dimonitor sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 223,
+      "elemen_kompetensi_id": 76,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Laporan pemulihan bencana dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 224,
+      "elemen_kompetensi_id": 77,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Laporan pemulihan bencana dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 225,
+      "elemen_kompetensi_id": 77,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Evaluasi pelaksanaan pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 226,
+      "elemen_kompetensi_id": 77,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rekomendasi perbaikan dirumuskan berdasarkan hasil evaluasi."
+    },
+    {
+      "id": 227,
+      "elemen_kompetensi_id": 77,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rekomendasi perbaikan dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 228,
+      "elemen_kompetensi_id": 78,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 229,
+      "elemen_kompetensi_id": 78,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 230,
+      "elemen_kompetensi_id": 79,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 231,
+      "elemen_kompetensi_id": 79,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 232,
+      "elemen_kompetensi_id": 79,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 233,
+      "elemen_kompetensi_id": 80,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 234,
+      "elemen_kompetensi_id": 80,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 235,
+      "elemen_kompetensi_id": 80,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 236,
+      "elemen_kompetensi_id": 81,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 237,
+      "elemen_kompetensi_id": 81,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 238,
+      "elemen_kompetensi_id": 81,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 239,
+      "elemen_kompetensi_id": 81,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 240,
+      "elemen_kompetensi_id": 82,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 241,
+      "elemen_kompetensi_id": 82,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 242,
+      "elemen_kompetensi_id": 82,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 243,
+      "elemen_kompetensi_id": 83,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 244,
+      "elemen_kompetensi_id": 83,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 245,
+      "elemen_kompetensi_id": 84,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Faktor-faktor yang berpengaruh terhadap perencanaan bisnis LPBBTI diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 246,
+      "elemen_kompetensi_id": 84,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Sasaran bisnis dan ukuran keberhasilan LPBBTI ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 247,
+      "elemen_kompetensi_id": 84,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Pendistribusian konsep rencana bisnis LPBBTI ke masing-masing unit kerja ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 248,
+      "elemen_kompetensi_id": 84,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Kajian dan analisis konsep rencana bisnis LPBBTI disusun sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 249,
+      "elemen_kompetensi_id": 85,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Strategi yang akan dilakukan dalam mendukung perencanaan bisnis ditetapkan berdasarkan hasil kajian dan analisis."
+    },
+    {
+      "id": 250,
+      "elemen_kompetensi_id": 85,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Program kerja ditetapkan sesuai strategi yang disusun berdasarkan kajian dan analisis."
+    },
+    {
+      "id": 251,
+      "elemen_kompetensi_id": 85,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Action plan disusun sesuai kebutuhan pencapaian masing-masing program kerja."
+    },
+    {
+      "id": 252,
+      "elemen_kompetensi_id": 85,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disusun sesuai dengan strategi, program kerja dan action plan."
+    },
+    {
+      "id": 253,
+      "elemen_kompetensi_id": 86,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI yang telah disusun, dipresentasikan kepada pihak internal."
+    },
+    {
+      "id": 254,
+      "elemen_kompetensi_id": 86,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disesuaikan berdasarkan umpan balik dari pihak internal."
+    },
+    {
+      "id": 255,
+      "elemen_kompetensi_id": 86,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI diajukan sesuai ketentuan."
+    },
+    {
+      "id": 256,
+      "elemen_kompetensi_id": 86,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didistribusikan sesuai ketentuan."
+    },
+    {
+      "id": 257,
+      "elemen_kompetensi_id": 86,
+      "urutan_kuk": "3.5",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didokumentasikan sesuai ketentuan."
+    },
+    {
+      "id": 258,
+      "elemen_kompetensi_id": 87,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Dokumen rencana bisnis LPBBTI disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 259,
+      "elemen_kompetensi_id": 87,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Objek sosialisasi rencana bisnis diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 260,
+      "elemen_kompetensi_id": 87,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disosialisasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 261,
+      "elemen_kompetensi_id": 88,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Target rencana kerja didistribusikan kepada seluruh unit kerja."
+    },
+    {
+      "id": 262,
+      "elemen_kompetensi_id": 88,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Realisasi target rencana kerja dipantau secara berkala."
+    },
+    {
+      "id": 263,
+      "elemen_kompetensi_id": 88,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Permasalahan yang terjadi dianalisis untuk menentukan alternatif solusinya."
+    },
+    {
+      "id": 264,
+      "elemen_kompetensi_id": 88,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Hasil analisis realisasi rencana kerja dikomunikasikan sesuai kebijakan dan waktu yang telah ditetapkan LPBBTI."
+    },
+    {
+      "id": 265,
+      "elemen_kompetensi_id": 89,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 266,
+      "elemen_kompetensi_id": 89,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 267,
+      "elemen_kompetensi_id": 90,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 268,
+      "elemen_kompetensi_id": 90,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 269,
+      "elemen_kompetensi_id": 90,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 270,
+      "elemen_kompetensi_id": 91,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 271,
+      "elemen_kompetensi_id": 91,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 272,
+      "elemen_kompetensi_id": 91,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 273,
+      "elemen_kompetensi_id": 92,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 274,
+      "elemen_kompetensi_id": 92,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 275,
+      "elemen_kompetensi_id": 92,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 276,
+      "elemen_kompetensi_id": 92,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 277,
+      "elemen_kompetensi_id": 93,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Faktor-faktor penerapan tata kelola diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 278,
+      "elemen_kompetensi_id": 93,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor penerapan tata kelola dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 279,
+      "elemen_kompetensi_id": 94,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kerangka kebijakan tata kelola dirumuskan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 280,
+      "elemen_kompetensi_id": 94,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Pedoman tata kelola ditetapkan sesuai kerangka kebijakan."
+    },
+    {
+      "id": 281,
+      "elemen_kompetensi_id": 95,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 282,
+      "elemen_kompetensi_id": 95,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 283,
+      "elemen_kompetensi_id": 95,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 284,
+      "elemen_kompetensi_id": 96,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 285,
+      "elemen_kompetensi_id": 96,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 286,
+      "elemen_kompetensi_id": 97,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Batasan dan ruang lingkup kebijakan umum penyaluran pendanaan ditentukan sesuai dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 287,
+      "elemen_kompetensi_id": 97,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor yang harus diperhatikan dalam penyusunan kebijakan penyaluran pendanaan ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 288,
+      "elemen_kompetensi_id": 98,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kerangka kebijakan umum penyaluran pendanaan dirumuskan sesuai dengan praktik umum terbaik."
+    },
+    {
+      "id": 289,
+      "elemen_kompetensi_id": 98,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Konsep kebijakan umum penyaluran pendanaan disusun sesuai dengan kerangka kebijakan umum penyaluran pendanaan disesuaikan dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 290,
+      "elemen_kompetensi_id": 98,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Kebijakan umum penyaluran pendanaan ditetapkan sesuai dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 291,
+      "elemen_kompetensi_id": 98,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Kebijakan umum penyaluran pendanaan didokumentasikan sesuai dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 292,
+      "elemen_kompetensi_id": 99,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode dan perangkat (tools) untuk menilai kelayakan pendanaan produktif diidentifikasi sesuai dengan kebijakan Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)."
+    },
+    {
+      "id": 293,
+      "elemen_kompetensi_id": 99,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kriteria dan persyaratan pendanaan produktif diidentifikasi sesuai dengan kebijakan LPBBTI."
+    },
+    {
+      "id": 294,
+      "elemen_kompetensi_id": 99,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Data dan dokumen dalam analisis kelayakan pendanaan produktif dikumpulkan berdasarkan sumber-sumber yang dapat dipertanggungjawabkan."
+    },
+    {
+      "id": 295,
+      "elemen_kompetensi_id": 100,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Data dan informasi bahan analisis pendanaan produktif diklasifikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 296,
+      "elemen_kompetensi_id": 100,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi divalidasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 297,
+      "elemen_kompetensi_id": 101,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Data dan informasi kelayakan dianalisis secara kuantitatif dan kualitatif sesuai metode analisis kelayakan pendanaan produktif."
+    },
+    {
+      "id": 298,
+      "elemen_kompetensi_id": 101,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Hasil analisis kelayakan pendanaan produktif disimpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 299,
+      "elemen_kompetensi_id": 102,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 300,
+      "elemen_kompetensi_id": 102,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 301,
+      "elemen_kompetensi_id": 102,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 302,
+      "elemen_kompetensi_id": 103,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 303,
+      "elemen_kompetensi_id": 103,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 304,
+      "elemen_kompetensi_id": 103,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 305,
+      "elemen_kompetensi_id": 104,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Bencana yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 306,
+      "elemen_kompetensi_id": 104,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 307,
+      "elemen_kompetensi_id": 104,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat dampak bencana ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 308,
+      "elemen_kompetensi_id": 105,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana pemulihan bencana disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 309,
+      "elemen_kompetensi_id": 105,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 310,
+      "elemen_kompetensi_id": 105,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Proses pemulihan bencana dimonitor sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 311,
+      "elemen_kompetensi_id": 105,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Laporan pemulihan bencana dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 312,
+      "elemen_kompetensi_id": 106,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Laporan pemulihan bencana dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 313,
+      "elemen_kompetensi_id": 106,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Evaluasi pelaksanaan pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 314,
+      "elemen_kompetensi_id": 106,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rekomendasi perbaikan dirumuskan berdasarkan hasil evaluasi."
+    },
+    {
+      "id": 315,
+      "elemen_kompetensi_id": 106,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rekomendasi perbaikan dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 316,
+      "elemen_kompetensi_id": 107,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Peraturan terkait, visi dan misi Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI) diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 317,
+      "elemen_kompetensi_id": 107,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kerangka manajemen risiko dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 318,
+      "elemen_kompetensi_id": 107,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Kebijakan manajemen risiko disusun sesuai dengan kerangka manajemen risiko."
+    },
+    {
+      "id": 319,
+      "elemen_kompetensi_id": 107,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Strategi manajemen risiko disusun sesuai dengan kebijakan manajemen risiko."
+    },
+    {
+      "id": 320,
+      "elemen_kompetensi_id": 108,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Struktur organisasi terkait pengelolaan risiko LPBBTI dirumuskan sesuai kebijakan."
+    },
+    {
+      "id": 321,
+      "elemen_kompetensi_id": 108,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Prosedur pengendalian risiko LPBBTI pada setiap lini bisnis dan divisi dirumuskan."
+    },
+    {
+      "id": 322,
+      "elemen_kompetensi_id": 108,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Kebutuhan sumber daya manusia untuk pengelolaan risiko dianalisis."
+    },
+    {
+      "id": 323,
+      "elemen_kompetensi_id": 109,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Faktor-faktor yang berpengaruh terhadap perencanaan bisnis LPBBTI diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 324,
+      "elemen_kompetensi_id": 109,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Sasaran bisnis dan ukuran keberhasilan LPBBTI ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 325,
+      "elemen_kompetensi_id": 109,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Pendistribusian konsep rencana bisnis LPBBTI ke masing-masing unit kerja ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 326,
+      "elemen_kompetensi_id": 109,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Kajian dan analisis konsep rencana bisnis LPBBTI disusun sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 327,
+      "elemen_kompetensi_id": 110,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Strategi yang akan dilakukan dalam mendukung perencanaan bisnis ditetapkan berdasarkan hasil kajian dan analisis."
+    },
+    {
+      "id": 328,
+      "elemen_kompetensi_id": 110,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Program kerja ditetapkan sesuai strategi yang disusun berdasarkan kajian dan analisis."
+    },
+    {
+      "id": 329,
+      "elemen_kompetensi_id": 110,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Action plan disusun sesuai kebutuhan pencapaian masing-masing program kerja."
+    },
+    {
+      "id": 330,
+      "elemen_kompetensi_id": 110,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disusun sesuai dengan strategi, program kerja dan action plan."
+    },
+    {
+      "id": 331,
+      "elemen_kompetensi_id": 111,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI yang telah disusun, dipresentasikan kepada pihak internal."
+    },
+    {
+      "id": 332,
+      "elemen_kompetensi_id": 111,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disesuaikan berdasarkan umpan balik dari pihak internal."
+    },
+    {
+      "id": 333,
+      "elemen_kompetensi_id": 111,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI diputuskan sesuai ketentuan."
+    },
+    {
+      "id": 334,
+      "elemen_kompetensi_id": 111,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didistribusikan sesuai ketentuan."
+    },
+    {
+      "id": 335,
+      "elemen_kompetensi_id": 111,
+      "urutan_kuk": "3.5",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didokumentasikan sesuai ketentuan."
+    },
+    {
+      "id": 336,
+      "elemen_kompetensi_id": 112,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Dokumen rencana bisnis LPBBTI disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 337,
+      "elemen_kompetensi_id": 112,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Objek sosialisasi rencana bisnis diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 338,
+      "elemen_kompetensi_id": 112,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 339,
+      "elemen_kompetensi_id": 113,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Target rencana kerja didistribusikan kepada seluruh unit kerja."
+    },
+    {
+      "id": 340,
+      "elemen_kompetensi_id": 113,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Realisasi target rencana kerja dipantau secara berkala."
+    },
+    {
+      "id": 341,
+      "elemen_kompetensi_id": 113,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Permasalahan yang terjadi dianalisis untuk menentukan alternatif solusinya."
+    },
+    {
+      "id": 342,
+      "elemen_kompetensi_id": 113,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Hasil analisis realisasi rencana kerja dikordinasikan sesuai kebijakan dan waktu yang ditetapkan LPBBTI."
+    },
+    {
+      "id": 343,
+      "elemen_kompetensi_id": 114,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 344,
+      "elemen_kompetensi_id": 114,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 345,
+      "elemen_kompetensi_id": 115,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 346,
+      "elemen_kompetensi_id": 115,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 347,
+      "elemen_kompetensi_id": 115,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 348,
+      "elemen_kompetensi_id": 116,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 349,
+      "elemen_kompetensi_id": 116,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 350,
+      "elemen_kompetensi_id": 116,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 351,
+      "elemen_kompetensi_id": 117,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 352,
+      "elemen_kompetensi_id": 117,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 353,
+      "elemen_kompetensi_id": 117,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 354,
+      "elemen_kompetensi_id": 117,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 355,
+      "elemen_kompetensi_id": 118,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebutuhan teknologi informasi dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 356,
+      "elemen_kompetensi_id": 118,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Ketersediaan teknologi informasi dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 357,
+      "elemen_kompetensi_id": 118,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Konsep rancang bangun teknologi informasi disiapkan."
+    },
+    {
+      "id": 358,
+      "elemen_kompetensi_id": 119,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Arsitektur teknologi informasi ditetapkan sesuai dengan kebutuhan."
+    },
+    {
+      "id": 359,
+      "elemen_kompetensi_id": 119,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Roadmap teknologi informasi ditetapkan sesuai dengan kebutuhan."
+    },
+    {
+      "id": 360,
+      "elemen_kompetensi_id": 119,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Arsitektur dan roadmap teknologi informasi dikomunikasikan ke unit kerja terkait."
+    },
+    {
+      "id": 361,
+      "elemen_kompetensi_id": 120,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 362,
+      "elemen_kompetensi_id": 120,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 363,
+      "elemen_kompetensi_id": 120,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 364,
+      "elemen_kompetensi_id": 121,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 365,
+      "elemen_kompetensi_id": 121,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 366,
+      "elemen_kompetensi_id": 122,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Rancang bangun teknologi informasi diidentifikasi."
+    },
+    {
+      "id": 367,
+      "elemen_kompetensi_id": 122,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Rencana kerja pengembangan sistem ditetapkan."
+    },
+    {
+      "id": 368,
+      "elemen_kompetensi_id": 123,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Skema testing dalam pengembangan sistem teknologi informasi dilakukan."
+    },
+    {
+      "id": 369,
+      "elemen_kompetensi_id": 123,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Hasil pemantauan sistem informasi dievaluasi."
+    },
+    {
+      "id": 370,
+      "elemen_kompetensi_id": 123,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Perbaikan atas hasil evaluasi pemantauan sistem ditentukan."
+    },
+    {
+      "id": 371,
+      "elemen_kompetensi_id": 123,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Perbaikan atas hasil evaluasi pemantauan sistem diimplementasikan."
+    },
+    {
+      "id": 372,
+      "elemen_kompetensi_id": 123,
+      "urutan_kuk": "2.5",
+      "pernyataan_kuk": "Laporan perbaikan dan laporan rencana implementasi didokumentasikan."
+    },
+    {
+      "id": 373,
+      "elemen_kompetensi_id": 124,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait keandalan sistem informasi dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 374,
+      "elemen_kompetensi_id": 124,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kinerja keandalan sistem keamanan informasi dievaluasi melalui tool/aplikasi monitoring yang tersedia."
+    },
+    {
+      "id": 375,
+      "elemen_kompetensi_id": 124,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Hasil evaluasi diklasifikasikan berdasarkan dampak yang ditimbulkan."
+    },
+    {
+      "id": 376,
+      "elemen_kompetensi_id": 124,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Tindakan perbaikan dilakukan berdasarkan hasil klasifikasi."
+    },
+    {
+      "id": 377,
+      "elemen_kompetensi_id": 124,
+      "urutan_kuk": "1.5",
+      "pernyataan_kuk": "Tindakan perbaikan didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 378,
+      "elemen_kompetensi_id": 125,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Aspek pengujian keandalan sistem diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 379,
+      "elemen_kompetensi_id": 125,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses pengujian keandalan sistem informasi dipantau sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 380,
+      "elemen_kompetensi_id": 125,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Hasil pengujian keandalan sistem informasi dievaluasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 381,
+      "elemen_kompetensi_id": 125,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Hasil evaluasi pengujian keandalan sistem informasi didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 382,
+      "elemen_kompetensi_id": 126,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 383,
+      "elemen_kompetensi_id": 126,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 384,
+      "elemen_kompetensi_id": 126,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 385,
+      "elemen_kompetensi_id": 127,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 386,
+      "elemen_kompetensi_id": 127,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 387,
+      "elemen_kompetensi_id": 127,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 388,
+      "elemen_kompetensi_id": 128,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Bencana yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 389,
+      "elemen_kompetensi_id": 128,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 390,
+      "elemen_kompetensi_id": 128,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat dampak bencana ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 391,
+      "elemen_kompetensi_id": 129,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana pemulihan bencana disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 392,
+      "elemen_kompetensi_id": 129,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 393,
+      "elemen_kompetensi_id": 129,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Proses pemulihan bencana dimonitor sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 394,
+      "elemen_kompetensi_id": 129,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Laporan pemulihan bencana dibuat sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 395,
+      "elemen_kompetensi_id": 130,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Laporan pemulihan bencana dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 396,
+      "elemen_kompetensi_id": 130,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Evaluasi pelaksanaan pemulihan bencana dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 397,
+      "elemen_kompetensi_id": 130,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rekomendasi perbaikan dirumuskan berdasarkan hasil evaluasi."
+    },
+    {
+      "id": 398,
+      "elemen_kompetensi_id": 130,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rekomendasi perbaikan dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 399,
+      "elemen_kompetensi_id": 131,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Peraturan terkait, visi dan misi Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI) diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 400,
+      "elemen_kompetensi_id": 131,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kerangka manajemen risiko dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 401,
+      "elemen_kompetensi_id": 131,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Kebijakan manajemen risiko disusun sesuai dengan kerangka manajemen risiko."
+    },
+    {
+      "id": 402,
+      "elemen_kompetensi_id": 131,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Strategi manajemen risiko disusun sesuai dengan kebijakan manajemen risiko."
+    },
+    {
+      "id": 403,
+      "elemen_kompetensi_id": 132,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Struktur organisasi terkait pengelolaan risiko LPBBTI dirumuskan sesuai kebijakan."
+    },
+    {
+      "id": 404,
+      "elemen_kompetensi_id": 132,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Prosedur pengendalian risiko LPBBTI pada setiap lini bisnis dan divisi dirumuskan."
+    },
+    {
+      "id": 405,
+      "elemen_kompetensi_id": 132,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Kebutuhan sumber daya manusia untuk pengelolaan risiko dianalisis."
+    },
+    {
+      "id": 406,
+      "elemen_kompetensi_id": 133,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan keamanan informasi bagi masing-masing unit kerja Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI) diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 407,
+      "elemen_kompetensi_id": 133,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Pedoman keamanan informasi bagi masing-masing unit kerja LPBBTI ditetapkan sesuai masing-masing klasifikasi."
+    },
+    {
+      "id": 408,
+      "elemen_kompetensi_id": 134,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Pedoman keamanan informasi dikomunikasikan ke seluruh unit kerja LPBBTI."
+    },
+    {
+      "id": 409,
+      "elemen_kompetensi_id": 134,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tugas keamanan informasi termasuk kontrol akses dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 410,
+      "elemen_kompetensi_id": 134,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Implementasi pedoman keamanan informasi dimonitor sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 411,
+      "elemen_kompetensi_id": 135,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Rencana kegiatan evaluasi disusun sesuai pedoman keamanan informasi."
+    },
+    {
+      "id": 412,
+      "elemen_kompetensi_id": 135,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Kelemahan keamanan informasi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 413,
+      "elemen_kompetensi_id": 135,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rekomendasi evaluasi keamanan informasi dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 414,
+      "elemen_kompetensi_id": 135,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Hasil evaluasi keamanan informasi didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 415,
+      "elemen_kompetensi_id": 136,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Faktor-faktor yang berpengaruh terhadap perencanaan bisnis LPBBTI diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 416,
+      "elemen_kompetensi_id": 136,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Sasaran bisnis dan ukuran keberhasilan LPBBTI ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 417,
+      "elemen_kompetensi_id": 136,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Pendistribusian konsep rencana bisnis LPBBTI ke masing-masing unit kerja ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 418,
+      "elemen_kompetensi_id": 136,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Kajian dan analisis konsep rencana bisnis LPBBTI disusun sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 419,
+      "elemen_kompetensi_id": 137,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Strategi yang akan dilakukan dalam mendukung perencanaan bisnis ditetapkan berdasarkan hasil kajian dan analisis."
+    },
+    {
+      "id": 420,
+      "elemen_kompetensi_id": 137,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Program kerja ditetapkan sesuai strategi yang disusun berdasarkan kajian dan analisis."
+    },
+    {
+      "id": 421,
+      "elemen_kompetensi_id": 137,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Action plan disusun sesuai kebutuhan pencapaian masing-masing program kerja."
+    },
+    {
+      "id": 422,
+      "elemen_kompetensi_id": 137,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disusun sesuai dengan strategi, program kerja dan action plan."
+    },
+    {
+      "id": 423,
+      "elemen_kompetensi_id": 138,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI yang telah disusun, dipresentasikan kepada pihak internal."
+    },
+    {
+      "id": 424,
+      "elemen_kompetensi_id": 138,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disesuaikan berdasarkan umpan balik dari pihak internal."
+    },
+    {
+      "id": 425,
+      "elemen_kompetensi_id": 138,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI diputuskan sesuai ketentuan."
+    },
+    {
+      "id": 426,
+      "elemen_kompetensi_id": 138,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didistribusikan sesuai ketentuan."
+    },
+    {
+      "id": 427,
+      "elemen_kompetensi_id": 138,
+      "urutan_kuk": "3.5",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didokumentasikan sesuai ketentuan."
+    },
+    {
+      "id": 428,
+      "elemen_kompetensi_id": 139,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Dokumen rencana bisnis LPBBTI disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 429,
+      "elemen_kompetensi_id": 139,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Objek sosialisasi rencana bisnis diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 430,
+      "elemen_kompetensi_id": 139,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 431,
+      "elemen_kompetensi_id": 140,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Target rencana kerja didistribusikan kepada seluruh unit kerja."
+    },
+    {
+      "id": 432,
+      "elemen_kompetensi_id": 140,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Realisasi target rencana kerja dipantau secara berkala."
+    },
+    {
+      "id": 433,
+      "elemen_kompetensi_id": 140,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Permasalahan yang terjadi dianalisis untuk menentukan alternatif solusinya."
+    },
+    {
+      "id": 434,
+      "elemen_kompetensi_id": 140,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Hasil analisis realisasi rencana kerja dikordinasikan sesuai kebijakan dan waktu yang telah ditetapkan LPBBTI."
+    },
+    {
+      "id": 435,
+      "elemen_kompetensi_id": 141,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 436,
+      "elemen_kompetensi_id": 141,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 437,
+      "elemen_kompetensi_id": 142,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 438,
+      "elemen_kompetensi_id": 142,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 439,
+      "elemen_kompetensi_id": 142,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 440,
+      "elemen_kompetensi_id": 143,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 441,
+      "elemen_kompetensi_id": 143,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 442,
+      "elemen_kompetensi_id": 143,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 443,
+      "elemen_kompetensi_id": 144,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 444,
+      "elemen_kompetensi_id": 144,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 445,
+      "elemen_kompetensi_id": 144,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 446,
+      "elemen_kompetensi_id": 144,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 447,
+      "elemen_kompetensi_id": 145,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Faktor-faktor penerapan tata kelola diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 448,
+      "elemen_kompetensi_id": 145,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor penerapan tata kelola dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 449,
+      "elemen_kompetensi_id": 146,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kerangka kebijakan tata kelola dirumuskan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 450,
+      "elemen_kompetensi_id": 146,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Pedoman tata kelola ditetapkan sesuai kerangka kebijakan."
+    },
+    {
+      "id": 451,
+      "elemen_kompetensi_id": 147,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 452,
+      "elemen_kompetensi_id": 147,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 453,
+      "elemen_kompetensi_id": 147,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 454,
+      "elemen_kompetensi_id": 148,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 455,
+      "elemen_kompetensi_id": 148,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 456,
+      "elemen_kompetensi_id": 149,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Batasan dan ruang lingkup kebijakan umum penyaluran pendanaan ditentukan sesuai dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 457,
+      "elemen_kompetensi_id": 149,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor yang harus diperhatikan dalam penyusunan kebijakan penyaluran pendanaan ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 458,
+      "elemen_kompetensi_id": 150,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kerangka kebijakan umum penyaluran pendanaan dirumuskan sesuai dengan praktik umum terbaik."
+    },
+    {
+      "id": 459,
+      "elemen_kompetensi_id": 150,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Konsep kebijakan umum penyaluran pendanaan disusun sesuai dengan kerangka kebijakan umum penyaluran pendanaan disesuaikan dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 460,
+      "elemen_kompetensi_id": 150,
+      "urutan_kuk": "45718",
+      "pernyataan_kuk": "Kebijakan umum penyaluran pendanaan ditetapkan sesuai dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 461,
+      "elemen_kompetensi_id": 150,
+      "urutan_kuk": "45749",
+      "pernyataan_kuk": "Kebijakan umum penyaluran pendanaan didokumentasikan sesuai dengan ketentuan yang berlaku."
+    },
+    {
+      "id": 462,
+      "elemen_kompetensi_id": 151,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Peraturan terkait, visi dan misi Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI) diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 463,
+      "elemen_kompetensi_id": 151,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kerangka manajemen risiko dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 464,
+      "elemen_kompetensi_id": 151,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Kebijakan manajemen risiko disusun sesuai dengan kerangka manajemen risiko."
+    },
+    {
+      "id": 465,
+      "elemen_kompetensi_id": 151,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Strategi manajemen risiko disusun sesuai dengan kebijakan manajemen risiko."
+    },
+    {
+      "id": 466,
+      "elemen_kompetensi_id": 152,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Struktur organisasi terkait pengelolaan risiko LPBBTI dirumuskan sesuai kebijakan."
+    },
+    {
+      "id": 467,
+      "elemen_kompetensi_id": 152,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Prosedur pengendalian risiko LPBBTI pada setiap lini bisnis dan divisi dirumuskan."
+    },
+    {
+      "id": 468,
+      "elemen_kompetensi_id": 152,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Kebutuhan sumber daya manusia untuk pengelolaan risiko dianalisis."
+    },
+    {
+      "id": 469,
+      "elemen_kompetensi_id": 153,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Rasio-rasio keuangan dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 470,
+      "elemen_kompetensi_id": 153,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Tingkat kesehatan Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI) dinilai berdasarkan ketentuan yang berlaku."
+    },
+    {
+      "id": 471,
+      "elemen_kompetensi_id": 154,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Indikator rasio keuangan yang tidak tercapai diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 472,
+      "elemen_kompetensi_id": 154,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Rekomendasi pencapaian rasio keuangan ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 473,
+      "elemen_kompetensi_id": 155,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data/faktor pendukung keberhasilan rencana bisnis LPBBTI dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 474,
+      "elemen_kompetensi_id": 155,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data faktor penghambat keberhasilan rencana bisnis LPBBTI dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 475,
+      "elemen_kompetensi_id": 156,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Realisasi pencapaian target kerja dibandingkan dengan target kerja dalam rencana bisnis LPBBTI"
+    },
+    {
+      "id": 476,
+      "elemen_kompetensi_id": 156,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tingkat keberhasilan pencapaian target kerja rencana bisnis dihitung sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 477,
+      "elemen_kompetensi_id": 157,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Analisis untuk mencari tindak lanjut dilakukan sesuai tingkat keberhasilan rencana bisnis LPBBTI."
+    },
+    {
+      "id": 478,
+      "elemen_kompetensi_id": 157,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Tindak lanjut ditetapkan sesuai prosedur yang berlaku"
+    },
+    {
+      "id": 479,
+      "elemen_kompetensi_id": 158,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Rencana tindak lanjut dalam rangka menjaga pencapaian rencana bisnis LPBBTI dikomunikasikan."
+    },
+    {
+      "id": 480,
+      "elemen_kompetensi_id": 158,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Laporan realisasi rencana bisnis didistribusikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 481,
+      "elemen_kompetensi_id": 159,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan dan strategi pengelolaan risiko diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 482,
+      "elemen_kompetensi_id": 159,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Penerapan manajemen risiko dikaji kesesuaiannya dengan kebijakan dan strategi pengelolaan manajemen risiko."
+    },
+    {
+      "id": 483,
+      "elemen_kompetensi_id": 159,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Skala prioritas ketidaksesuaian ditetapkan sesuai kebijakan dan strategi pengelolaan risiko."
+    },
+    {
+      "id": 484,
+      "elemen_kompetensi_id": 160,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Perbaikan terhadap proses manajemen risiko diidentifikasi sesuai skala prioritas."
+    },
+    {
+      "id": 485,
+      "elemen_kompetensi_id": 160,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Rekomendasi perbaikan terhadap penerapan manajemen risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 486,
+      "elemen_kompetensi_id": 161,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kriteria pemantauan dirumuskan sesuai pedoman tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)."
+    },
+    {
+      "id": 487,
+      "elemen_kompetensi_id": 161,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data dan informasi pelaksanaan kebijakan tata kelola diidentifikasi sesuai dengan kriteria pemantauan dan pedoman tata kelola LPBBTI."
+    },
+    {
+      "id": 488,
+      "elemen_kompetensi_id": 162,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Tujuan, metode, dan waktu pelaksanan evaluasi ditetapkan berdasarkan pedoman tata kelola."
+    },
+    {
+      "id": 489,
+      "elemen_kompetensi_id": 162,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi penerapan kebijakan tata kelola dinilai ketidaksesuaiannya dengan kriteria yang telah dirumuskan."
+    },
+    {
+      "id": 490,
+      "elemen_kompetensi_id": 163,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Hasil pemantauan dan evaluasi diklasifikasikan bedasarkan tingkat signifikansi dan skala prioritas."
+    },
+    {
+      "id": 491,
+      "elemen_kompetensi_id": 163,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Tindak lanjut hasil pemantauan dan evaluasi penerapan tata kelola dilaksanakan sesuai skala prioritas berdasarkan pedoman tata kelola."
+    },
+    {
+      "id": 492,
+      "elemen_kompetensi_id": 164,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Faktor-faktor yang berpengaruh terhadap perencanaan bisnis LPBBTI diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 493,
+      "elemen_kompetensi_id": 164,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Sasaran bisnis dan ukuran keberhasilan LPBBTI ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 494,
+      "elemen_kompetensi_id": 164,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Pendistribusian konsep rencana bisnis LPBBTI ke masing-masing unit kerja ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 495,
+      "elemen_kompetensi_id": 164,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Kajian dan analisis konsep rencana bisnis LPBBTI disusun sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 496,
+      "elemen_kompetensi_id": 165,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Strategi yang akan dilakukan dalam mendukung perencanaan bisnis ditetapkan berdasarkan hasil kajian dan analisis."
+    },
+    {
+      "id": 497,
+      "elemen_kompetensi_id": 165,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Program kerja ditetapkan sesuai strategi yang disusun berdasarkan kajian dan analisis."
+    },
+    {
+      "id": 498,
+      "elemen_kompetensi_id": 165,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Action plan disusun sesuai kebutuhan pencapaian masing-masing program kerja."
+    },
+    {
+      "id": 499,
+      "elemen_kompetensi_id": 165,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disusun sesuai dengan strategi, program kerja dan action plan."
+    },
+    {
+      "id": 500,
+      "elemen_kompetensi_id": 166,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI yang telah disusun, dipresentasikan kepada pihak internal."
+    },
+    {
+      "id": 501,
+      "elemen_kompetensi_id": 166,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI disesuaikan berdasarkan umpan balik dari pihak internal."
+    },
+    {
+      "id": 502,
+      "elemen_kompetensi_id": 166,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI diputuskan sesuai ketentuan."
+    },
+    {
+      "id": 503,
+      "elemen_kompetensi_id": 166,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didistribusikan sesuai ketentuan."
+    },
+    {
+      "id": 504,
+      "elemen_kompetensi_id": 166,
+      "urutan_kuk": "3.5",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI didokumentasikan sesuai ketentuan."
+    },
+    {
+      "id": 505,
+      "elemen_kompetensi_id": 167,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Dokumen rencana bisnis LPBBTI disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 506,
+      "elemen_kompetensi_id": 167,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Objek sosialiasasi rencana bisnis diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 507,
+      "elemen_kompetensi_id": 167,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Rencana bisnis LPBBTI dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 508,
+      "elemen_kompetensi_id": 168,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Target rencana kerja didistribusikan kepada seluruh unit kerja."
+    },
+    {
+      "id": 509,
+      "elemen_kompetensi_id": 168,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Realisasi target rencana kerja dipantau secara berkala."
+    },
+    {
+      "id": 510,
+      "elemen_kompetensi_id": 168,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Permasalahan yang terjadi dianalisis untuk menentukan alternatif solusinya."
+    },
+    {
+      "id": 511,
+      "elemen_kompetensi_id": 168,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Hasil analisis realisasi rencana kerja dikoordinasikan sesuai kebijakan dan waktu yang telah ditetapkan LPBBTI."
+    },
+    {
+      "id": 512,
+      "elemen_kompetensi_id": 169,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 513,
+      "elemen_kompetensi_id": 169,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 514,
+      "elemen_kompetensi_id": 170,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 515,
+      "elemen_kompetensi_id": 170,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 516,
+      "elemen_kompetensi_id": 170,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 517,
+      "elemen_kompetensi_id": 171,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 518,
+      "elemen_kompetensi_id": 171,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 519,
+      "elemen_kompetensi_id": 171,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 520,
+      "elemen_kompetensi_id": 172,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 521,
+      "elemen_kompetensi_id": 172,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 522,
+      "elemen_kompetensi_id": 172,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 523,
+      "elemen_kompetensi_id": 172,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 524,
+      "elemen_kompetensi_id": 173,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Faktor-faktor penerapan tata kelola diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 525,
+      "elemen_kompetensi_id": 173,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor penerapan tata kelola dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 526,
+      "elemen_kompetensi_id": 174,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kerangka kebijakan tata kelola dirumuskan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 527,
+      "elemen_kompetensi_id": 174,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Pedoman tata kelola ditetapkan sesuai kerangka kebijakan."
+    },
+    {
+      "id": 528,
+      "elemen_kompetensi_id": 175,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 529,
+      "elemen_kompetensi_id": 175,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 530,
+      "elemen_kompetensi_id": 175,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 531,
+      "elemen_kompetensi_id": 176,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 532,
+      "elemen_kompetensi_id": 176,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 533,
+      "elemen_kompetensi_id": 177,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Insiden yang terjadi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 534,
+      "elemen_kompetensi_id": 177,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Prosedur dan tata cara pengelolaan dan pelaporan insiden keamanan informasi diidentifikasi."
+    },
+    {
+      "id": 535,
+      "elemen_kompetensi_id": 177,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Tingkat keparahan insiden ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 536,
+      "elemen_kompetensi_id": 178,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Sarana penanganan insiden disiapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 537,
+      "elemen_kompetensi_id": 178,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Proses penanganan insiden dilakukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 538,
+      "elemen_kompetensi_id": 178,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Laporan penanganan insiden dibuat prosedur yang berlaku."
+    },
+    {
+      "id": 539,
+      "elemen_kompetensi_id": 179,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Peraturan terkait, visi dan misi Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI) diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 540,
+      "elemen_kompetensi_id": 179,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Kerangka manajemen risiko dirumuskan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 541,
+      "elemen_kompetensi_id": 179,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Kebijakan manajemen risiko disusun sesuai dengan kerangka manajemen risiko."
+    },
+    {
+      "id": 542,
+      "elemen_kompetensi_id": 179,
+      "urutan_kuk": "1.4",
+      "pernyataan_kuk": "Strategi manajemen risiko disusun sesuai dengan kebijakan manajemen risiko."
+    },
+    {
+      "id": 543,
+      "elemen_kompetensi_id": 180,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Struktur organisasi terkait pengelolaan risiko LPBBTI dirumuskan sesuai kebijakan."
+    },
+    {
+      "id": 544,
+      "elemen_kompetensi_id": 180,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Prosedur pengendalian risiko LPBBTI pada setiap lini bisnis dan divisi dirumuskan."
+    },
+    {
+      "id": 545,
+      "elemen_kompetensi_id": 180,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Kebutuhan sumber daya manusia untuk pengelolaan risiko dianalisis."
+    },
+    {
+      "id": 546,
+      "elemen_kompetensi_id": 181,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Rancang bangun teknologi informasi diidentifikasi."
+    },
+    {
+      "id": 547,
+      "elemen_kompetensi_id": 181,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Rencana kerja pengembangan sistem ditetapkan."
+    },
+    {
+      "id": 548,
+      "elemen_kompetensi_id": 182,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Skema testing dalam pengembangan sistem teknologi informasi dilakukan."
+    },
+    {
+      "id": 549,
+      "elemen_kompetensi_id": 182,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Hasil pemantauan sistem informasi dievaluasi."
+    },
+    {
+      "id": 550,
+      "elemen_kompetensi_id": 182,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Perbaikan atas hasil evaluasi pemantauan sistem ditentukan."
+    },
+    {
+      "id": 551,
+      "elemen_kompetensi_id": 182,
+      "urutan_kuk": "2.4",
+      "pernyataan_kuk": "Perbaikan atas hasil evaluasi pemantauan sistem diimplementasikan."
+    },
+    {
+      "id": 552,
+      "elemen_kompetensi_id": 182,
+      "urutan_kuk": "2.5",
+      "pernyataan_kuk": "Laporan perbaikan dan laporan rencana implementasi didokumentasikan."
+    },
+    {
+      "id": 553,
+      "elemen_kompetensi_id": 183,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebutuhan teknologi informasi dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 554,
+      "elemen_kompetensi_id": 183,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Ketersediaan teknologi informasi dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 555,
+      "elemen_kompetensi_id": 183,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Konsep rancang bangun teknologi informasi disiapkan."
+    },
+    {
+      "id": 556,
+      "elemen_kompetensi_id": 184,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Arsitektur teknologi informasi ditetapkan sesuai dengan kebutuhan."
+    },
+    {
+      "id": 557,
+      "elemen_kompetensi_id": 184,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Roadmap teknologi informasi ditetapkan sesuai dengan kebutuhan."
+    },
+    {
+      "id": 558,
+      "elemen_kompetensi_id": 184,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Arsitektur dan roadmap teknologi informasi dikomunikasikan ke unit kerja terkait."
+    },
+    {
+      "id": 559,
+      "elemen_kompetensi_id": 185,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan keamanan informasi bagi masing-masing unit kerja Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI) diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 560,
+      "elemen_kompetensi_id": 185,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Pedoman keamanan informasi bagi masing-masing unit kerja LPBBTI ditetapkan sesuai masing-masing klasifikasi."
+    },
+    {
+      "id": 561,
+      "elemen_kompetensi_id": 186,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Pedoman keamanan informasi dikomunikasikan ke seluruh unit kerja LPBBTI."
+    },
+    {
+      "id": 562,
+      "elemen_kompetensi_id": 186,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tugas keamanan informasi termasuk kontrol akses dilakukan sesuai prosedur yang berlaku"
+    },
+    {
+      "id": 563,
+      "elemen_kompetensi_id": 186,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Implementasi pedoman keamanan informasi dimonitor sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 564,
+      "elemen_kompetensi_id": 187,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Rencana kegiatan evaluasi disusun sesuai pedoman keamanan informasi"
+    },
+    {
+      "id": 565,
+      "elemen_kompetensi_id": 187,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Kelemahan keamanan informasi diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 566,
+      "elemen_kompetensi_id": 187,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Rekomendasi evaluasi keamanan informasi dikomunikasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 567,
+      "elemen_kompetensi_id": 187,
+      "urutan_kuk": "3.4",
+      "pernyataan_kuk": "Hasil evaluasi keamanan informasi didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 568,
+      "elemen_kompetensi_id": 188,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data faktor pendukung keberhasilan rencana bisnis LPBBTI dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 569,
+      "elemen_kompetensi_id": 188,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data faktor penghambat keberhasilan rencana bisnis LPBBTI dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 570,
+      "elemen_kompetensi_id": 189,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Realisasi pencapaian target kerja dibandingkan dengan target kerja dalam rencana bisnis LPBBTI/"
+    },
+    {
+      "id": 571,
+      "elemen_kompetensi_id": 189,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tingkat keberhasilan pencapaian target kerja rencana bisnis dihitung sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 572,
+      "elemen_kompetensi_id": 190,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Analisis untuk mencari tindak lanjut dilakukan sesuai tingkat keberhasilan rencana bisnis LPBBTI."
+    },
+    {
+      "id": 573,
+      "elemen_kompetensi_id": 190,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Tindak lanjut ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 574,
+      "elemen_kompetensi_id": 191,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Rencana tindak lanjut dalam rangka menjaga pencapaian rencana bisnis LPBBTI dikomunikasikan."
+    },
+    {
+      "id": 575,
+      "elemen_kompetensi_id": 191,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Laporan realisasi rencana bisnis didistribusikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 576,
+      "elemen_kompetensi_id": 192,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan dan strategi pengelolaan risiko diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 577,
+      "elemen_kompetensi_id": 192,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Penerapan manajemen risiko dikaji kesesuaiannya dengan kebijakan dan strategi pengelolaan manajemen risiko."
+    },
+    {
+      "id": 578,
+      "elemen_kompetensi_id": 192,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Skala prioritas ketidaksesuaian ditetapkan sesuai kebijakan dan strategi pengelolaan risiko."
+    },
+    {
+      "id": 579,
+      "elemen_kompetensi_id": 193,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Perbaikan terhadap proses manajemen risiko diidentifikasi sesuai skala prioritas."
+    },
+    {
+      "id": 580,
+      "elemen_kompetensi_id": 193,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Rekomendasi perbaikan terhadap penerapan manajemen risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 581,
+      "elemen_kompetensi_id": 194,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kriteria pemantauan dirumuskan sesuai pedoman tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)."
+    },
+    {
+      "id": 582,
+      "elemen_kompetensi_id": 194,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data dan informasi pelaksanaan kebijakan tata kelola diidentifikasi sesuai dengan kriteria pemantauan dan pedoman tata kelola LPBBTI."
+    },
+    {
+      "id": 583,
+      "elemen_kompetensi_id": 195,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Tujuan, metode, dan waktu pelaksanan evaluasi ditetapkan berdasarkan pedoman tata kelola."
+    },
+    {
+      "id": 584,
+      "elemen_kompetensi_id": 195,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi penerapan kebijakan tata kelola dinilai ketidaksesuaiannya dengan kriteria yang telah dirumuskan."
+    },
+    {
+      "id": 585,
+      "elemen_kompetensi_id": 196,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Hasil pemantauan dan evaluasi diklasifikasikan bedasarkan tingkat signifikansi dan skala prioritas."
+    },
+    {
+      "id": 586,
+      "elemen_kompetensi_id": 196,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Tindak lanjut hasil pemantauan dan evaluasi penerapan tata kelola dilaksanakan sesuai skala prioritas berdasarkan pedoman tata kelola."
+    },
+    {
+      "id": 587,
+      "elemen_kompetensi_id": 197,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data dan informasi terkait risiko dianalisis sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 588,
+      "elemen_kompetensi_id": 197,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Faktor-faktor risiko ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 589,
+      "elemen_kompetensi_id": 198,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Metode pengukuran risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 590,
+      "elemen_kompetensi_id": 198,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Risiko dinilai sesuai metode yang ditetapkan."
+    },
+    {
+      "id": 591,
+      "elemen_kompetensi_id": 198,
+      "urutan_kuk": "2.3",
+      "pernyataan_kuk": "Peringkat risiko ditetapkan sesuai dengan hasil pengukuran risiko."
+    },
+    {
+      "id": 592,
+      "elemen_kompetensi_id": 199,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Alat pemantauan risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 593,
+      "elemen_kompetensi_id": 199,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Proses pemantauan risiko dilakukan sesuai dengan alat pemantauan yang ditetapkan."
+    },
+    {
+      "id": 594,
+      "elemen_kompetensi_id": 199,
+      "urutan_kuk": "3.3",
+      "pernyataan_kuk": "Hasil pemantauan risiko dilaporkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 595,
+      "elemen_kompetensi_id": 200,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Sistem pengendalian risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 596,
+      "elemen_kompetensi_id": 200,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Proses pengendalian risiko dilakukan sesuai sistem pengendalian risiko yang ditetapkan."
+    },
+    {
+      "id": 597,
+      "elemen_kompetensi_id": 200,
+      "urutan_kuk": "4.3",
+      "pernyataan_kuk": "Pengendalian risiko dievaluasi sesuai dengan prosedur yang berlaku."
+    },
+    {
+      "id": 598,
+      "elemen_kompetensi_id": 200,
+      "urutan_kuk": "4.4",
+      "pernyataan_kuk": "Hasil pengendalian risiko didokumentasikan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 599,
+      "elemen_kompetensi_id": 201,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Metode sosialisasi pedoman tata kelola ditentukan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 600,
+      "elemen_kompetensi_id": 201,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Materi sosialisasi pedoman tata kelola disusun sesuai kebutuhan."
+    },
+    {
+      "id": 601,
+      "elemen_kompetensi_id": 201,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Sosialisasi pedoman tata kelola dilaksanakan sesuai metode dan materi."
+    },
+    {
+      "id": 602,
+      "elemen_kompetensi_id": 202,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Kebijakan tata kelola diimplementasikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 603,
+      "elemen_kompetensi_id": 202,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Kendala penerapan tata kelola dikomunikasikan kepada pimpinan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 604,
+      "elemen_kompetensi_id": 203,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Data faktor pendukung keberhasilan rencana bisnis LPBBTI dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 605,
+      "elemen_kompetensi_id": 203,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data faktor penghambat keberhasilan rencana bisnis LPBBTI dikumpulkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 606,
+      "elemen_kompetensi_id": 204,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Realisasi pencapaian target kerja dibandingkan dengan target kerja dalam rencana bisnis LPBBTI/"
+    },
+    {
+      "id": 607,
+      "elemen_kompetensi_id": 204,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Tingkat keberhasilan pencapaian target kerja rencana bisnis dihitung sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 608,
+      "elemen_kompetensi_id": 205,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Analisis untuk mencari tindak lanjut dilakukan sesuai tingkat keberhasilan rencana bisnis LPBBTI."
+    },
+    {
+      "id": 609,
+      "elemen_kompetensi_id": 205,
+      "urutan_kuk": "3.2",
+      "pernyataan_kuk": "Tindak lanjut ditetapkan sesuai prosedur yang berlaku"
+    },
+    {
+      "id": 610,
+      "elemen_kompetensi_id": 206,
+      "urutan_kuk": "4.1",
+      "pernyataan_kuk": "Rencana tindak lanjut dalam rangka menjaga pencapaian rencana bisnis LPBBTI dikomunikasikan."
+    },
+    {
+      "id": 611,
+      "elemen_kompetensi_id": 206,
+      "urutan_kuk": "4.2",
+      "pernyataan_kuk": "Laporan realisasi rencana bisnis didistribusikan sesuai ketentuan yang berlaku."
+    },
+    {
+      "id": 612,
+      "elemen_kompetensi_id": 207,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kebijakan dan strategi pengelolaan risiko diidentifikasi sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 613,
+      "elemen_kompetensi_id": 207,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Penerapan manajemen risiko dikaji kesesuaiannya dengan kebijakan dan strategi pengelolaan manajemen risiko."
+    },
+    {
+      "id": 614,
+      "elemen_kompetensi_id": 207,
+      "urutan_kuk": "1.3",
+      "pernyataan_kuk": "Skala prioritas ketidaksesuaian ditetapkan sesuai kebijakan dan strategi pengelolaan risiko."
+    },
+    {
+      "id": 615,
+      "elemen_kompetensi_id": 208,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Perbaikan terhadap proses manajemen risiko diidentifikasi sesuai skala prioritas."
+    },
+    {
+      "id": 616,
+      "elemen_kompetensi_id": 208,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Rekomendasi perbaikan terhadap penerapan manajemen risiko ditetapkan sesuai prosedur yang berlaku."
+    },
+    {
+      "id": 617,
+      "elemen_kompetensi_id": 209,
+      "urutan_kuk": "1.1",
+      "pernyataan_kuk": "Kriteria pemantauan dirumuskan sesuai pedoman tata kelola Layanan Pendanaan Bersama Berbasis Teknologi Informasi (LPBBTI)."
+    },
+    {
+      "id": 618,
+      "elemen_kompetensi_id": 209,
+      "urutan_kuk": "1.2",
+      "pernyataan_kuk": "Data dan informasi pelaksanaan kebijakan tata kelola diidentifikasi sesuai dengan kriteria pemantauan dan pedoman tata kelola LPBBTI."
+    },
+    {
+      "id": 619,
+      "elemen_kompetensi_id": 210,
+      "urutan_kuk": "2.1",
+      "pernyataan_kuk": "Tujuan, metode, dan waktu pelaksanan evaluasi ditetapkan berdasarkan pedoman tata kelola."
+    },
+    {
+      "id": 620,
+      "elemen_kompetensi_id": 210,
+      "urutan_kuk": "2.2",
+      "pernyataan_kuk": "Data dan informasi penerapan kebijakan tata kelola dinilai ketidaksesuaiannya dengan kriteria yang telah dirumuskan."
+    },
+    {
+      "id": 621,
+      "elemen_kompetensi_id": 211,
+      "urutan_kuk": "3.1",
+      "pernyataan_kuk": "Hasil pemantauan dan evaluasi diklasifikasikan bedasarkan tingkat signifikansi dan skala prioritas."
+    }
+  ],
+  "registration_sequence": [
+    {
+      "id": 6,
+      "year": 2026,
+      "skema_id": 24,
+      "last_seq": 12
+    },
+    {
+      "id": 7,
+      "year": 2026,
+      "skema_id": 25,
+      "last_seq": 10
+    },
+    {
+      "id": 8,
+      "year": 2026,
+      "skema_id": 27,
+      "last_seq": 11
+    },
+    {
+      "id": 9,
+      "year": 2026,
+      "skema_id": 30,
+      "last_seq": 9
+    },
+    {
+      "id": 10,
+      "year": 2026,
+      "skema_id": 26,
+      "last_seq": 2
+    }
+  ],
+  "certificate_sequence": [
+    {
+      "id": 1,
+      "year": 2026,
+      "skema_id": 25,
+      "last_seq": 10
+    },
+    {
+      "id": 2,
+      "year": 2026,
+      "skema_id": 24,
+      "last_seq": 11
+    },
+    {
+      "id": 3,
+      "year": 2026,
+      "skema_id": 27,
+      "last_seq": 11
+    },
+    {
+      "id": 4,
+      "year": 2026,
+      "skema_id": 30,
+      "last_seq": 10
+    },
+    {
+      "id": 5,
+      "year": 2026,
+      "skema_id": 0,
+      "last_seq": 44
+    }
+  ]
+}

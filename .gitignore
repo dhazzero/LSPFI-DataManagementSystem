@@ -1,11 +1,9 @@
 .tools/
 .local/
-data/
+/data/
 config.json
 dist/
 *.log
 *.exe
-
-.idea/
-
+*.exe~
 .idea/
