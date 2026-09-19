@@ -1,0 +1,8 @@
+{
+  "address": "127.0.0.1:4080",
+  "mysql_host": "127.0.0.1:3306",
+  "mysql_user": "lspfi_dms",
+  "mysql_password": "ISI_PASSWORD_MYSQL",
+  "database": "lspfi_dms",
+  "storage_dir": "data"
+}

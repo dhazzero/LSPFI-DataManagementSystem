@@ -1,0 +1,11 @@
+.tools/
+.local/
+data/
+config.json
+dist/
+*.log
+*.exe
+
+.idea/
+
+.idea/
