@@ -24,6 +24,7 @@ type Master struct {
 }
 type Record struct {
 	GenerateRegistration bool              `json:"generate_registration,omitempty"`
+	GenerateCertificate  bool              `json:"generate_certificate,omitempty"`
 	LegacyID             int64             `json:"legacy_id,omitempty"`
 	ID                   int64             `json:"id"`
 	Fields               map[string]string `json:"fields"`
@@ -74,6 +75,9 @@ func headerKey(s string) string {
 		"nohp": "phone", "emailpribadi": "email", "pendidikanterakhirkode": "education", "jabatankode": "occupation", "namainstansi": "company",
 		"sumberanggarankode": "funding", "sumberanggaran": "funding", "namatuk": "tuk", "tanggal tanda tangan rapat pleno": "plenary_date",
 		"tanggal lahir dd mm yyyy": "birth_date", "no blanko sertifikat": "blanko",
+		"nomorregistrasi": "registration", "nomorpendaftaran": "registration",
+		"nomorsertifikat": "certificate", "nosertifikat": "certificate",
+		"tahunsertifikat": "certificate_year",
 	}
 	for k, v := range aliases {
 		if normal(k) == n {
@@ -128,13 +132,46 @@ var schemePrefixPattern = regexp.MustCompile(`^\d+\s+`)
 var schemeFullPattern = regexp.MustCompile(`(?i)^(?:\d+\s+)?Jenjang Kualifikasi\s+(\d+)\s+Bidang Fintech P2P Lending Sub Bidang\s+(.+)$`)
 
 func matchMaster(value, category string, masters []Master) (Master, error) {
-	matches := []Master{}
 	v := normal(value)
+
+	// Tier 1: Exact code or "code - label" match
+	var exactMatches []Master
 	for _, m := range masters {
 		if m.Category != category {
 			continue
 		}
-		ok := m.Code == value || normal(m.Label) == v || value == m.Code+" - "+m.Label
+		if m.Code == value || value == m.Code+" - "+m.Label {
+			exactMatches = append(exactMatches, m)
+		}
+	}
+	if len(exactMatches) == 1 {
+		return exactMatches[0], nil
+	}
+	if len(exactMatches) > 1 {
+		return Master{}, fmt.Errorf("%s: nilai %q tidak ditemukan secara unik pada master", category, value)
+	}
+
+	// Tier 2: Exact normalized label match
+	var labelMatches []Master
+	for _, m := range masters {
+		if m.Category != category {
+			continue
+		}
+		if normal(m.Label) == v {
+			labelMatches = append(labelMatches, m)
+		}
+	}
+	if len(labelMatches) == 1 {
+		return labelMatches[0], nil
+	}
+
+	// Tier 3: Category-specific aliases & integer equivalence (e.g. leading zero tolerance)
+	var fallbackMatches []Master
+	for _, m := range masters {
+		if m.Category != category {
+			continue
+		}
+		ok := false
 		if category == "SKEMA" {
 			// Old workbooks use ID dropdowns, full scheme titles, and short level labels.
 			if parts := schemeDropdownPattern.FindStringSubmatch(value); len(parts) == 2 && parts[1] == m.Code {
@@ -144,6 +181,9 @@ func matchMaster(value, category string, masters []Master) (Master, error) {
 				if normal(alias) == v {
 					ok = true
 				}
+			}
+			if (v == "5ti" && normal(m.Label) == "5eksekutifti") || (v == "5nonti" && normal(m.Label) == "5eksekutifnonti") {
+				ok = true
 			}
 		}
 		if category == "PENDIDIKAN" {
@@ -158,17 +198,25 @@ func matchMaster(value, category string, masters []Master) (Master, error) {
 			b, e2 := strconv.Atoi(m.Code)
 			ok = e1 == nil && e2 == nil && a == b
 		}
-		if category == "SKEMA" && ((v == "5ti" && normal(m.Label) == "5eksekutifti") || (v == "5nonti" && normal(m.Label) == "5eksekutifnonti")) {
-			ok = true
-		}
 		if ok {
-			matches = append(matches, m)
+			fallbackMatches = append(fallbackMatches, m)
 		}
 	}
-	if len(matches) != 1 {
-		return Master{}, fmt.Errorf("%s: nilai %q tidak ditemukan secara unik pada master", category, value)
+
+	allMatches := append(labelMatches, fallbackMatches...)
+	seen := map[int64]bool{}
+	var uniqueMatches []Master
+	for _, m := range allMatches {
+		if !seen[m.ID] {
+			seen[m.ID] = true
+			uniqueMatches = append(uniqueMatches, m)
+		}
 	}
-	return matches[0], nil
+
+	if len(uniqueMatches) == 1 {
+		return uniqueMatches[0], nil
+	}
+	return Master{}, fmt.Errorf("%s: nilai %q tidak ditemukan secara unik pada master", category, value)
 }
 
 func schemeAliases(label string) []string {
@@ -214,6 +262,17 @@ func validate(input map[string]string, masters []Master, generate ...bool) (map[
 		out[f.Key] = v
 		if len(v) > 1000 {
 			issues = append(issues, f.Label+": maksimal 1000 karakter")
+		}
+	}
+	if year := out["certificate_year"]; year != "" {
+		n, e := strconv.Atoi(year)
+		if e != nil || n < 1900 || n > 2100 {
+			issues = append(issues, "Tahun sertifikat harus 1900–2100")
+		}
+	}
+	if seq, year := certificateSequence(out["certificate"]); seq > 0 {
+		if year < 1900 || year > 2100 || (out["certificate_year"] != "" && out["certificate_year"] != strconv.Itoa(year)) {
+			issues = append(issues, "Tahun sertifikat tidak sesuai dengan nomor")
 		}
 	}
 	if out["name"] == "" {
@@ -280,15 +339,41 @@ func validate(input map[string]string, masters []Master, generate ...bool) (map[
 			issues = append(issues, e.Error())
 			continue
 		}
-		if label != "" {
-			byLabel, e := matchMaster(label, f.Category, masters)
-			if e != nil || byLabel.Code != m.Code {
-				issues = append(issues, f.Label+": kode dan nama tidak cocok dengan master")
+		if label != "" && normal(label) != normal(m.Label) {
+			if f.Key == "education" {
+				matchedAlias := false
+				for _, part := range strings.Split(m.Label, "/") {
+					if normal(part) == normal(label) {
+						matchedAlias = true
+						break
+					}
+				}
+				if !matchedAlias {
+					byLabel, e := matchMaster(label, f.Category, masters)
+					if e != nil || byLabel.Code != m.Code {
+						issues = append(issues, f.Label+": kode dan nama tidak cocok dengan master")
+					}
+				}
+			} else if f.Key == "occupation" {
+				// Jabatan in import workbook is often the specific job title (e.g. "Customer Service Staff").
+				// Only report conflict if the label explicitly matches another registered master category.
+				if byLabel, e := matchMaster(label, f.Category, masters); e == nil && byLabel.Code != m.Code {
+					issues = append(issues, f.Label+": kode dan nama tidak cocok dengan master")
+				}
+			} else {
+				byLabel, e := matchMaster(label, f.Category, masters)
+				if e != nil || byLabel.Code != m.Code {
+					issues = append(issues, f.Label+": kode dan nama tidak cocok dengan master")
+				}
 			}
 		}
 		out[f.Key] = m.Code
 		if labelKey != "" {
-			out[labelKey] = m.Label
+			if f.Key == "occupation" && label != "" {
+				out[labelKey] = label
+			} else {
+				out[labelKey] = m.Label
+			}
 		}
 	}
 	if out["city"] != "" {
@@ -320,7 +405,16 @@ func nullable(s string) any {
 }
 func saveRecord(tx *sql.Tx, r Record) (int64, error) {
 	f := r.Fields
+	// All DMS saves acquire the same guard first, including batch imports.
+	// This prevents mixed manual/automatic writes from taking locks in
+	// opposite orders. Year 0 also retains the latest certificate allocation.
+	if _, e := tx.Exec("INSERT INTO certificate_sequences(scheme,year,last_seq) VALUES('0',0,0) ON DUPLICATE KEY UPDATE last_seq=last_seq"); e != nil {
+		return 0, e
+	}
 	if e := prepareRegistration(tx, &r); e != nil {
+		return 0, e
+	}
+	if e := prepareCertificate(tx, &r); e != nil {
 		return 0, e
 	}
 	b, e := json.Marshal(f)

@@ -60,6 +60,93 @@ func TestRealLegacySchemeNames(t *testing.T) {
 		}
 	}
 }
+
+func TestTieredMasterMatching(t *testing.T) {
+	masters := []Master{
+		{ID: 1, Category: "PENDIDIKAN", Code: "05", Label: "D1/D2/D3"},
+		{ID: 2, Category: "PENDIDIKAN", Code: "5", Label: "D1/D2/D3"},
+		{ID: 3, Category: "PEKERJAAN", Code: "3", Label: "Pegawai Swasta"},
+		{ID: 4, Category: "PEKERJAAN", Code: "15", Label: "Pegawai Swasta"},
+		{ID: 5, Category: "KEMENTERIAN", Code: "01", Label: "Kementerian Ketenagakerjaan"},
+	}
+
+	// Exact code matching should resolve uniquely even with leading zero duplicates
+	m5, err := matchMaster("5", "PENDIDIKAN", masters)
+	if err != nil || m5.Code != "5" || m5.ID != 2 {
+		t.Fatalf("expected code 5, got %+v, err: %v", m5, err)
+	}
+	m05, err := matchMaster("05", "PENDIDIKAN", masters)
+	if err != nil || m05.Code != "05" || m05.ID != 1 {
+		t.Fatalf("expected code 05, got %+v, err: %v", m05, err)
+	}
+	m15, err := matchMaster("15", "PEKERJAAN", masters)
+	if err != nil || m15.Code != "15" || m15.ID != 4 {
+		t.Fatalf("expected code 15, got %+v, err: %v", m15, err)
+	}
+	m3, err := matchMaster("3", "PEKERJAAN", masters)
+	if err != nil || m3.Code != "3" || m3.ID != 3 {
+		t.Fatalf("expected code 3, got %+v, err: %v", m3, err)
+	}
+
+	// Fallback to integer match when only "05" exists
+	only05 := []Master{{ID: 10, Category: "PENDIDIKAN", Code: "05", Label: "D1/D2/D3"}}
+	mLead, err := matchMaster("5", "PENDIDIKAN", only05)
+	if err != nil || mLead.Code != "05" {
+		t.Fatalf("expected leading zero match to 05, got %+v, err: %v", mLead, err)
+	}
+
+	// Unregistered code 100 should fail when not in masters
+	_, err = matchMaster("100", "KEMENTERIAN", masters)
+	if err == nil {
+		t.Fatal("expected error for unregistered code 100 in KEMENTERIAN")
+	}
+}
+
+func TestUserRowValidation(t *testing.T) {
+	masters := []Master{
+		{ID: 1, Category: "SKEMA", Code: "24", Label: "3 Layanan Pengguna"},
+		{ID: 2, Category: "PENDIDIKAN", Code: "5", Label: "D1/D2/D3"},
+		{ID: 3, Category: "PEKERJAAN", Code: "15", Label: "Pegawai Swasta"},
+		{ID: 4, Category: "PROVINSI", Code: "36", Label: "Banten"},
+		{ID: 5, Category: "KABUPATEN", Code: "3671", Label: "Kota Tangerang", Parent: "36"},
+		{ID: 6, Category: "SUMBER_ANGGARAN", Code: "3", Label: "Mandiri"},
+		{ID: 7, Category: "KEMENTERIAN", Code: "100", Label: "Mandiri / Perusahaan"},
+	}
+
+	fields := map[string]string{
+		"name":             "Indah Septiani",
+		"nik":              "3174055609910005",
+		"scheme":           "3 Layanan Pengguna",
+		"birth_date":       "16/09/1991",
+		"email":            "indahtyan16@gmail.com",
+		"phone":            "082286860855",
+		"test_date":        "21/01/2026",
+		"registration":     "PPL 2605 00005",
+		"education":        "5",
+		"education_label":  "D-3",
+		"occupation":       "15",
+		"occupation_label": "Customer Service Staff",
+		"province":         "36",
+		"city":             "3671",
+		"funding":          "3",
+		"ministry":         "100",
+		"result":           "K",
+	}
+
+	out, issues := validate(fields, masters)
+	if len(issues) > 0 {
+		t.Fatalf("unexpected validation issues: %v", issues)
+	}
+	if out["education"] != "5" || out["education_label"] != "D1/D2/D3" {
+		t.Fatalf("unexpected education: %+v", out)
+	}
+	if out["occupation"] != "15" || out["occupation_label"] != "Customer Service Staff" {
+		t.Fatalf("unexpected occupation: %+v", out)
+	}
+	if out["ministry"] != "100" {
+		t.Fatalf("unexpected ministry: %+v", out)
+	}
+}
 func TestExcelRoundTripAndNumericNIK(t *testing.T) {
 	f, issues := validate(testFields(), testMasters())
 	if len(issues) > 0 {
@@ -159,5 +246,22 @@ func TestIdentityAndConfigIsolation(t *testing.T) {
 	f["test_date"] = "2026-09-20"
 	if identity(f) == first {
 		t.Fatal("repeated assessments must remain distinct")
+	}
+}
+
+func TestCertificateYearImportValidation(t *testing.T) {
+	for _, year := range []string{"1800", "2101", "abc", "2027"} {
+		f := testFields()
+		f["certificate"] = "64911 4210 3 0000045 2026"
+		f["certificate_year"] = year
+		if _, issues := validate(f, testMasters()); len(issues) == 0 {
+			t.Fatalf("invalid certificate year accepted: %s", year)
+		}
+	}
+	f := testFields()
+	f["certificate"] = "CERT-LEGACY"
+	f["certificate_year"] = "2026"
+	if _, issues := validate(f, testMasters()); len(issues) != 0 {
+		t.Fatal(issues)
 	}
 }

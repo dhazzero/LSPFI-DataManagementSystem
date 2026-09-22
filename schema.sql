@@ -61,3 +61,10 @@ CREATE TABLE IF NOT EXISTS registration_sequences (
  last_seq BIGINT NOT NULL DEFAULT 0,
  UNIQUE KEY scheme_year(scheme,year)
 ) ENGINE=InnoDB;
+CREATE TABLE IF NOT EXISTS certificate_sequences (
+ id BIGINT PRIMARY KEY AUTO_INCREMENT,
+ scheme VARCHAR(100) NOT NULL DEFAULT '0',
+ year INT NOT NULL,
+ last_seq BIGINT NOT NULL DEFAULT 0,
+ UNIQUE KEY scheme_year(scheme,year)
+) ENGINE=InnoDB;

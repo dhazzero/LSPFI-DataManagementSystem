@@ -98,7 +98,7 @@ func validateReferenceBackup(b Backup) error {
 		return errors.New("cadangan referensi tidak boleh berisi berkas asesi")
 	}
 	for name, rows := range b.Tables {
-		if name != "users" && name != "master" && name != "registration_sequences" && len(rows) != 0 {
+		if name != "users" && name != "master" && name != "registration_sequences" && name != "certificate_sequences" && len(rows) != 0 {
 			return errors.New("cadangan referensi memuat data operasional asesi")
 		}
 	}

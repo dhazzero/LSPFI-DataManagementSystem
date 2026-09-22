@@ -32,6 +32,7 @@ INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (18, '
 INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (19, 'KEMENTERIAN', '02', 'Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi', NULL) ON DUPLICATE KEY UPDATE label=VALUES(label);
 INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (20, 'KEMENTERIAN', '03', 'Kementerian Komunikasi dan Informatika', NULL) ON DUPLICATE KEY UPDATE label=VALUES(label);
 INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (21, 'KEMENTERIAN', '99', 'Lainnya', NULL) ON DUPLICATE KEY UPDATE label=VALUES(label);
+INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (22, 'KEMENTERIAN', '100', 'Mandiri / Perusahaan', NULL) ON DUPLICATE KEY UPDATE label=VALUES(label);
 INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (22, 'PROVINSI', '31', 'DKI Jakarta', NULL) ON DUPLICATE KEY UPDATE label=VALUES(label);
 INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (23, 'PROVINSI', '32', 'Jawa Barat', NULL) ON DUPLICATE KEY UPDATE label=VALUES(label);
 INSERT INTO ParameterBnsp (id, kategori, kode, label, parent_kode) VALUES (24, 'PROVINSI', '33', 'Jawa Tengah', NULL) ON DUPLICATE KEY UPDATE label=VALUES(label);

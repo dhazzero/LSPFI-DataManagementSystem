@@ -1,0 +1,16 @@
+# Store text as LF; use LF in working copies on every platform by default.
+* text=auto eol=lf
+
+# Windows command scripts use CRLF in working copies.
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Never perform line-ending conversion on binary assets.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.zip binary
+*.xlsx binary
+*.xls binary
+*.exe binary
