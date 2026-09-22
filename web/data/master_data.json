@@ -120,6 +120,13 @@
       "parent_kode": ""
     },
     {
+      "id": 22,
+      "kategori": "KEMENTERIAN",
+      "kode": "100",
+      "label": "Mandiri / Perusahaan",
+      "parent_kode": ""
+    },
+    {
       "id": 8,
       "kategori": "PEKERJAAN",
       "kode": "1",

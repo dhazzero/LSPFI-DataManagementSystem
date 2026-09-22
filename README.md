@@ -11,6 +11,18 @@ Aplikasi web lokal berbasis Go untuk mengelola arsip asesmen LSP Fintech Indones
 
 Penutupan browser tidak menghentikan aplikasi. Proses `LSPFI-Arsip.exe` berjalan di latar belakang dan dapat dihentikan melalui Task Manager setelah semua penyimpanan selesai. Jangan menjalankan dua salinan aplikasi yang menulis database/folder arsip yang sama.
 
+### macOS / Linux
+
+Pada mesin pengembangan, jalankan `./scripts/build.sh` untuk pengujian dan build. Setelah `config.json` disiapkan dan MySQL aktif, jalankan `./scripts/start.sh`, atau klik **Mulai-LSPFI.command** pada macOS. Buka alamat yang ditampilkan di terminal. Server berjalan di terminal tersebut; gunakan Ctrl+C untuk menghentikannya. Komputer pengguna yang sudah memiliki executable tidak memerlukan Go.
+
+### Mengelola referensi
+
+Buka **Data referensi**, pilih kategori, lalu isi kode dan nama. Untuk pendidikan, kode induk boleh dikosongkan; untuk kabupaten/kota, pilih provinsi induknya. Gunakan **Edit** pada baris yang sudah ada, lalu **Perbarui referensi**. Penambahan kode ganda ditolak agar data lama tidak tertimpa. Pencarian dan pembagian halaman memudahkan penelusuran daftar wilayah.
+
+Referensi yang masih dipakai asesmen, wilayah anak, penomoran, atau data RegisterWeb tidak boleh dihapus atau diganti kode/induknya. Nama tetap bisa diedit. Pesan kegagalan tampil di formulir dan isian dipertahankan. Perubahan serta sinkronisasi ke salinan lokal RegisterWeb disimpan dalam satu transaksi.
+
+Pada formulir asesmen, pilih provinsi terlebih dahulu agar kabupaten/kota tersaring sesuai induknya. Mengganti provinsi mengosongkan pilihan kabupaten yang tidak sesuai.
+
 ## Yang sudah tersedia
 
 - Login admin dan pembaca. Admin mengelola data, master, scan, akun baru, dan cadangan; pembaca dapat melihat serta mengekspor seluruh arsip.
@@ -133,6 +145,8 @@ Perintah hanya membaca `DATABASE_URL`, tabel `Skema`, dan `ParameterBnsp` dari s
 Salin `config.example.json` menjadi `config.json`, isi koneksi MySQL dan jalankan `LSPFI-Arsip.exe --init`. Akun MySQL pada konfigurasi harus disiapkan oleh pengelola dan diberi hak hanya untuk `lspfi_dms`. Bila akun tidak dapat membuat database, buat `lspfi_dms` lebih dahulu dengan akun administrator MySQL. Tambahkan referensi melalui aplikasi sebelum mengimpor Excel.
 
 ## Pengembangan dan pengujian
+
+Panduan pembagian modul, aturan transaksi, pengujian, dan batas pengembangan berikutnya tersedia di [Struktur dan pemeliharaan](docs/architecture-and-maintenance.md). Aset browser dibundel dalam executable: setelah mengubah kode, lakukan build dan restart server sebelum memuat ulang browser.
 
 Go minimal 1.26. Dependensi dikunci oleh `go.mod`/`go.sum`: driver MySQL, Excelize, dan bcrypt. Tidak ada aset CDN, font daring, atau layanan cloud wajib.
 

@@ -25,6 +25,7 @@ var backupTables = []struct {
 	{"users", []string{"id", "username", "password_hash", "role", "created_at"}},
 	{"master", []string{"id", "category", "code", "label", "parent_code"}},
 	{"registration_sequences", []string{"id", "scheme", "year", "last_seq"}},
+	{"certificate_sequences", []string{"id", "scheme", "year", "last_seq"}},
 	{"assessments", []string{"id", "identity_key", "nik", "name", "scheme", "registration", "certificate", "test_date", "result", "fields", "source", "version", "created_at", "updated_at"}},
 	{"documents", []string{"id", "assessment_id", "name", "category", "mime", "size", "sha256", "created_at"}},
 	{"audit", []string{"id", "username", "action", "detail", "created_at"}},
@@ -49,7 +50,7 @@ func (a *App) writeBackup(path string) error {
 	}
 	defer tx.Rollback()
 	for _, table := range backupTables {
-		if table.Name != "users" && table.Name != "master" && table.Name != "registration_sequences" {
+		if table.Name != "users" && table.Name != "master" && table.Name != "registration_sequences" && table.Name != "certificate_sequences" {
 			snapshot.Tables[table.Name] = [][]*string{}
 			continue
 		}
@@ -81,7 +82,7 @@ func (a *App) writeBackup(path string) error {
 		}
 		snapshot.Tables[table.Name] = data
 	}
-	if e = preserveRegistrationFloors(tx, &snapshot); e != nil {
+	if e = preserveFloors(tx, &snapshot); e != nil {
 		return e
 	}
 	var catalogBytes []byte
@@ -289,6 +290,9 @@ func (a *App) restore(path string) error {
 	}
 	if _, ok := manifest.Tables["registration_sequences"]; !ok {
 		manifest.Tables["registration_sequences"] = [][]*string{}
+	}
+	if _, ok := manifest.Tables["certificate_sequences"]; !ok {
+		manifest.Tables["certificate_sequences"] = [][]*string{}
 	}
 	if len(manifest.Tables) != len(backupTables) {
 		return errors.New("tabel backup tidak lengkap")

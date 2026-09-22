@@ -1,0 +1,425 @@
+<!doctype html>
+<html lang="id" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LSPFI · Executive Dashboard</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
+  <!-- Tailwind CSS Local Standalone -->
+  <script src="/tailwind.js"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0fdf9',
+              100: '#ccfbf1',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Local Chart.js for 100% Offline Support -->
+  <script src="/chart.min.js"></script>
+  
+  <style>
+    /* Custom subtle glass & scrollbar styling */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #0b0f19; }
+    ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #334155; }
+    .glass-panel {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(51, 65, 85, 0.4);
+    }
+    .pulse-glow {
+      box-shadow: 0 0 15px rgba(20, 184, 166, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans selection:bg-brand-500/30 selection:text-brand-400">
+
+  <!-- TOP HEADER -->
+  <header class="border-b border-slate-800/80 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Brand & Title -->
+      <div class="flex items-center gap-4">
+        <a href="/" class="flex items-center gap-3 group">
+          <img src="/logo-white.png" alt="LSPFI" class="h-10 w-auto object-contain transition-transform group-hover:scale-105">
+        </a>
+        <div class="hidden sm:block h-8 w-[1px] bg-slate-800"></div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded bg-brand-950 text-brand-400 border border-brand-800/60">
+              Executive View
+            </span>
+            <span class="flex items-center gap-1.5 text-xs text-emerald-400">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+              Live Data
+            </span>
+          </div>
+          <h1 class="text-lg sm:text-xl font-bold tracking-tight text-white mt-0.5">
+            LSPFI Management Analytics
+          </h1>
+        </div>
+      </div>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <!-- Date / Last Sync -->
+        <div class="hidden md:flex flex-col text-right">
+          <span class="text-xs text-slate-400 font-medium" id="header-date">Selasa, 22 Sep 2026</span>
+          <span class="text-[11px] text-slate-500" id="header-sync">Sinkronisasi: Memuat…</span>
+        </div>
+
+        <!-- Refresh Button -->
+        <button id="btn-refresh" title="Muat Ulang Data" class="p-2.5 rounded-lg bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700/60 transition-all flex items-center gap-2 text-xs font-medium">
+          <svg class="w-4 h-4 transition-transform duration-500" id="refresh-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+          </svg>
+          <span class="hidden sm:inline">Segarkan</span>
+        </button>
+
+        <!-- Link Back to Operational App -->
+        <a href="/" class="px-3.5 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold transition-all shadow-lg shadow-brand-950/40 flex items-center gap-1.5">
+          <span>Ruang Arsip</span>
+          <span>→</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- MAIN WRAPPER -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+    <!-- CONTROLS & FILTER BAR -->
+    <section class="glass-panel rounded-2xl p-4 sm:p-5 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-xl">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-brand-950 text-brand-400 border border-brand-800/60 flex items-center justify-center font-bold text-lg">
+          ◈
+        </div>
+        <div>
+          <h2 class="text-sm font-semibold text-slate-200">Executive Performance Indicators</h2>
+          <p class="text-xs text-slate-400">Ringkasan strategis asesi, keputusan asesmen, penerbitan sertifikat, dan kepatuhan berkas.</p>
+        </div>
+      </div>
+
+      <!-- Quick Dynamic Filters -->
+      <div class="flex flex-wrap items-center gap-3 w-full md:w-auto">
+        <!-- Year Filter -->
+        <div class="relative flex-1 sm:flex-initial min-w-[130px]">
+          <select id="filter-year" class="w-full bg-slate-900 border border-slate-700/80 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-brand-500 transition-colors">
+            <option value="">Semua Tahun</option>
+          </select>
+        </div>
+
+        <!-- Scheme Filter -->
+        <div class="relative flex-1 sm:flex-initial min-w-[200px]">
+          <select id="filter-scheme" class="w-full bg-slate-900 border border-slate-700/80 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-brand-500 transition-colors truncate">
+            <option value="">Semua Skema Sertifikasi</option>
+          </select>
+        </div>
+
+        <!-- Result Status Filter -->
+        <div class="relative flex-1 sm:flex-initial min-w-[140px]">
+          <select id="filter-result" class="w-full bg-slate-900 border border-slate-700/80 rounded-lg px-3 py-2 text-xs text-slate-200 focus:outline-none focus:border-brand-500 transition-colors">
+            <option value="">Semua Keputusan</option>
+            <option value="K">Kompeten (K)</option>
+            <option value="BK">Belum Kompeten (BK)</option>
+            <option value="pending">Dalam Proses</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. TOP SECTION: 5 KPI SUMMARY CARDS -->
+    <section>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4" id="kpi-container">
+        
+        <!-- KPI 1: Total Asesmen & Competency Rate -->
+        <div class="glass-panel rounded-xl p-5 relative overflow-hidden transition-all duration-300 hover:border-brand-500/50 hover:shadow-brand-950/30 group">
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-brand-500/5 rounded-full blur-xl group-hover:bg-brand-500/10 transition-colors"></div>
+          <div class="flex items-center justify-between text-slate-400 text-xs font-medium mb-2">
+            <span>Total Asesmen</span>
+            <span class="w-7 h-7 rounded-lg bg-slate-800/80 text-brand-400 flex items-center justify-center font-bold text-sm">▤</span>
+          </div>
+          <div class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" id="kpi-total-assessments">
+            --
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">Tingkat Kelulusan</span>
+            <span class="font-semibold text-emerald-400" id="kpi-pass-rate">--%</span>
+          </div>
+          <!-- Micro Progress Bar -->
+          <div class="w-full h-1.5 bg-slate-800 rounded-full mt-1.5 overflow-hidden">
+            <div id="kpi-pass-bar" class="h-full bg-gradient-to-r from-teal-500 to-emerald-400 transition-all duration-700" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- KPI 2: Asesi / Kandidat Unik -->
+        <div class="glass-panel rounded-xl p-5 relative overflow-hidden transition-all duration-300 hover:border-cyan-500/50 group">
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-cyan-500/5 rounded-full blur-xl group-hover:bg-cyan-500/10 transition-colors"></div>
+          <div class="flex items-center justify-between text-slate-400 text-xs font-medium mb-2">
+            <span>Asesi Unik (NIK)</span>
+            <span class="w-7 h-7 rounded-lg bg-slate-800/80 text-cyan-400 flex items-center justify-center font-bold text-sm">♙</span>
+          </div>
+          <div class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" id="kpi-unique-candidates">
+            --
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">Rasio Uji/Kandidat</span>
+            <span class="font-semibold text-cyan-400" id="kpi-candidate-ratio">--</span>
+          </div>
+          <div class="w-full h-1.5 bg-slate-800 rounded-full mt-1.5 overflow-hidden">
+            <div class="h-full bg-cyan-500" style="width: 100%"></div>
+          </div>
+        </div>
+
+        <!-- KPI 3: Cakupan Penerbitan Sertifikat -->
+        <div class="glass-panel rounded-xl p-5 relative overflow-hidden transition-all duration-300 hover:border-emerald-500/50 group">
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-emerald-500/5 rounded-full blur-xl group-hover:bg-emerald-500/10 transition-colors"></div>
+          <div class="flex items-center justify-between text-slate-400 text-xs font-medium mb-2">
+            <span>Sertifikat Terbit</span>
+            <span class="w-7 h-7 rounded-lg bg-slate-800/80 text-emerald-400 flex items-center justify-center font-bold text-sm">№</span>
+          </div>
+          <div class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" id="kpi-cert-count">
+            --
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">Rasio dari Kompeten</span>
+            <span class="font-semibold text-emerald-400" id="kpi-cert-ratio">--%</span>
+          </div>
+          <div class="w-full h-1.5 bg-slate-800 rounded-full mt-1.5 overflow-hidden">
+            <div id="kpi-cert-bar" class="h-full bg-emerald-500 transition-all duration-700" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- KPI 4: Kepatuhan Berkas Digital -->
+        <div class="glass-panel rounded-xl p-5 relative overflow-hidden transition-all duration-300 hover:border-violet-500/50 group">
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-violet-500/5 rounded-full blur-xl group-hover:bg-violet-500/10 transition-colors"></div>
+          <div class="flex items-center justify-between text-slate-400 text-xs font-medium mb-2">
+            <span>Audit Bukti Digital</span>
+            <span class="w-7 h-7 rounded-lg bg-slate-800/80 text-violet-400 flex items-center justify-center font-bold text-sm">▧</span>
+          </div>
+          <div class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" id="kpi-doc-compliance">
+            --%
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">Asesmen Lengkap Dokumen</span>
+            <span class="font-semibold text-violet-400" id="kpi-doc-count">--</span>
+          </div>
+          <div class="w-full h-1.5 bg-slate-800 rounded-full mt-1.5 overflow-hidden">
+            <div id="kpi-doc-bar" class="h-full bg-violet-500 transition-all duration-700" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- KPI 5: Jangkauan Perusahaan Fintech -->
+        <div class="glass-panel rounded-xl p-5 relative overflow-hidden transition-all duration-300 hover:border-amber-500/50 group">
+          <div class="absolute -right-6 -bottom-6 w-24 h-24 bg-amber-500/5 rounded-full blur-xl group-hover:bg-amber-500/10 transition-colors"></div>
+          <div class="flex items-center justify-between text-slate-400 text-xs font-medium mb-2">
+            <span>Mitra Industri Fintech</span>
+            <span class="w-7 h-7 rounded-lg bg-slate-800/80 text-amber-400 flex items-center justify-center font-bold text-sm">🏛</span>
+          </div>
+          <div class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight" id="kpi-companies-count">
+            --
+          </div>
+          <div class="mt-3 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400">Institusi Terdaftar</span>
+            <span class="font-semibold text-amber-400" id="kpi-corporate-reach">Lending & Tech</span>
+          </div>
+          <div class="w-full h-1.5 bg-slate-800 rounded-full mt-1.5 overflow-hidden">
+            <div class="h-full bg-amber-500" style="width: 100%"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. MIDDLE SECTION: INTERACTIVE DATA VISUALIZATIONS (CHART.JS) -->
+    <section class="space-y-6">
+      
+      <!-- Charts Row 1: Trend & Distribution -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        
+        <!-- Chart 1: Monthly Timeline Trend (2 cols wide) -->
+        <div class="glass-panel rounded-2xl p-5 lg:col-span-2 flex flex-col justify-between shadow-xl">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+            <div>
+              <h3 class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-400"></span>
+                Tren Pelaksanaan Asesmen & Tingkat Kompetensi
+              </h3>
+              <p class="text-xs text-slate-400 mt-0.5">Dinamika volume peserta uji kompetensi dan kelulusan sepanjang waktu</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1.5 text-[11px] text-slate-400">
+                <span class="w-2.5 h-2.5 rounded bg-brand-500 inline-block"></span> Kompeten
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-[11px] text-slate-400 ml-2">
+                <span class="w-2.5 h-2.5 rounded bg-rose-500 inline-block"></span> Belum Kompeten
+              </span>
+            </div>
+          </div>
+
+          <div class="relative w-full h-64 sm:h-72">
+            <canvas id="chart-timeline"></canvas>
+          </div>
+        </div>
+
+        <!-- Chart 2: Scheme Distribution (1 col) -->
+        <div class="glass-panel rounded-2xl p-5 flex flex-col justify-between shadow-xl">
+          <div class="mb-4">
+            <h3 class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-teal-400"></span>
+              Porsi Skema Sertifikasi
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">Sebaran pendaftaran menurut kualifikasi kompetensi</p>
+          </div>
+
+          <div class="relative w-full h-56 sm:h-64 flex items-center justify-center">
+            <canvas id="chart-schemes"></canvas>
+          </div>
+
+          <div class="mt-3 pt-3 border-t border-slate-800/80 text-[11px] text-slate-400 text-center" id="chart-schemes-note">
+            Memuat distribusi skema…
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Charts Row 2: Top Fintech Companies -->
+      <div class="glass-panel rounded-2xl p-5 shadow-xl">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
+          <div>
+            <h3 class="text-sm font-semibold text-slate-100 flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+              Top 10 Institusi & Perusahaan Fintech Pengirim Asesi
+            </h3>
+            <p class="text-xs text-slate-400 mt-0.5">Peringkat keterlibatan institusi keuangan dan platform fintech dalam sertifikasi tenaga kerja</p>
+          </div>
+          <span class="text-xs text-slate-400 self-start sm:self-auto font-mono bg-slate-800/80 px-2.5 py-1 rounded">
+            Ranked by Candidate Volume
+          </span>
+        </div>
+
+        <div class="relative w-full h-60 sm:h-68">
+          <canvas id="chart-companies"></canvas>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- 3. BOTTOM SECTION: COMPACT EXECUTIVE DATA TABLE -->
+    <section class="glass-panel rounded-2xl shadow-xl overflow-hidden">
+      
+      <!-- Table Header & Controls -->
+      <div class="p-5 border-b border-slate-800/80 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+        <div>
+          <div class="flex items-center gap-2.5">
+            <h3 class="text-base font-semibold text-slate-100">Daftar Asesmen Terkini</h3>
+            <span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-slate-800 text-brand-400" id="table-total-badge">
+              0 Data
+            </span>
+          </div>
+          <p class="text-xs text-slate-400 mt-0.5">Tinjauan cepat data peserta, nomor registrasi/sertifikat, kelengkapan berkas, dan status keputusan</p>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Search Box -->
+          <div class="relative min-w-[240px] flex-1 sm:flex-initial">
+            <input type="text" id="table-search" placeholder="Cari nama, NIK, skema, perusahaan…" 
+                   class="w-full bg-slate-900 border border-slate-700/80 rounded-lg pl-9 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-500 focus:outline-none focus:border-brand-500 transition-colors">
+            <span class="absolute left-3 top-2 text-slate-500 text-xs">🔍</span>
+          </div>
+
+          <!-- Quick Result Tabs -->
+          <div class="flex items-center bg-slate-900 border border-slate-800 rounded-lg p-0.5 text-xs">
+            <button class="px-2.5 py-1 rounded-md font-medium transition-colors bg-brand-600 text-white" data-tab-status="all">Semua</button>
+            <button class="px-2.5 py-1 rounded-md font-medium transition-colors text-slate-400 hover:text-white" data-tab-status="K">Kompeten</button>
+            <button class="px-2.5 py-1 rounded-md font-medium transition-colors text-slate-400 hover:text-white" data-tab-status="BK">Belum Kompeten</button>
+          </div>
+
+          <!-- Export CSV Trigger -->
+          <button id="btn-export-csv" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs text-slate-300 hover:text-white transition-all flex items-center gap-1.5">
+            <span>⤓ Unduh CSV</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Table Body -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="bg-slate-900/60 text-slate-400 border-b border-slate-800/80 uppercase tracking-wider text-[10px]">
+              <th class="py-3 px-4 font-semibold">Nama Asesi / NIK</th>
+              <th class="py-3 px-4 font-semibold">Skema Kualifikasi</th>
+              <th class="py-3 px-4 font-semibold">Perusahaan & TUK</th>
+              <th class="py-3 px-4 font-semibold">Tgl Uji</th>
+              <th class="py-3 px-4 font-semibold">Penomoran (Reg / Sertifikat)</th>
+              <th class="py-3 px-4 font-semibold text-center">Digital Scan</th>
+              <th class="py-3 px-4 font-semibold text-right">Keputusan</th>
+            </tr>
+          </thead>
+          <tbody id="table-body" class="divide-y divide-slate-800/50">
+            <tr>
+              <td colspan="7" class="py-12 text-center text-slate-500">
+                <div class="inline-block animate-spin text-brand-400 text-2xl mb-2">↻</div>
+                <p>Memuat data asesmen dari server…</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table Pagination Footer -->
+      <div class="p-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 bg-slate-900/40">
+        <div id="table-pagination-info">
+          Menampilkan 0 dari 0 data
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="btn-prev-page" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all">
+            ← Sebelumnya
+          </button>
+          <span class="px-2 font-mono text-slate-300" id="table-current-page">1 / 1</span>
+          <button id="btn-next-page" class="px-3 py-1.5 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all">
+            Selanjutnya →
+          </button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-6 text-center text-xs text-slate-500 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
+      <div>
+        Lembaga Sertifikasi Profesi Fintech Indonesia (LSPFI) &middot; Executive Intelligence System
+      </div>
+      <div>
+        Offline Ready &middot; Local Encrypted Database
+      </div>
+    </div>
+  </footer>
+
+  <!-- Dashboard Integration Script -->
+  <script src="/dashboard.js"></script>
+</body>
+</html>

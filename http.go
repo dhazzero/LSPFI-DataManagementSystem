@@ -152,6 +152,7 @@ func (a *App) routes() http.Handler {
 	mux.HandleFunc("POST /api/import/commit", a.protected(true, a.commitImport))
 	mux.HandleFunc("GET /api/export", a.protected(false, a.export))
 	mux.HandleFunc("POST /api/master", a.protected(true, a.saveMaster))
+	mux.HandleFunc("DELETE /api/master/{id}", a.protected(true, a.deleteMaster))
 	mux.HandleFunc("GET /api/audit", a.protected(true, a.auditList))
 	mux.HandleFunc("POST /api/password", a.protected(false, a.changePassword))
 	mux.HandleFunc("POST /api/users", a.protected(true, a.createUser))
@@ -173,7 +174,7 @@ func (a *App) routes() http.Handler {
 		w.Header().Set("Referrer-Policy", "no-referrer")
 		w.Header().Set("X-Frame-Options", "SAMEORIGIN")
 		w.Header().Set("Cache-Control", "no-store")
-		w.Header().Set("Content-Security-Policy", "default-src 'self'; style-src 'self'; script-src 'self'; img-src 'self' blob:; frame-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'self'")
+		w.Header().Set("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' blob: data:; frame-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'self'; frame-ancestors 'self'")
 		if r.Method != "GET" && r.Method != "HEAD" && !sameOrigin(r) {
 			fail(w, 403, "Permintaan harus berasal dari aplikasi ini.")
 			return
@@ -268,7 +269,11 @@ func (a *App) save(w http.ResponseWriter, r *http.Request, s Session) {
 			}
 			input.Source = candidate.Source
 			if input.GenerateRegistration && candidate.Fields["registration"] != "" {
-				fail(w, 422, "Pendaftaran RegisterWeb sudah memiliki nomor. Gunakan nomor sumber.")
+				fail(w, 422, "Pendaftaran RegisterWeb sudah memiliki nomor registrasi. Gunakan nomor sumber.")
+				return
+			}
+			if input.GenerateCertificate && candidate.Fields["certificate"] != "" {
+				fail(w, 422, "Pendaftaran RegisterWeb sudah memiliki nomor sertifikat. Gunakan nomor sumber.")
 				return
 			}
 		}
@@ -281,7 +286,7 @@ func (a *App) save(w http.ResponseWriter, r *http.Request, s Session) {
 	defer tx.Rollback()
 	id, e := saveRecord(tx, input)
 	if e != nil {
-		if errors.Is(e, errRegistration) {
+		if errors.Is(e, errRegistration) || errors.Is(e, errCertificate) {
 			fail(w, 422, e.Error())
 		} else if strings.Contains(e.Error(), "muat ulang") {
 			fail(w, 409, e.Error())
@@ -290,7 +295,7 @@ func (a *App) save(w http.ResponseWriter, r *http.Request, s Session) {
 		}
 		return
 	}
-	if e = audit(tx, s.Username, "SAVE_ASSESSMENT", fmt.Sprintf("Asesmen #%d · skema %s · registrasi %s · tahun %s · otomatis %t", id, input.Fields["scheme"], input.Fields["registration"], input.Fields["registration_year"], input.GenerateRegistration)); e != nil {
+	if e = audit(tx, s.Username, "SAVE_ASSESSMENT", fmt.Sprintf("Asesmen #%d · skema %s · registrasi %s · sertifikat %s · otomatis_reg %t · otomatis_cert %t", id, input.Fields["scheme"], input.Fields["registration"], input.Fields["certificate"], input.GenerateRegistration, input.GenerateCertificate)); e != nil {
 		internal(w, e)
 		return
 	}
@@ -639,42 +644,6 @@ func (a *App) readDocument(w http.ResponseWriter, r *http.Request, s Session) {
 	http.ServeContent(w, r, name, info.ModTime(), file)
 }
 
-var masterCategories = map[string]bool{"SKEMA": true, "PENDIDIKAN": true, "PEKERJAAN": true, "PROVINSI": true, "KABUPATEN": true, "SUMBER_ANGGARAN": true, "KEMENTERIAN": true}
-
-func (a *App) saveMaster(w http.ResponseWriter, r *http.Request, s Session) {
-	var m Master
-	if !decode(w, r, &m) {
-		return
-	}
-	m.Category = strings.TrimSpace(m.Category)
-	m.Code = strings.TrimSpace(m.Code)
-	m.Label = strings.TrimSpace(m.Label)
-	if !masterCategories[m.Category] || m.Code == "" || m.Label == "" || len(m.Code) > 100 || len(m.Label) > 255 || len(m.Parent) > 100 {
-		fail(w, 422, "Kategori, kode, dan nama master wajib diisi dengan panjang yang valid.")
-		return
-	}
-	a.writes.Lock()
-	defer a.writes.Unlock()
-	tx, e := a.db.Begin()
-	if e != nil {
-		internal(w, e)
-		return
-	}
-	defer tx.Rollback()
-	if _, e = tx.Exec("INSERT INTO master(category,code,label,parent_code) VALUES(?,?,?,?) ON DUPLICATE KEY UPDATE label=VALUES(label),parent_code=VALUES(parent_code)", m.Category, m.Code, m.Label, m.Parent); e != nil {
-		internal(w, e)
-		return
-	}
-	if e = audit(tx, s.Username, "SAVE_MASTER", m.Category+" / "+m.Code); e != nil {
-		internal(w, e)
-		return
-	}
-	if e = tx.Commit(); e != nil {
-		internal(w, e)
-		return
-	}
-	jsonOut(w, 200, map[string]bool{"ok": true})
-}
 func (a *App) auditList(w http.ResponseWriter, r *http.Request, s Session) {
 	rows, e := a.db.Query("SELECT username,action,detail,DATE_FORMAT(created_at,'%Y-%m-%d %H:%i:%s') FROM audit ORDER BY id DESC LIMIT 200")
 	if e != nil {

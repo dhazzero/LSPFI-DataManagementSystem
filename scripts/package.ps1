@@ -7,9 +7,11 @@ foreach ($fileName in @('LSPFI-Arsip.exe','Mulai-LSPFI.cmd','config.example.json
     Copy-Item -LiteralPath (Join-Path $projectDirectory $fileName) -Destination (Join-Path $distribution $fileName) -Force
 }
 Copy-Item -LiteralPath 'scripts/start.ps1' -Destination (Join-Path $distribution 'scripts/start.ps1') -Force
-if (Test-Path -LiteralPath 'docs/registerweb-database.md') {
-    New-Item -ItemType Directory -Path (Join-Path $distribution 'docs') -Force | Out-Null
-    Copy-Item -LiteralPath 'docs/registerweb-database.md','docs/registerweb-schema.json' -Destination (Join-Path $distribution 'docs') -Force
+foreach ($document in @('docs/registerweb-database.md','docs/registerweb-schema.json','docs/architecture-and-maintenance.md')) {
+    if (Test-Path -LiteralPath $document) {
+        New-Item -ItemType Directory -Path (Join-Path $distribution 'docs') -Force | Out-Null
+        Copy-Item -LiteralPath $document -Destination (Join-Path $distribution 'docs') -Force
+    }
 }
 $goBinary = Join-Path $projectDirectory '.tools/go/bin/go.exe'
 if (-not (Test-Path -LiteralPath $goBinary)) { $goBinary = (Get-Command go -ErrorAction Stop).Source }

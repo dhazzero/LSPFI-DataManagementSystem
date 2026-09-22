@@ -20,7 +20,7 @@ func (a *App) legacyCandidate(id int64) (Record, error) {
 	if e != nil {
 		return Record{}, e
 	}
-	rows, e := a.legacyRows(registration, " WHERE id=?", []any{id}, 1, 0)
+	rows, e := a.legacyRows(registration, " WHERE id=?", []any{id}, 1, 0, "", "")
 	if e != nil {
 		return Record{}, e
 	}
@@ -34,7 +34,7 @@ func (a *App) legacyCandidate(id int64) (Record, error) {
 	}
 	profile := map[string]*string{}
 	if p["user_id"] != nil {
-		rows, e = a.legacyRows(profileTable, " WHERE user_id=?", []any{*p["user_id"]}, 1, 0)
+		rows, e = a.legacyRows(profileTable, " WHERE user_id=?", []any{*p["user_id"]}, 1, 0, "", "")
 		if e != nil {
 			return Record{}, e
 		}
@@ -147,7 +147,22 @@ func legacyWhere(t LegacyTable, q, column, value string) (string, []any, error) 
 	}
 	return where, args, nil
 }
-func (a *App) legacyRows(t LegacyTable, where string, args []any, limit, offset int) ([]map[string]*string, error) {
+func legacySort(t LegacyTable, sortBy, sortDir string) (string, string) {
+	dir := strings.ToUpper(sortDir)
+	if dir != "DESC" {
+		dir = "ASC"
+	}
+	if sortBy == "" {
+		return "", dir
+	}
+	for _, c := range t.Columns {
+		if c.Name == sortBy {
+			return c.Name, dir
+		}
+	}
+	return "", dir
+}
+func (a *App) legacyRows(t LegacyTable, where string, args []any, limit, offset int, sortBy, sortDir string) ([]map[string]*string, error) {
 	cols := []string{}
 	for _, c := range t.Columns {
 		if secretColumn(c.Name) {
@@ -157,14 +172,18 @@ func (a *App) legacyRows(t LegacyTable, where string, args []any, limit, offset 
 		}
 	}
 	query := "SELECT " + strings.Join(cols, ",") + " FROM " + quoteID(t.Target) + where
-	primary := []string{}
-	for _, idx := range t.Indexes {
-		if idx.Name == "PRIMARY" {
-			primary = append(primary, quoteID(idx.Column))
+	if sortBy != "" {
+		query += " ORDER BY " + quoteID(sortBy) + " " + sortDir
+	} else {
+		primary := []string{}
+		for _, idx := range t.Indexes {
+			if idx.Name == "PRIMARY" {
+				primary = append(primary, quoteID(idx.Column))
+			}
 		}
-	}
-	if len(primary) > 0 {
-		query += " ORDER BY " + strings.Join(primary, ",")
+		if len(primary) > 0 {
+			query += " ORDER BY " + strings.Join(primary, ",")
+		}
 	}
 	if limit > 0 {
 		query += " LIMIT ? OFFSET ?"
@@ -226,12 +245,13 @@ func (a *App) legacyData(w http.ResponseWriter, r *http.Request, s Session) {
 	if page > max(1, (count+49)/50) {
 		page = max(1, (count+49)/50)
 	}
-	rows, e := a.legacyRows(t, where, args, 50, (page-1)*50)
+	sortBy, sortDir := legacySort(t, query.Get("sort"), query.Get("dir"))
+	rows, e := a.legacyRows(t, where, args, 50, (page-1)*50, sortBy, sortDir)
 	if e != nil {
 		internal(w, e)
 		return
 	}
-	jsonOut(w, 200, map[string]any{"table": t, "rows": rows, "total": count, "page": page, "page_size": 50})
+	jsonOut(w, 200, map[string]any{"table": t, "rows": rows, "total": count, "page": page, "page_size": 50, "sort": sortBy, "dir": sortDir})
 }
 func (a *App) legacyExport(w http.ResponseWriter, r *http.Request, s Session) {
 	t, e := a.legacyTable(r.PathValue("table"))
@@ -249,7 +269,8 @@ func (a *App) legacyExport(w http.ResponseWriter, r *http.Request, s Session) {
 		fail(w, 400, e.Error())
 		return
 	}
-	rows, e := a.legacyRows(t, where, args, 100001, 0)
+	sortBy, sortDir := legacySort(t, q.Get("sort"), q.Get("dir"))
+	rows, e := a.legacyRows(t, where, args, 100001, 0, sortBy, sortDir)
 	if e != nil {
 		internal(w, e)
 		return

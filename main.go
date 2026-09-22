@@ -25,7 +25,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-//go:embed web/* schema.sql
+//go:embed web/*.html web/*.js web/*.css web/*.png schema.sql
 var assets embed.FS
 
 const databaseName = "lspfi_dms"

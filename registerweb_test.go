@@ -113,7 +113,7 @@ func TestRegisterWebSnapshotMySQL(t *testing.T) {
 	if e != nil {
 		t.Fatal(e)
 	}
-	values, e := target.legacyRows(table, " WHERE 1=1", nil, 50, 0)
+	values, e := target.legacyRows(table, " WHERE 1=1", nil, 50, 0, "", "")
 	if e != nil {
 		t.Fatal(e)
 	}
@@ -203,5 +203,40 @@ func TestActualRegisterWebSchemaCompatibility(t *testing.T) {
 		if e = createLegacyTables(context.Background(), target.db, c); e != nil {
 			t.Fatalf("actual schema retry failed: %v", e)
 		}
+	}
+}
+
+func TestLegacySort(t *testing.T) {
+	table := LegacyTable{
+		Columns: []LegacyColumn{
+			{Name: "id"},
+			{Name: "code"},
+			{Name: "name"},
+		},
+	}
+	// Valid column asc
+	col, dir := legacySort(table, "code", "asc")
+	if col != "code" || dir != "ASC" {
+		t.Fatalf("expected code ASC, got %s %s", col, dir)
+	}
+	// Valid column desc
+	col, dir = legacySort(table, "name", "desc")
+	if col != "name" || dir != "DESC" {
+		t.Fatalf("expected name DESC, got %s %s", col, dir)
+	}
+	// Case insensitive dir
+	col, dir = legacySort(table, "id", "DeSc")
+	if col != "id" || dir != "DESC" {
+		t.Fatalf("expected id DESC, got %s %s", col, dir)
+	}
+	// Invalid column should default to empty string
+	col, dir = legacySort(table, "non_existent", "asc")
+	if col != "" || dir != "ASC" {
+		t.Fatalf("expected empty ASC, got %s %s", col, dir)
+	}
+	// Empty column
+	col, dir = legacySort(table, "", "desc")
+	if col != "" || dir != "DESC" {
+		t.Fatalf("expected empty DESC, got %s %s", col, dir)
 	}
 }

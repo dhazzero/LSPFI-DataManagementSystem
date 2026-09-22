@@ -6,4 +6,6 @@ dist/
 *.log
 *.exe
 *.exe~
+/lspfi-dms
+.DS_Store
 .idea/
